@@ -4,6 +4,8 @@ title: Building a backyard pond
 img: pondfountain.jpg
 fig-caption: Building a backyard pond
 fig-color: white
+feature-img: /assets/img/pondtop.jpg
+thumbnail: /assets/img/pondtop.jpg
 ---
 Having a water feature in the backyard is always nice, but there are
 some steps to maintain the feature that come along with any installation.
@@ -65,7 +67,7 @@ started an amazon subscription for [fish food](https://www.amazon.com/gp/product
 the price at amazon is just so much better and the subscription quite convenient. If you didn't know, Amazon offers a "Subscribe & Save" option in several of their products, which for me works like a charm sending me the needed fish food every quarter and at the same time it reduces the price even more!
 
 And that was it! The finished product is shown below:
-![pond with fish]({{ site.baseurl }}/images/pondtop.jpg "pond with fish")
+![pond with fish]({{ site.baseurl }}/assets/img/pondtop.jpg "pond with fish")
 
 ## A short video
 <iframe width="720" height="450" src="https://www.youtube.com/embed/6nGO3nnOEL8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -75,15 +77,3 @@ But the other six survived and started growing at regular rate. Whenever we leav
 of our neighbors to feed the fish once a day.
 
 The filter requires regular maintenance, every 2-3 months cleaning and changing the carbon filters. And so far after 1 and a half years we had to change the light bulb for a new one.  And that is pretty much all the maintenance.
-
-### Products suggested from text above
-<center>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=frsanchezgith-20&marketplace=amazon&region=US&placement=B001F9UNV6&asins=B001F9UNV6&linkId=83aa6e5bd7c6f9ba75f515075f0bc7a3&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
-</iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=frsanchezgith-20&marketplace=amazon&region=US&placement=B009LSHY2E&asins=B009LSHY2E&linkId=6af2492057777ecbe7d88b9bedd19cec&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
-</iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=frsanchezgith-20&marketplace=amazon&region=US&placement=B00F87SDOU&asins=B00F87SDOU&linkId=2d23b7636e84fe1e864bf7ee09b29821&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
-</iframe>
-<iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=frsanchezgith-20&marketplace=amazon&region=US&placement=B00176IK5S&asins=B00176IK5S&linkId=e557105aff2266f7bdaf95b08e8aa935&show_border=false&link_opens_in_new_window=true&price_color=333333&title_color=0066c0&bg_color=ffffff">
-    </iframe>
-</center>

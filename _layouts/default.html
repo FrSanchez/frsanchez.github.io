@@ -1,16 +1,21 @@
 <!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
 <html lang="en">
-{% include head.html %}
-<body>
-  <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0&appId=410676122476369&autoLogAppEvents=1"></script>
+  {% include head.html %}
+  <body>
+    {% include navbar.html %}
+    <div class="content">
+      {{ content }}
+    </div>
+    {% if page.script %}
+    <script src="{{ page.script | relative_url }}" type="text/javascript"></script>
+    {% endif %}
 
-  <div class="wrapper">
-    {{ content }}
-  </div>
-
-  {% include analytics.html %}
-
-  {% include javascripts.html %}
-</body>
+    {% include footer.html %}
+  </body>
 </html>

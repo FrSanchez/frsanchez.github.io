@@ -1,11 +1,11 @@
 ---
 layout: post
-index: false
 title: Spirograph
 permalink: /spiro/
-jquery: true
-img: spirograph.png
-fig-caption: Spirograph
+bootstrap: true
+script: assets/js/spiro.js
+feature-img: assets/img/spirograph.png
+thumbnail: assets/img/spirograph.png
 ---
 
 This is a small javascript program that simulates a spirograph based
@@ -14,43 +14,48 @@ on the mathematical formulas described in
 The implementation is done with html canvas and javascript
 
 <div class="spiro">
-<div>
-<canvas id="myCanvas" width="600" height="500" >
-</canvas >
-</div>
-<table ><tr><td>
-
-  <div id="outerRadius">
-    <label for="handle1">R</label>
-    <div class="handle ui-slider-handle " id='handle1'></div>
+  <div>
+  <canvas id="myCanvas" width="600" height="500" >
+  </canvas >
   </div>
-  <div id="innerRadius">
-    <label for="handle2">r</label>
-    <div class="handle ui-slider-handle " id='handle2'></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <div>
+          <label for="oR">Radius:</label>
+          <input type="range" min="0" max="1" id="oR">
+          <input type="text" value="1" id="outerRadius">
+        </div>
+        <div>
+          <label for="iR">radius:</label>
+          <input type="range" min="0" max="1" id="iR">
+          <input type="text" value="1" id="innerRadius">
+        </div>
+        <div>
+          <label for="cycles">cycles:</label>
+          <input type="range" min="0" max="1" id="cycles">
+          <input type="text" value="1" id="ratio">
+        </div>
+      </div>
+      <div class="col">
+        <div id="red"></div>
+        <div id="green"></div>
+        <div id="blue"></div>
+
+        <div id="swatch" class="ui-widget-content ui-corner-all"></div>
+      </div>
+    </div>
   </div>
-  <div id="ratio">
-    <label for="handle3">cycles</label>
-    <div class="handle ui-slider-handle " id='handle3'></div>
+
+
+  <div>
+    <button class="ui-button ui-widget ui-corner-all" id='draw'>Draw!</button>
+    <button class="ui-button ui-widget ui-corner-all" id='clear'>Clear</button>
+    <button class="ui-button ui-widget ui-corner-all" id='undo'>Undo</button>
   </div>
-  </td>
-  <td>
-  <div id="red"></div>
-  <div id="green"></div>
-  <div id="blue"></div>
 
-  <div id="swatch" class="ui-widget-content ui-corner-all"></div>
+  <a id="dl" download="spirograph.png">Click to download the image</a>
 
-  </td>
-  </tr>
-</table>
-<div>
-  <button class="ui-button ui-widget ui-corner-all" id='draw'>Draw!</button>
-  <button class="ui-button ui-widget ui-corner-all" id='clear'>Clear</button>
-  <button class="ui-button ui-widget ui-corner-all" id='undo'>Undo</button>
-</div>
-
-<a id="dl" download="spirograph.png">Click to download the image</a>
-
-<script src="{{ site.baseurl }}/assets/js/spiro.js"></script>
 </div>
 <hr/>

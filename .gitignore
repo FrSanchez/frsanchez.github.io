@@ -1,35 +1,30 @@
-_site
-.sass-cache
-.jekyll-metadata
-yarn.lock
+# Idea files
+.idea/*
+
+# Mac files
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+*.manifest
+*.spec
+
+# Jekyll dev or build files
+_site/*
+_development_tool/*
+.sass-cache/*
+*.css.map
+*.scssc
+.bundle/*
+
+# Theme Gem files
 Gemfile.lock
-package-lock.json
-node_modules/
+*.gem
+.gems
+jekyll-theme-type-on-strap.gemspec
 
-### macOS ###
-*.DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-.jekyll-cache/
+# Node js files
+**/node_modules/*
+*-test.md
+*copy.md
+.jekyll-cache/*
+test/*

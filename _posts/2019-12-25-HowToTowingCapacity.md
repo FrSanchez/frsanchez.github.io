@@ -1,9 +1,10 @@
 ---
 layout: post
 title: How to calculate your vehicle's towing capacity
-banner: towing-banner.png
-img: towing.png
-fig-color: white
+feature-img: assets/img/pexels/towing.png
+thumbnail: assets/img/thumbnails/towing.png
+tags: [Towing, RV, Calculator]
+author: frsanchez
 ---
 As we decided to get a travel trailer,
 we quickly discovered that a towing capacity
@@ -11,7 +12,7 @@ stated in the manual of my car is not actually even remotely the only value need
 
 
 
-![hitch]({{ site.baseurl }}/images/hitch.png )
+![hitch]({{ site.baseurl }}/assets/img/hitch.png )
 The result has to do with the relationship between the payload capacity – or cargo capacity - of the vehicle,
 also called TV (Towing Vehicle), and the tongue weight.
 The tongue weight is usually 10% – 15% of the overall trailer weight when properly distributed.

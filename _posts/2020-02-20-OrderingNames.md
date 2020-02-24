@@ -3,11 +3,10 @@ layout: post
 title: Ordering names
 #date: # 2017-09-12 13:32:20 +0300
 description: Using javscript to order lists # You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: ordering.png # Add image post (optional)
-fig-caption: Ordering Names # Add figcaption (optional)
+image: assets/img/ordering.png # Add image post (optional)
 tags: [Javascript, FileReader, Events]
-jquery: true
-script: ordering.js
+bootstrap: true
+script: assets/js/ordering.js
 ---
 
 This is a sample block to read a list of names, order them and also create a random ordered list. The code even allows to drag and drop files into the text area for easier manipulation of long lists, and also to avoid storing any data on our server - because there is no need to do it.
@@ -20,19 +19,22 @@ The working area is next and [below](#description-of-the-code) that is the descr
 
 <button class="ui-button ui-widget ui-corner-all" id='order'>Go</button>
 
-<div class="grid-container">
-<div class="grid-input" >
-<h4>Ordered</h4>
-</div>
-<div class="grid-input" >
-<h4>Randomized</h4>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <h4>Ordered</h4>
+      <div id="ordered">
+      </div>
+    </div>
+    <div class="col-sm">
+      <h4>Randomized</h4>
+      <div id="random">
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="grid-text" id="ordered">
-</div>
-<div class="grid-text" id="random">
-</div>
-</div>
+
 
 ### Description of the code
 
