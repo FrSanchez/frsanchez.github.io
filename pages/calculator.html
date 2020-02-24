@@ -1,0 +1,78 @@
+---
+layout: page
+title : Calculator
+permalink: /calculator/
+subtitle: for your Towing Capacity
+feature-img: "assets/img/pexels/calculator.jpg"
+tags: [Calculator, Towing]
+script: assets/js/towing.js
+hide_title: true
+bootstrap: true
+---
+
+**This data is not sent or stored in our servers**
+
+
+<h1>Input Data</h1>
+<h2>Towing Vehicle</h2>
+<div class="container">
+  <div class="row">
+    <div class="col">
+  {% for towing in site.data.towing.vehicle %}
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="lbl-{{towing.label}}">{{towing.label}}</span>
+    </div>
+    <input type="text" class="form-control" placeholder="{{ towing.label }}" id="{{ towing.id }}" aria-describedby="lbl-{{ towing.label }}" title="{{ towing.description }}">
+  </div>
+  {% endfor %}
+</div>
+
+<div class="col">
+<h2>Estimated Cargo (in the vehicle)</h2>
+  {% for towing in site.data.towing.payload %}
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="lbl-{{towing.label}}">{{towing.label}}</span>
+    </div>
+    <input type="text" class="form-control" placeholder="{{ towing.label }}" id="{{ towing.id }}" aria-describedby="lbl-{{ towing.label }}" title="{{ towing.description }}">
+  </div>
+  {% endfor %}
+</div>
+
+<div class="col">
+<h2>Travel Trailer data</h2>
+  {% for towing in site.data.towing.trailer %}
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="lbl-{{towing.label}}">{{towing.label}}</span>
+    </div>
+    <input type="text" class="form-control" placeholder="{{ towing.label }}" id="{{ towing.id }}" aria-describedby="lbl-{{ towing.label }}" title="{{ towing.description }}">
+  </div>
+  {% endfor %}
+</div>
+</div>
+<div class="row">
+  <div class="col">
+    <div class='results'>
+      <h1>Results</h1>
+        {% for towing in site.data.towing.results %}
+          <div class="grid-alert alert alert-danger {{ towing.id }}-alert" role="alert">
+          {{ towing.alert }}
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="lbl-{{towing.label}}">{{towing.label}}</span>
+            </div>
+            <input type="text" class="form-control" placeholder="0" id="{{ towing.id }}" aria-describedby="lbl-{{ towing.label }}" disabled>
+          </div>
+        {% endfor %}
+      </div>
+    </div>'
+    <div class="col">
+      <img src="{{ site.baseurl }}/assets/img/pexels/camper.jpg"></img>
+    </div>
+  </div>
+</div>
+<hr/>
+*Disclaimer: It is your responsibility to check all numbers and data for accurate information. This is not a replacement for your auto and trailer manufacturer's data. We can't take any responsibility for any wrongly introduced data. The information provided is for entertainment only.*
