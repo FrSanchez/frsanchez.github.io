@@ -11,6 +11,7 @@ const less = require('gulp-less');
 const cleanCSS = require('gulp-clean-css');
 const replace = require('gulp-replace');
 const webp = require('gulp-webp');
+const minify = require('gulp-minify');
 
 gulp.task('js', function minijs() {
   return gulp.src(['js/partials/**.js'])
@@ -24,11 +25,19 @@ gulp.task('js', function minijs() {
 
 gulp.task('js2', function () {
   return gulp.src(['js-src/*.js'])
-    .pipe(uglify({ warnings: true }))
+    .pipe(minify({
+        ext:{
+            min:'.min.js'
+        },
+        exclude: ['tasks'],
+        mangle: true,
+        noSource: true,
+        ignoreFiles: ['.combo.js', '.min.js']
+    }))
     .on('error', (err) => {
       console.log(err.toString());
     })
-    .pipe(gulp.dest("js/"))
+    .pipe(gulp.dest("js"))
 })
 
 gulp.task("img", function imging() {
