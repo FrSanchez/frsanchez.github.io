@@ -1,3 +1,33 @@
+.times {
+  text-align: center;
+  padding-bottom: 20px;
+
+  img {
+      border-radius: 1em;
+      padding: 10px;
+      width: 350px;
+      margin-right: 0.5em;
+
+
+      &:before {
+        bottom: 0;
+        content: "";
+        display: none;
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+  h4 {
+      display: block;
+  }
+
+}
+
+
 h1.title {
   @extend .header-txt-shadow;
   padding: $title-padding 0;
@@ -7,6 +37,80 @@ h1.title {
   font-weight: normal;
   margin-top: 5px;
   text-shadow: 1px 1px 2px $text-shadow;
+}
+
+div.feature-image-times::before {
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgba(33,33,33,1);
+    opacity: 0.5;
+    height: 350px;
+}
+
+.feature-image-times {
+  padding: 0;
+
+  .post-link {
+    color: $feature-image-text-color;
+  }
+
+  div.main-nav {
+    display: block;
+    float: left;
+    color: rgba(255,255,255,1);
+    top: 10;
+    left: 20;
+    position: absolute;
+
+    a {
+       color: rgba(255,255,255,1);
+    }
+  }
+
+  header {
+    color: $feature-image-text-color;
+    margin-bottom: 0;
+    padding: $padding-large/2.5 $padding-large;
+    height: 350px;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(33,33,33,1);
+
+    @media screen and (max-width: $break) {
+      padding: $padding-large*1.5 $padding-small;
+    }
+
+    @media screen and (min-width: $break) {
+      background-size: 100% auto;
+    }
+
+    @media screen and (max-width: $break) {
+      background-size: 200% auto;
+    }
+
+    @media screen and (max-width: $sm-break) {
+      background-size: 400% auto;
+    }
+    .meta {
+      color: rgba($feature-image-text-color, .7);
+    }
+  }
+
+  .post-content {
+    @extend %padding-post;
+    padding-bottom: 0;
+  }
+
+  footer {
+    @extend %padding-post;
+    padding-top: 0;
+  }
 }
 
 //Shared css in _post.scss
