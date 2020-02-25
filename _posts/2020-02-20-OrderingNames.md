@@ -6,7 +6,7 @@ description: Using javscript to order lists # You’ll find this post in your `_
 image: assets/img/ordering.png # Add image post (optional)
 tags: [Javascript, FileReader, Events]
 bootstrap: true
-script: assets/js/ordering.min.js
+script: assets/js/ordering.js
 ---
 
 This is a sample block to read a list of names, order them and also create a random ordered list. The code even allows to drag and drop files into the text area for easier manipulation of long lists, and also to avoid storing any data on our server - because there is no need to do it.
