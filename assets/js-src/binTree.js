@@ -1,86 +1,77 @@
-$( function() {
-  Node = function(data) {
-    this.data = null;
-    if (typeof data !== 'undefined') {
+$(function() {
+  var DEFAULT_RADIUS = 20;
+  
+  class Node {
+    constructor(data) {
       this.data = data;
+      this.left = null;
+      this.right = null;
     }
-    this.left = null;
-    this.right = null;
-    this.radius = 20;
-  }
 
-  Node.prototype.setRadius = function(radius) {
-    this.radius = radius;
-  }
-
-  Node.prototype.getRadius = function()
-  {
-    return this.radius;
-  }
-
-  Node.prototype.draw = function(context, unused, cy, left, right) {
-    var cx = left + (right - left ) / 2;
-
-    if (this.left !== null) {
-      context.beginPath();
-      context.moveTo(cx - this.radius, cy + this.radius - 5);
-      var nr = cx;
-      var lcx = left + (nr - left ) / 2;
-      context.lineTo(lcx, cy + 25);
-      context.stroke();
-      this.left.draw(context, lcx , cy + 40, left, nr);
-    }
-    if (this.right != null) {
-      context.beginPath();
-      context.moveTo(cx + this.radius, cy + this.radius - 5);
-      var nl = cx;
-      var rcx = cx + (right - nl) / 2;
-      context.lineTo( rcx , cy + 25);
-      context.stroke();
-      this.right.draw(context, rcx, cy + 40, nl, right);
-    }
-    if (this.data !== null && typeof this.data !== 'undefined') {
-      context.beginPath();
-      context.moveTo(cx + this.radius, cy);
-      context.arc(cx, cy, this.radius, 0, 2 * Math.PI, false);
-      context.fillStyle = "#FBFBFB";
-      context.fill();
-      context.stroke();
-      context.fillStyle = "#101010";
-      context.fillText(this.data, cx, cy);
-    }
-  }
-
-  Node.prototype.insert = function(data) {
-    if (data === null || typeof data === 'undefined') {
+    insert(node) {
+      // First make sure we are inserting data but we also prevent duplicates
+      if (node == null || typeof(node) == 'undefined' || this.data === node.data) {
+        return false;
+      }
+      // now chose whether go left
+      if (this.data > node.data) {
+        if (this.left === null) {
+          this.left = node;
+          return true;
+        }
+        return this.left.insert(node);
+      } else {
+        // or go right
+        if (this.right === null) {
+          this.right = node;
+          return true;
+        }
+        return this.right.insert(node);
+      }
       return false;
     }
+  }
 
-    if(this.data === null) {
-      this.data = data;
-      return true;
+  class VNode extends Node {
+    constructor(data, radius) {
+      super(data);
+      this.radius = radius;
     }
 
-    if (this.data === data) {
-      return false;
-    }
+    setRadius(radius) { this.radius = radius; }
 
-    if (this.data > data) {
-      if (this.left === null) {
-        this.left = new Node(data);
-        this.left.setRadius(this.radius);
-        return true;
+    draw(context, unused, cy, left, right) {
+      var cx = left + (right - left) / 2;
+
+      if (this.left !== null) {
+        context.beginPath();
+        context.moveTo(cx - this.radius, cy + this.radius - 5);
+        var nr = cx;
+        var lcx = left + (nr - left) / 2;
+        context.lineTo(lcx, cy + 25);
+        context.stroke();
+        this.left.draw(context, lcx, cy + 40, left, nr);
       }
-      return this.left.insert(data);
-    } else {
-      if(this.right === null) {
-        this.right = new Node(data);
-        this.right.setRadius(this.radius);
-        return true;
+      if (this.right != null) {
+        context.beginPath();
+        context.moveTo(cx + this.radius, cy + this.radius - 5);
+        var nl = cx;
+        var rcx = cx + (right - nl) / 2;
+        context.lineTo(rcx, cy + 25);
+        context.stroke();
+        this.right.draw(context, rcx, cy + 40, nl, right);
       }
-      return this.right.insert(data);
+      if (this.data !== null && typeof this.data !== 'undefined') {
+        context.beginPath();
+        context.moveTo(cx + this.radius, cy);
+        context.arc(cx, cy, this.radius, 0, 2 * Math.PI, false);
+        context.fillStyle = "#FBFBFB";
+        context.fill();
+        context.stroke();
+        context.fillStyle = "#101010";
+        context.fillText(this.data, cx, cy);
+      }
     }
-    return false;
   }
 
   function getContext(canvas) {
@@ -93,17 +84,20 @@ $( function() {
   }
 
   var canvas = $('#tree')[0];
-
-  var root = new Node();
+  var root = null;
   var cx = canvas.width / 2;
   var cy = 25;
 
-  $( "button" ).click( function( event ) {
-      event.preventDefault();
-      var number = parseInt($('#number').val());
-      root.insert(number);
+  $("button").click(function(event) {
+    event.preventDefault();
+    var number = parseInt($('#number').val());
+    if (root === null) {
+      root = new VNode(number, DEFAULT_RADIUS);
+    } else {
+      root.insert(new VNode(number, DEFAULT_RADIUS));
+    }
 
-      root.draw( getContext(canvas), cx, cy, 0, canvas.width);
-      console.log(root);
-    } );
+    root.draw(getContext(canvas), cx, cy, 0, canvas.width);
+    console.log(root);
+  });
 });
