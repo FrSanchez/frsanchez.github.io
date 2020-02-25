@@ -1,0 +1,70 @@
+<html lang="en">
+  {% include head.html %}
+  <body>
+    <div class="content">
+<!-- content -->
+<article {% if page.feature-img %}class="feature-image-times"{% endif %}>
+  <div class="feature-image-times">
+    <header id="main" style="background-image: url('{{ page.feature-img | relative_url }}')">
+
+    </header>
+  </div>
+  <div class="main-nav">
+    <h3>
+      <a href="{{ site.url | relative_url }}">BLOG</a>
+    </h3>
+  </div>
+
+  <section class="post-content">
+  {% if page.bootstrap %}
+  <div class="bootstrap-iso">
+  {% endif %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="{{ page.image | relative_url }}"></img>
+        </div>
+        <div class="col">
+          <h1>{{ page.subtitle }}</h1>
+
+          {{ content }}
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col times">
+          <a href="https://apps.apple.com/us/app/timesfacts/id1412190930?ls=1" target="_blank">
+            <img src="{{ page.appstore | relative_url }}" class="times"></img>
+            <h4 class="times">Available on the App Store</h4>
+          </a>
+        </div>
+        <div class="col times">
+          <a href="https://play.google.com/store/apps/details?id=com.sanchezparralabs.times" target="_blank" >
+            <img src="{{ page.googleplay | relative_url }}" class="times"></img>
+            <h4 class="times">Available on Google Play</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  {% if page.bootstrap %}
+  </div>
+  {% endif %}
+  </section>
+
+  <!-- Tag list for portfolio -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include tags_list.html tags=tag_list %}
+
+</article>
+
+<!-- content end-->
+    </div>
+
+    {% include footer.html %}
+  </body>
+</html>
