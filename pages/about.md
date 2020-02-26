@@ -17,7 +17,7 @@ A few years ago my wife, my brother in law and I wrote an app and made it availa
 It may still be out there: [Times](/times)  
 
 ---
-Lots of amazing beatiful pictures from [Pexels](https://www.pexels.com/)
+Lots of amazing beatiful pictures from [Pexels](https://www.pexels.com/){:target="_blank"}
 
 ### Contact me
 
