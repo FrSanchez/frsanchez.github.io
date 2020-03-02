@@ -38,7 +38,7 @@ The working area is next and [below](#description-of-the-code) that is the descr
 
 ### Description of the code
 
-Javascript file in [github](https://github.com/FrSanchez/frsanchez.github.io/blob/master/assets/js/ordering.js)
+Javascript file in [github](https://github.com/FrSanchez/frsanchez.github.io/blob/master/assets/js-src/ordering.js)
 
 To read the names, the code takes the contents of the textarea and puts it into an array line by line to be able to manipulate it. JQuery makes it easy by using the textarea locator, retrieving the value and the using split() by newline, then sorting is native in javascript for an array:
 

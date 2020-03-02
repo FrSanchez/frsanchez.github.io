@@ -6,7 +6,7 @@ tags: [BinarySearch, BinaryTree, Programing, Javascript] # add tag
 image: assets/img/bintree.png # Add image post (optional)=
 description: Sample implementation of a binary search tree in JavaScript. # Add post description (optional)
 bootstrap: true
-script: assets/js/binTree.min.js
+script: assets/js/binTree.js
 ---
 This is a sample implementation of a Binary Serach Tree in JavaScript. Right now it is a work in progress, please
 keep looking for updates for this post, as I will keep working on it.
@@ -19,6 +19,7 @@ as I keep progressing in this code.
 <label for="number">Number:</label>
 <input type="text" id="number" name="number">
 <button class="ui-button ui-widget ui-corner-all" id='insert'>Insert</button>
+<button class="ui-button ui-widget ui-corner-all" id='search'>Search</button>
 
 First we have to define the basic piece, and that is going to be a Node:
 {% highlight javascript %}

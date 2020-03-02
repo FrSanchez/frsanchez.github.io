@@ -23,7 +23,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <img src="{{ page.image | relative_url }}"></img>
+          <img alt="Logo" src="{{ page.image | relative_url }}"></img>
         </div>
         <div class="col">
           <h1>{{ page.subtitle }}</h1>
@@ -38,13 +38,13 @@
       <div class="row">
         <div class="col times">
           <a href="https://apps.apple.com/us/app/timesfacts/id1412190930?ls=1" target="_blank">
-            <img src="{{ page.appstore | relative_url }}" class="times"></img>
+            <img alt="App Store" src="{{ page.appstore | relative_url }}" class="times"></img>
             <h4 class="times">Available on the App Store</h4>
           </a>
         </div>
         <div class="col times">
           <a href="https://play.google.com/store/apps/details?id=com.sanchezparralabs.times" target="_blank" >
-            <img src="{{ page.googleplay | relative_url }}" class="times"></img>
+            <img alt="Google Play" src="{{ page.googleplay | relative_url }}" class="times"></img>
             <h4 class="times">Available on Google Play</h4>
           </a>
         </div>
