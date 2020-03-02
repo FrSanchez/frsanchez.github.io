@@ -5,6 +5,7 @@ matrix:
       - 10
     before_script:
       - npm install -g gulp-cli
+      - npm install
     script: gulp -f assets/gulpfile.js
 
   - language: ruby
