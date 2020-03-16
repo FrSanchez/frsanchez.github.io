@@ -2,7 +2,7 @@
 layout: post
 title: Binary Search Tree
 date: 2020-01-28 00:00:00 +0700
-tags: [BinarySearch, BinaryTree, Programing] # add tag
+tags: [BinarySearch, BinaryTree, Data structures, Programing] # add tag
 feature-img: assets/img/bintree.png # Add image post (optional)
 thumbnail: assets/img/pexels/mac-bintree.png
 description: First article in a series that aims to cover common data structures. # Add post description (optional)
