@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "rspec"
 gem "jekyll"
 gem "html-proofer"
 gem "jekyll-paginate"

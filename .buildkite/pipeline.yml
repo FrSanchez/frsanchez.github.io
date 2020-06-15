@@ -1,0 +1,6 @@
+steps:
+  - name: ":rspec:"
+    command: "bundle install && bundle exec rspec --color specs"
+
+  - name: ":ruby:"
+    command: "rake test"
