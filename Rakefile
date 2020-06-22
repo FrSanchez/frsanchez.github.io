@@ -7,5 +7,6 @@ task :test do
 end
 
 task :build do
+  sh "cd assets; gulp"
   sh "bundle exec jekyll build"
 end
