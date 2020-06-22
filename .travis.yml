@@ -1,38 +1,35 @@
 language: ruby
-cache: bundler
+rvm:
+  - 2.6.3
 
-# Travis will build the site from gh-pages branch
-# and deploy the content to master branch
-# use gh-pages branch to serve for github pages
-# master branch will be used for deployment
+before_script:
+ - chmod +x ./scripts/cibuild # or do this locally and commit
 
+# Assume bundler is being used, therefore
+# the `install` step will run `bundle install` by default.
+script: ./scripts/cibuild
+
+# branch whitelist, only for GitHub Pages
 branches:
   only:
-  - gh-pages
-script:
-  - JEKYLL_ENV=production bundle exec jekyll build --destination site
+  # - gh-pages     # test the gh-pages branch
+  # - /pages-(.*)/ # test every branch which starts with "pages-"
+  - travis
+  - main
 
-# You need to generate a Personal Access Token
-# https://github.com/settings/tokens
-# Add this token in environment variable GITHUB_TOKEN in Travis CI repo settings
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
-deploy:
-  provider: pages
-  local-dir: ./site
-  target-branch: master
-  email: deploy@travis-ci.org
-  name: Deployment Bot
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  keep-history: true
-  on:
-    branch: gh-pages
+addons:
+  apt:
+    packages:
+    - libcurl4-openssl-dev
 
-# Generate your secure token with the travis gem:
-# get Github token from your Travis CI profile page
-  gem install travis
-  travis encrypt 'GIT_NAME="YOUR_USERNAME" GIT_EMAIL="YOUR_EMAIL" GH_TOKEN=YOUR_TOKEN' --add env.global --com
+sudo: false # route your build to the container-based infrastructure for a faster build
 
-# env:
-#   global:
-    #     secure: Example
+cache: bundler # caching bundler gem packages will speed up build
+
+# Optional: disable email notifications about the outcome of your builds
+notifications:
+  email: false
