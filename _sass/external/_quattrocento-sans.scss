@@ -1,0 +1,18 @@
+/*!
+ * Font: SIL OFL 1.1, CSS: MIT License
+ */
+
+ $quattrocento-font-path: "../../assets/fonts/QuattrocentoSans" !default;
+
+ @font-face {
+     font-family: 'Quattrocento Sans';
+     src: url('#{$quattrocento-font-path}/QuattrocentoSans-Regular.eot'); /* IE9 Compat Modes */
+     src: url('#{$quattrocento-font-path}/QuattrocentoSans-Regular.eot?#iefix') format('embedded-opentype'),
+          url('#{$quattrocento-font-path}/QuattrocentoSans-Regular.woff2') format('woff2'),
+          url('#{$quattrocento-font-path}/QuattrocentoSans-Regular.woff') format('woff'),/* Modern Browsers */
+          url('#{$quattrocento-font-path}/QuattrocentoSans-Regular.ttf') format('truetype'),/* Safari, Android, iOS */
+          url('#{$quattrocento-font-path}/QuattrocentoSans-Regular.svg#QuattrocentoSans') format('svg');/* Legacy iOS */
+     font-weight: normal;
+     font-style: normal;
+ }
+ 
