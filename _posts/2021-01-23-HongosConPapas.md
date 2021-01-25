@@ -2,7 +2,7 @@
 layout: post
 title: Chapiñones con papas
 tags: [recetas, champiñones, hongos, papas, cocina] # add tag
-feature-img: assets/img/hongosconpapas.jpg # Add image post (optional)
+feature-img: assets/img/champinones.jpeg # Add image post (optional)
 thumbnail: assets/img/hongosconpapas.jpg
 description: Quesadillas de champiñones con papas. # Add post description (optional)
 hide_title: false
