@@ -1,0 +1,15 @@
+
+<html lang="en">
+  {% include head.html %}
+  <body>
+
+    <div class="content">
+      {{ content }}
+    </div>
+    {% if page.script %}
+    <script src="{{ page.script | relative_url }}" type="text/javascript"></script>
+    {% endif %}
+
+
+  </body>
+</html>
