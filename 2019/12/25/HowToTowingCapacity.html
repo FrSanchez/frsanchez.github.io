@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://frsanchez.github.io//2019/12/25/HowToTowingCapacity.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Sanchez Parra Labs Blog" href="https://frsanchez.github.io//feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    
+    <!-- Global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156236534-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156236534-1');
+    </script>
+
+    <!-- Page analysis (analytics.js) -->
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-156236534-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+     <!-- End Google Analytics -->
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>How to calculate your vehicle’s towing capacity | Sanchez Parra Labs Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="How to calculate your vehicle’s towing capacity" />
+<meta name="author" content="Francisco Sanchez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As we decided to get a travel trailer, we quickly discovered that a towing capacity stated in the manual of my car is not actually even remotely the only value needed to safely tow a trailer." />
+<meta property="og:description" content="As we decided to get a travel trailer, we quickly discovered that a towing capacity stated in the manual of my car is not actually even remotely the only value needed to safely tow a trailer." />
+<link rel="canonical" href="https://frsanchez.github.io//2019/12/25/HowToTowingCapacity.html" />
+<meta property="og:url" content="https://frsanchez.github.io//2019/12/25/HowToTowingCapacity.html" />
+<meta property="og:site_name" content="Sanchez Parra Labs Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-12-25T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="How to calculate your vehicle’s towing capacity" />
+<script type="application/ld+json">
+{"author":{"@type":"Person","name":"Francisco Sanchez"},"description":"As we decided to get a travel trailer, we quickly discovered that a towing capacity stated in the manual of my car is not actually even remotely the only value needed to safely tow a trailer.","headline":"How to calculate your vehicle’s towing capacity","dateModified":"2019-12-25T00:00:00+00:00","datePublished":"2019-12-25T00:00:00+00:00","@type":"BlogPosting","url":"https://frsanchez.github.io//2019/12/25/HowToTowingCapacity.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://frsanchez.github.io//2019/12/25/HowToTowingCapacity.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Manual seo tags -->
+    <!--
+    <title>How to calculate your vehicle's towing capacity | Sanchez Parra Labs Blog</title>
+    <meta name="description" content="As we decided to get a travel trailer,we quickly discovered that a towing capacitystated in the manual of my car is not actually even remotely the only value...">
+    -->
+    <script data-ad-client="ca-pub-8521880323242125" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/favicon/favicon-96x96.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Sanchez Parra Labs Blog" href="/">
+        Sanchez Parra Labs Blog
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#" data-proofer-ignore>
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+            <li>
+              <a href="https://feedburner.google.com/fb/a/mailverify?uri=SanchezParraLabsBlog&amp;loc=en_US" class="popup">Subscribe</a>
+            </li>
+            <li class="separator"> | </li>
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Calculator" title="Calculator" href="/calculator/">
+                     Calculator 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2019/12/25/HowToTowingCapacity.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="How to calculate your vehicle&#39;s towing capacity" />
+<meta property="og:description"  content="As we decided to get a travel trailer,
+we quickly discovered that a towing capacity
+stated in the manual of my car is not actually even remotely the only value needed to safely tow a trailer.
+" />
+<meta property="og:image"        content="assets/img/pexels/towing.png" />
+
+
+<article class="feature-image">
+  <header id="main" style="">
+    
+      
+      <h1 id="How+to+calculate+your+vehicle%27s+towing+capacity" class="title">How to calculate your vehicle's towing capacity</h1>
+      
+
+
+<div class="post-info"><a href="https://github.com/FrSanchez" target="_blank">
+      <img alt="author" src="/assets/img/avatar.jpg">
+    
+    <p class="meta">
+      Francisco Sanchez - December 25, 2019
+    </p></a></div>
+
+    
+  </header>
+  <section class="post-content">
+  
+      <p>As we decided to get a travel trailer,
+we quickly discovered that a towing capacity
+stated in the manual of my car is not actually even remotely the only value needed to safely tow a trailer.</p>
+
+<p><img src="/assets/img/hitch.png" alt="hitch" />
+The result has to do with the relationship between the payload capacity – or cargo capacity - of the vehicle,
+also called TV (Towing Vehicle), and the tongue weight.
+The tongue weight is usually 10% – 15% of the overall trailer weight when properly distributed.</p>
+
+<p>First you have to start looking for the data required to do the calculation
+either online or on your vehicle’s manual. The words used to describe everything are
+pretty descriptive, but it is a lot of lingo and it takes some time to make them part of your day to day
+vocabulary.</p>
+
+<p>For the vehicle, you need to find the following:</p>
+<ul>
+  <li><a href="https://en.wikipedia.org/wiki/Curb_weight" target="_blank">Curb Weight</a>: which is the weight of the vehicle without any passengers or cargo.
+You can find that in your vehicle’s manual, on a sticker on the driver’s side, or on the manufacturer’s website.</li>
+  <li><a href="https://en.wikipedia.org/wiki/Gross_vehicle_weight_rating" target="_blank">GVWR or Gross Vehicle Weight Rating</a>. This is also in the manual and usually on the driver’s side sticker, and it is the max weight the vehicle can have. Make sure you never exceed this value for any reason because you can put your life and other’s at risk.</li>
+  <li>GCVWR or Gross Combined Vehicle Weight Rating. Sometimes found on the driver’s side sticker, or the manual. It refers to how much weight can be carried by the vehicle including the trailer, hence the word <em>Combined</em>.</li>
+  <li>Payload or Cargo capacity. This number should be the GVWR minus the curb weight. Giving you how much fuel, baggage and occupants can go safely into the vehicle. This value also is used to carry the tongue of the trailer.</li>
+  <li>Towing capacity. Stated in the manual. This is usually not that useful because you can’t tow more than the GCVWR minus the GVWR, but this gives you a sense of security that your vehicle was built with extra capacity in several parts that make it safe to reach the limit.</li>
+</ul>
+
+<p>For the trailer, you need 3 values:</p>
+<ul>
+  <li>UVW or Unloaded Vehicle Weight. Which is the weight from the factory without dealer options, but it usually includes full tanks of propane.</li>
+  <li>GVWR. Same as the vehicle. This is the maximum weight the trailer can carry.</li>
+  <li>Hitch Weight. It should be 10% - 15% of the overall weight of the trailer.</li>
+</ul>
+
+<p>This is where things start getting more difficult. But for simplicity you should assume you
+will be carrying your trailer fully loaded - that’s at the GVWR for any required calculation
+including the weight of the hitch. That will give you enough leeway.</p>
+
+<p>As you can see, all those names are kind of confusing in the beginning, but as you start getting
+familiar with them, it becomes easier to understand how much you can actually tow safely.
+Again never exceed the GVWR and GCVWR set by the manufacturer. You can find some tricks on the
+internet to increase the payload capacity of your truck, specially by upgrading the tires, but
+that doesn’t mean the overall GCVWR can go up, and that is because the manufacturer already
+qualified all the components for such rating and it states that such value is safe for operation.
+Think about it this way: if you are in an accident and you are found at fault, your insurance
+may refuse to pay if you are found to have exceeded your vehicle capabilities in any way.</p>
+
+<p>To make it easier to take into account all the values that I mentioned above,
+I used the data and formulas from the guys at
+<a href="http://www.keepyourdaydream.com/payload/" target="_blank">Keep Your Daydream</a> and I wrote a simple online calculator.</p>
+
+<p>Is it open source? Well of course <a href="https://github.com/FrSanchez/TowingCapacity" target="_blank">it is</a>, but even better, you can access it
+from your phone or computer. I also added the <a href="/calculator">calculator</a> to this website.</p>
+
+<p>Hopefully it works for a lot of people and please leave a comment here if you use it.</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffrsanchez.github.io%2F%2F2019%2F12%2F25%2FHowToTowingCapacity.html" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=How+to+calculate+your+vehicle%27s+towing+capacity%20https%3A%2F%2Ffrsanchez.github.io%2F%2F2019%2F12%2F25%2FHowToTowingCapacity.html" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=https://frsanchez.github.io//2019/12/25/HowToTowingCapacity.html&title=How+to+calculate+your+vehicle%27s+towing+capacity%20%7C%20Sanchez+Parra+Labs+Blog" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://frsanchez.github.io//2019/12/25/HowToTowingCapacity.html&title=How+to+calculate+your+vehicle%27s+towing+capacity%20%7C%20Sanchez+Parra+Labs+Blog&summary=&source=https://frsanchez.github.io//2019/12/25/HowToTowingCapacity.html" target="_blank" title=" LinkedIn">
+			<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on LinkedIn</span>
+		</a>
+        </li>
+          
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#Calculator">
+      <p><i class="fa fa-tag fa-fw"></i> Calculator</p>
+    </a>
+    
+    <a class="button" href="/tags#RV">
+      <p><i class="fa fa-tag fa-fw"></i> RV</p>
+    </a>
+    
+    <a class="button" href="/tags#Towing">
+      <p><i class="fa fa-tag fa-fw"></i> Towing</p>
+    </a>
+    
+  </div>
+</footer>
+
+</article>
+
+<!-- Disqus -->
+
+<div class="comments">
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_shortname = 'frsanchez-github-io-2';
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view comments.</noscript>
+
+</div>
+
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="Binary Search Tree" href="/2020/01/27/BinarySearchTree.html">
+            <p>Previous post</p>
+            Binary Search Tree
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="Building a backyard pond" href="/2019/11/29/BuildingAPond.html">
+            <p>Next post</p>
+            Building a backyard pond
+        </a>
+    </div>
+    
+</div>
+
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/pexels/towing.png');
+    
+  }
+</style>
+
+    </div>
+    
+
+    <footer class="site-footer">
+    <p class="text">
+        2020 © <a href="https://github.com/FrSanchez">Francisco Sanchez</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="https://frsanchez.github.io//feed.xml" title="Follow RSS feed">
+    <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+<li>
+    <a href="mailto:sanchezparralabs@outlook.com" title="Email">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://www.facebook.com/TimesFacts"
+       title="Follow on Facebook">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+<li>
+    <a href="https://github.com/frsanchez" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a href="https://www.linkedin.com/in/franciscodsanchez" title="Follow on LinkedIn">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="type" href="https://twitter.com/tng2000"
+       title="Follow on Twitter">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+            <a href="/privacy.html">Privacy Policies</a> 
+            | <a href="/cookies.html">Cookie Policy</a> 
+            | <a href="/tou.html">Terms of Use</a> 
+</footer>
+
+
+
+  </body>
+</html>

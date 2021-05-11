@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<!--
+    Type on Strap jekyll theme v2.0.0
+    Copyright 2016-2019 Sylhare
+    Theme free for personal and commercial use under the MIT license
+    https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
+    <script defer=true src="/assets/js/main.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://frsanchez.github.io//2020/01/27/BinarySearchTree.html">
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/atom+xml" title="Sanchez Parra Labs Blog" href="https://frsanchez.github.io//feed.xml"/>
+
+    
+
+    <!-- KaTeX 0.8.3 -->
+    <!-- if you have any issue check https://github.com/KaTeX/KaTeX -->
+    
+    <script src="/assets/js/vendor/katex.min.js"></script>
+    
+
+    <!-- Google Analytics -->
+    
+    <!-- Global site tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-156236534-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-156236534-1');
+    </script>
+
+    <!-- Page analysis (analytics.js) -->
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-156236534-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+     <!-- End Google Analytics -->
+
+    <!-- seo tags -->
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Binary Search Tree | Sanchez Parra Labs Blog</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Binary Search Tree" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="First article in a series that aims to cover common data structures." />
+<meta property="og:description" content="First article in a series that aims to cover common data structures." />
+<link rel="canonical" href="https://frsanchez.github.io//2020/01/27/BinarySearchTree.html" />
+<meta property="og:url" content="https://frsanchez.github.io//2020/01/27/BinarySearchTree.html" />
+<meta property="og:site_name" content="Sanchez Parra Labs Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-01-27T17:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Binary Search Tree" />
+<script type="application/ld+json">
+{"description":"First article in a series that aims to cover common data structures.","headline":"Binary Search Tree","dateModified":"2020-01-27T17:00:00+00:00","datePublished":"2020-01-27T17:00:00+00:00","@type":"BlogPosting","url":"https://frsanchez.github.io//2020/01/27/BinarySearchTree.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://frsanchez.github.io//2020/01/27/BinarySearchTree.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <!-- Manual seo tags -->
+    <!--
+    <title>Binary Search Tree | Sanchez Parra Labs Blog</title>
+    <meta name="description" content="This is the first article in a series that aims to cover common data structures.">
+    -->
+    <script data-ad-client="ca-pub-8521880323242125" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+  <body>
+    <header class="site-header">
+
+    <!-- Logo and title -->
+	<div class="branding">
+        
+		<a href="/">
+			<img alt="logo img" class="avatar" src="/assets/img/favicon/favicon-96x96.png" />
+		</a>
+        
+
+		<h1 class="site-title">
+			<a aria-label="Sanchez Parra Labs Blog" href="/">
+        Sanchez Parra Labs Blog
+      </a>
+		</h1>
+	</div>
+
+    <!-- Toggle menu -->
+    <nav class="clear">
+    <a aria-label="pull" id="pull" class="toggle" href="#" data-proofer-ignore>
+    <i class="fa fa-bars fa-lg"></i>
+    </a>
+
+    <!-- Menu -->
+    <ul class="hide">
+        
+            <li>
+              <a href="https://feedburner.google.com/fb/a/mailverify?uri=SanchezParraLabsBlog&amp;loc=en_US" class="popup">Subscribe</a>
+            </li>
+            <li class="separator"> | </li>
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="About" title="About" href="/about/">
+                     About 
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Calculator" title="Calculator" href="/calculator/">
+                     Calculator 
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Search" title="Search" href="/search/">
+                     <i class="fa fa-search" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            <li class="separator"> | </li>
+            <li>
+                <a class="clear" aria-label="Tags" title="Tags" href="/tags/">
+                     <i class="fa fa-tags" aria-hidden="true"></i>
+                    
+                </a>
+            </li>
+            
+            
+        
+            
+            
+        
+            
+            
+        
+            
+            
+        
+    </ul>
+
+	</nav>
+</header>
+
+    <div class="content">
+      
+
+<meta property="og:url"          content="/2020/01/27/BinarySearchTree.html" />
+<meta property="og:type"         content="article" />
+<meta property="og:title"        content="Binary Search Tree" />
+<meta property="og:description"  content="This is the first article in a series that aims to cover common data structures.
+" />
+<meta property="og:image"        content="assets/img/bintree.png" />
+
+
+<article class="feature-image">
+  <header id="main" style="">
+    
+      
+      <h1 id="Binary+Search+Tree" class="title">Binary Search Tree</h1>
+      
+
+
+<div class="post-info">
+    <p class="meta">
+      January 27, 2020
+    </p></div>
+
+    
+  </header>
+  <section class="post-content">
+  
+      <p>This is the first article in a series that aims to cover common data structures.</p>
+
+<p>A binary search tree is an in-memory data structure whose purpose in life is to make
+ultra fast searches even through large amounts of data. The main downside of this
+structure is the need for the data to be ordered.</p>
+
+<p>Let’s start first by identifying why a binary search is so fast. If we have an array as shown
+in the image below, with elements a fixed number of elements in it as long as they are
+sorted we can use what is called a binary search to find if an element is contained in the array or not.</p>
+
+<p><img src="/assets/img/array.png" alt="array" /></p>
+
+<p>A binary search purpose is to eliminate half of the data in every iteration slicing each
+time the amount of data that needs to be searched. In the array above, we would start by
+looking at the element in the middle ( n/2 ). If the data we are looking for is there
+our search is done. The next step is the one that makes the split it half. If the
+element we are looking for is less than the middle, then we repeat the search in the
+middle left, otherwise we repeat the search in the middle right. And then repeat the
+same sequence as you can see in the images below.</p>
+
+<p><img src="/assets/img/arrayMiddle.png" alt="array with middle" /></p>
+
+<p>Eventually we will find the element we are looking for, or we would traverse the whole dataset
+in the minimum number possible of steps making sure the element is not there. Keep in mind that
+this algorithm takes into account the fact that the data within the array is already ordered
+using the same criteria that will be used to search within it. If you need to start with
+unsorted data, then you need to sort it first.</p>
+
+<p>Now let’s take this to the next level. What if each element within the array was uniquely placed in memory
+with a simple way of reaching to the elements on the left, or the elements on the right? But each of those
+sets of elements need to maintain the same rule. That is what we can refer to as a node.
+A <em>Node</em> is going to have 3 pieces to it:</p>
+<ul>
+  <li>Data</li>
+  <li>A pointer to a node on the left</li>
+  <li>A pointer to a node on the right</li>
+</ul>
+
+<p>Each node will point in turn to another node, or when the node doesn’t have any left or right pointers, it is called a leaf.
+In the example below, you can see the node in the middle has the value of 100 - and this is called the root,
+because it is our entry point into the tree. All the data on the left hand side of the root is less than 100
+while all the nodes on the right will have values larger than 100.</p>
+
+<p><img src="/assets/img/OrderedTree.png" alt="binary search tree" /></p>
+
+<p>With such a tree, we can easily create a recursive search algorithm. The following
+piece of code is written in Java:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">BinarySearchTree</span> <span class="o">{</span>
+  <span class="c1">//... This is a snippet</span>
+  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Node</span>
+  <span class="o">{</span>
+    <span class="kd">private</span> <span class="nc">Data</span> <span class="n">data</span> <span class="o">=</span> <span class="no">NULL</span><span class="o">;</span> <span class="c1">// we assume Data is defined and can be compared</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">left</span> <span class="o">=</span> <span class="no">NULL</span><span class="o">;</span>
+    <span class="kd">private</span> <span class="nc">Node</span> <span class="n">right</span> <span class="o">=</span> <span class="no">NULL</span><span class="o">;</span>
+
+    <span class="kd">public</span> <span class="nc">Node</span> <span class="nf">getLeft</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">left</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">Node</span> <span class="nf">getRight</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">right</span><span class="o">;</span> <span class="o">}</span>
+    <span class="kd">public</span> <span class="nc">Data</span> <span class="nf">getData</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">data</span><span class="o">;</span> <span class="o">}</span>
+  <span class="o">}</span>
+
+  <span class="nc">Node</span> <span class="nf">search</span><span class="o">(</span><span class="nc">Node</span> <span class="n">node</span><span class="o">,</span> <span class="nc">Data</span> <span class="n">target</span><span class="o">)</span>
+  <span class="o">{</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">getData</span><span class="o">()</span> <span class="o">==</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="n">node</span><span class="o">;</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">target</span> <span class="o">&lt;</span> <span class="n">node</span><span class="o">.</span><span class="na">getData</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">node</span><span class="o">.</span><span class="na">getLeft</span><span class="o">()</span> <span class="o">!=</span> <span class="no">NULL</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="nf">search</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">left</span><span class="o">,</span> <span class="n">target</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">if</span> <span class="o">(</span><span class="n">target</span> <span class="o">&gt;</span> <span class="n">node</span><span class="o">.</span><span class="na">getData</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">node</span><span class="o">.</span><span class="na">getRight</span><span class="o">()</span> <span class="o">!=</span> <span class="no">NULL</span><span class="o">)</span> <span class="o">{</span>
+      <span class="k">return</span> <span class="nf">search</span><span class="o">(</span><span class="n">node</span><span class="o">.</span><span class="na">right</span><span class="o">,</span> <span class="n">target</span><span class="o">);</span>
+    <span class="o">}</span>
+    <span class="k">return</span> <span class="no">NULL</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<hr />
+<p>Below is the same approach but written in C++</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="k">struct</span> <span class="nc">Node</span>
+<span class="p">{</span>
+    <span class="n">Data</span><span class="o">*</span> <span class="n">data</span><span class="p">;</span> <span class="c1">// NodeData is defined somewhere else and is comparable</span>
+    <span class="n">Node</span><span class="o">*</span> <span class="n">left</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">Node</span><span class="o">*</span> <span class="n">right</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="n">Node</span><span class="o">*</span> <span class="nf">search</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">node</span><span class="p">,</span> <span class="n">Data</span> <span class="o">&amp;</span><span class="n">target</span><span class="p">)</span>
+<span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">==</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">node</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">&lt;</span> <span class="o">*</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">&amp;&amp;</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">left</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">target</span> <span class="o">&gt;</span> <span class="o">*</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">data</span> <span class="o">&amp;&amp;</span> <span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">search</span><span class="p">(</span><span class="n">node</span><span class="o">-&gt;</span><span class="n">right</span><span class="p">,</span> <span class="n">target</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Stay tuned, because in future articles I will add more operations to the Binary Search Tree and will
+also talk about optimizing the code utilizing more object oriented principles and strengths
+of Java and C++.</p>
+
+    
+  </section>
+
+  <!-- Social media shares -->
+  
+
+<div class="share-buttons">
+    <ul class="share-buttons">
+        <div class="meta">Share</div>
+        
+        <li>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffrsanchez.github.io%2F%2F2020%2F01%2F27%2FBinarySearchTree.html" target="_blank" title=" Facebook">
+			<i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Facebook</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="https://twitter.com/intent/tweet?text=Binary+Search+Tree%20https%3A%2F%2Ffrsanchez.github.io%2F%2F2020%2F01%2F27%2FBinarySearchTree.html" target="_blank" title="">
+			<i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Tweet</span>
+		</a>
+        </li>
+            
+        <li>
+            <a href="http://www.reddit.com/submit?url=https://frsanchez.github.io//2020/01/27/BinarySearchTree.html&title=Binary+Search+Tree%20%7C%20Sanchez+Parra+Labs+Blog" target="_blank" title=" Reddit">
+			<i class="fa fa-reddit-square fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on Reddit</span>
+		</a>
+        </li>
+         
+        <li>
+            <a href="http://www.linkedin.com/shareArticle?mini=true&url=https://frsanchez.github.io//2020/01/27/BinarySearchTree.html&title=Binary+Search+Tree%20%7C%20Sanchez+Parra+Labs+Blog&summary=&source=https://frsanchez.github.io//2020/01/27/BinarySearchTree.html" target="_blank" title=" LinkedIn">
+			<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+			<span class="sr-only">Share on LinkedIn</span>
+		</a>
+        </li>
+          
+    </ul>
+</div>
+
+
+
+
+   <!-- Tag list -->
+  
+  
+
+
+<footer>
+  <div class="tag-list">
+    
+      <div class="meta">Tags</div>
+    
+
+    
+    <a class="button" href="/tags#BinarySearch">
+      <p><i class="fa fa-tag fa-fw"></i> BinarySearch</p>
+    </a>
+    
+    <a class="button" href="/tags#BinaryTree">
+      <p><i class="fa fa-tag fa-fw"></i> BinaryTree</p>
+    </a>
+    
+    <a class="button" href="/tags#Data+structures">
+      <p><i class="fa fa-tag fa-fw"></i> Data structures</p>
+    </a>
+    
+    <a class="button" href="/tags#Programing">
+      <p><i class="fa fa-tag fa-fw"></i> Programing</p>
+    </a>
+    
+  </div>
+</footer>
+
+</article>
+
+<!-- Disqus -->
+
+<div class="comments">
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+	var disqus_shortname = 'frsanchez-github-io-2';
+	(function() {
+		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+</script>
+<noscript>Please enable JavaScript to view comments.</noscript>
+
+</div>
+
+
+
+<!-- Post navigation -->
+
+  <div id="post-nav">
+    
+    <div id="previous-post">
+        <a alt="Spirograph" href="/spiro/">
+            <p>Previous post</p>
+            Spirograph
+        </a>
+    </div>
+    
+
+    
+    <div id="next-post">
+        <a alt="How to calculate your vehicle's towing capacity" href="/2019/12/25/HowToTowingCapacity.html">
+            <p>Next post</p>
+            How to calculate your vehicle's towing capacity
+        </a>
+    </div>
+    
+</div>
+
+
+
+
+<!-- To change color of links in the page -->
+<style>
+  
+
+  header#main {
+    background-repeat:no-repeat;
+     background-image: url('/assets/img/bintree.png');
+    
+  }
+</style>
+
+    </div>
+    
+
+    <footer class="site-footer">
+    <p class="text">
+        2020 © <a href="https://github.com/FrSanchez">Francisco Sanchez</a>
+</p>
+            <div class="footer-icons">
+                <ul>
+                <!-- Social icons from Font Awesome, if enabled -->
+                
+<li>
+    <a feed.xml href="https://frsanchez.github.io//feed.xml" title="Follow RSS feed">
+    <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+<li>
+    <a href="mailto:sanchezparralabs@outlook.com" title="Email">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+<li>
+    <a href="https://www.facebook.com/TimesFacts"
+       title="Follow on Facebook">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+<li>
+    <a href="https://github.com/frsanchez" title="Follow on GitHub">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+<li>
+    <a href="https://www.linkedin.com/in/franciscodsanchez" title="Follow on LinkedIn">
+		<span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+    <a class="type" href="https://twitter.com/tng2000"
+       title="Follow on Twitter">
+        <span class="fa-stack fa-lg">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>
+</li>
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+            <a href="/privacy.html">Privacy Policies</a> 
+            | <a href="/cookies.html">Cookie Policy</a> 
+            | <a href="/tou.html">Terms of Use</a> 
+</footer>
+
+
+
+  </body>
+</html>
