@@ -1,5 +1,11 @@
 # My blog source
 
+# Run & deploy
+
+You need to do `bundle install`
+```bash
+./scripts/localDeploy.sh
+```
 ## Local testing
 1. Run the Jekyll server: `bundle exec jekyll serve -P 4880`
 
