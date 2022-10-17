@@ -2,6 +2,8 @@
 
 # Run & deploy
 
+**NOTE**: First read (https://jekyllrb.com/docs/installation/macos/)[https://jekyllrb.com/docs/installation/macos/]
+
 You need to do `bundle install`
 ```bash
 ./scripts/localDeploy.sh
