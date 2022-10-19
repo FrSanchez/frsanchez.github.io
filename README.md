@@ -4,6 +4,11 @@
 
 **NOTE**: First read (https://jekyllrb.com/docs/installation/macos/)[https://jekyllrb.com/docs/installation/macos/]
 
+- Install RVM
+- Install ruby 3
+- run `bundle install`
+- run `bundle exec jekyll build`
+
 You need to do `bundle install`
 ```bash
 ./scripts/localDeploy.sh
