@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://frsanchez.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://frsanchez.github.io//" rel="alternate" type="text/html" /><updated>2022-10-18T17:02:30-07:00</updated><id>https://frsanchez.github.io//feed.xml</id><title type="html">Sanchez Parra Labs Blog</title><subtitle>A blog about coding, photography and weekenders</subtitle><entry><title type="html">Champiñones con papas</title><link href="https://frsanchez.github.io//chanpinonesconpapas/" rel="alternate" type="text/html" title="Champiñones con papas" /><published>2021-01-23T00:00:00-08:00</published><updated>2021-01-23T00:00:00-08:00</updated><id>https://frsanchez.github.io//HongosConPapas</id><content type="html" xml:base="https://frsanchez.github.io//chanpinonesconpapas/"><![CDATA[<iframe width="1082" height="608" src="https://www.youtube.com/embed/5JbnxtnZE0M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>]]></content><author><name>Muriel Parra</name></author><category term="recetas" /><category term="champiñones" /><category term="hongos" /><category term="papas" /><category term="cocina" /><summary type="html"><![CDATA[Quesadillas de champiñones con papas.]]></summary></entry><entry><title type="html">El Santo Rosario (spanish)</title><link href="https://frsanchez.github.io//rosario/" rel="alternate" type="text/html" title="El Santo Rosario (spanish)" /><published>2020-06-22T00:00:00-07:00</published><updated>2020-06-22T00:00:00-07:00</updated><id>https://frsanchez.github.io//Rosario</id><content type="html" xml:base="https://frsanchez.github.io//rosario/"><![CDATA[<p>Una de las devociones cristianas más hermosas es meditar la vida de nuestro Señor
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://frsanchez.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://frsanchez.github.io//" rel="alternate" type="text/html" /><updated>2023-06-14T10:37:59-07:00</updated><id>https://frsanchez.github.io//feed.xml</id><title type="html">Sanchez Parra Labs Blog</title><subtitle>A blog about coding, photography and weekenders</subtitle><entry><title type="html">La Importancia de las APIs en el Mundo Tecnológico</title><link href="https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs.html" rel="alternate" type="text/html" title="La Importancia de las APIs en el Mundo Tecnológico" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs</id><content type="html" xml:base="https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs.html"><![CDATA[<p>En el vertiginoso mundo tecnológico de hoy en día, las APIs (Interfaces de Programación de Aplicaciones, por sus siglas en inglés) desempeñan un papel fundamental en el funcionamiento y la interconexión de diferentes sistemas y aplicaciones. Desde el ámbito empresarial hasta el desarrollo de software, las APIs han revolucionado la forma en que las empresas interactúan con sus clientes, optimizan sus operaciones y promueven la colaboración entre diversas plataformas.</p>
+
+<h1 id="qué-es-un-api-y-por-qué-es-relevante">¿Qué es un API y por qué es relevante?</h1>
+
+<p>Un API es un conjunto de reglas y protocolos que permite que diferentes aplicaciones se comuniquen entre sí. Básicamente, actúa como un intermediario que facilita la interacción y el intercambio de datos entre diferentes sistemas, sin que los usuarios finales necesiten comprender los detalles técnicos subyacentes.</p>
+
+<p>La relevancia de las APIs radica en su capacidad para permitir la integración y la colaboración sin problemas entre diferentes sistemas. Al proporcionar una interfaz estándar para la comunicación y el intercambio de datos, las APIs eliminan la necesidad de desarrollar soluciones personalizadas desde cero. Esto no solo ahorra tiempo y recursos, sino que también fomenta la innovación y la creación de nuevas aplicaciones y servicios.</p>
+
+<h1 id="las-apis-web-y-su-impacto">Las APIs Web y su impacto:</h1>
+
+<p>En este artículo, nos centraremos en las APIs web, que son interfaces de programación diseñadas para permitir la comunicación entre aplicaciones a través de la web. Estas APIs utilizan protocolos estándar basados en HTTP, como REST (Representational State Transfer) y GraphQL, para facilitar la transferencia de datos.</p>
+
+<h1 id="el-crecimiento-exponencial-de-las-apis">El crecimiento exponencial de las APIs:</h1>
+
+<p>El impacto de las APIs en el mundo tecnológico es innegable. Según estudios recientes, el número de APIs públicas disponibles ha experimentado un crecimiento significativo en los últimos años. Por ejemplo, en el año 2019, el número total de APIs públicas superó la asombrosa cifra de 50,000, lo que representa un incremento del 144% en comparación con el año anterior (Fuente: insertar referencia). Este crecimiento continuo demuestra la creciente importancia y adopción de las APIs en el mundo actual.</p>
+
+<h1 id="beneficios-de-las-apis-en-el-mundo-empresarial">Beneficios de las APIs en el mundo empresarial:</h1>
+
+<ol>
+  <li>
+    <p>Ampliación del alcance y la presencia en línea: Las APIs permiten que las empresas compartan sus servicios y datos con socios y desarrolladores externos, lo que brinda la oportunidad de expandir su alcance y llegar a nuevos clientes.</p>
+  </li>
+  <li>
+    <p>Innovación y agilidad: Las APIs fomentan la innovación al proporcionar una plataforma para que los desarrolladores creen nuevas aplicaciones y servicios utilizando la funcionalidad existente de otros sistemas.</p>
+  </li>
+  <li>
+    <p>Mejora de la experiencia del cliente: Las APIs permiten a las empresas integrar sus servicios con otras aplicaciones populares, brindando a los clientes una experiencia más fluida y personalizada.</p>
+  </li>
+  <li>
+    <p>Eficiencia operativa: Al utilizar APIs para automatizar procesos y compartir datos, las empresas pueden optimizar sus operaciones internas y mejorar la eficiencia.</p>
+  </li>
+  <li>
+    <p>Mejores prácticas para el desarrollo de APIs (próximo artículo):</p>
+  </li>
+</ol>
+
+<p>En un próximo artículo, exploraremos en detalle las mejores prácticas para el desarrollo de APIs. Discutiremos la importancia de un diseño claro y coherente, la documentación exhaustiva, la autenticación y autorización seguras, y otros aspectos clave que garantizan la calidad y la adopción exitosa de una API.</p>
+
+<h1 id="conclusión">Conclusión:</h1>
+
+<p>En el vertiginoso mundo tecnológico actual, las APIs desempeñan un papel esencial en la interconexión de sistemas y aplicaciones. Con su capacidad para fomentar la innovación, mejorar la eficiencia operativa y ampliar el alcance de las empresas, las APIs se han convertido en una herramienta fundamental para el éxito en el mundo digital. A medida que el número de APIs públicas continúa en aumento, es fundamental comprender su importancia y adoptar las mejores prácticas para su desarrollo y uso eficiente.</p>]]></content><author><name></name></author><category term="APIs" /><category term="Interfaces de Programación de Aplicaciones" /><category term="Importancia de las APIs" /><category term="Conectividad tecnológica" /><category term="Innovación tecnológica" /><category term="Integración de sistemas" /><category term="Colaboración de aplicaciones" /><category term="Interconexión de aplicaciones" /><category term="Beneficios de las APIs" /><category term="APIs web" /><category term="Desarrollo de APIs" /><category term="Empresas y APIs" /><category term="Experiencia del cliente y APIs" /><category term="Eficiencia operativa y APIs" /><category term="Mejores prácticas para APIs" /><category term="Diseño de APIs" /><category term="Documentación de APIs" /><category term="Autenticación y autorización de APIs" /><category term="Crecimiento de las APIs" /><category term="Estadísticas de APIs" /><summary type="html"><![CDATA[En el vertiginoso mundo tecnológico de hoy en día, las APIs (Interfaces de Programación de Aplicaciones, por sus siglas en inglés) desempeñan un papel fundamental en el funcionamiento y la interconexión de diferentes sistemas y aplicaciones. Desde el ámbito empresarial hasta el desarrollo de software, las APIs han revolucionado la forma en que las empresas interactúan con sus clientes, optimizan sus operaciones y promueven la colaboración entre diversas plataformas.]]></summary></entry><entry><title type="html">Champiñones con papas</title><link href="https://frsanchez.github.io//chanpinonesconpapas/" rel="alternate" type="text/html" title="Champiñones con papas" /><published>2021-01-23T00:00:00-08:00</published><updated>2021-01-23T00:00:00-08:00</updated><id>https://frsanchez.github.io//HongosConPapas</id><content type="html" xml:base="https://frsanchez.github.io//chanpinonesconpapas/"><![CDATA[<iframe width="1082" height="608" src="https://www.youtube.com/embed/5JbnxtnZE0M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>]]></content><author><name>Muriel Parra</name></author><category term="recetas" /><category term="champiñones" /><category term="hongos" /><category term="papas" /><category term="cocina" /><summary type="html"><![CDATA[Quesadillas de champiñones con papas.]]></summary></entry><entry><title type="html">El Santo Rosario (spanish)</title><link href="https://frsanchez.github.io//rosario/" rel="alternate" type="text/html" title="El Santo Rosario (spanish)" /><published>2020-06-22T00:00:00-07:00</published><updated>2020-06-22T00:00:00-07:00</updated><id>https://frsanchez.github.io//Rosario</id><content type="html" xml:base="https://frsanchez.github.io//rosario/"><![CDATA[<p>Una de las devociones cristianas más hermosas es meditar la vida de nuestro Señor
 Jesucristo en compañía de su santa madre. Aunque no me considero experto en el tema,
 si quiero compartir este excelente ejercicio espiritual diaro y entonces aquí
 presento una breve introducción a como rezar el rosario. Para una explicación detallada
@@ -216,10 +256,10 @@ an empty spot in the table. In my opinion the first one is a cleaner one and the
 
 <p>If we wanted to calculate a simple hash value for the string in the input box below, we can use the following code</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">hashForString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nf">hashForString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">total</span> <span class="o">+=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="nx">total</span> <span class="o">+=</span> <span class="nx">str</span><span class="p">.</span><span class="nf">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
   <span class="p">};</span>
   <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
@@ -232,51 +272,51 @@ instead of writing pseudocode I prefer giving fully working javascript that can 
 or adapted to your preferred language.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Holds the key value pair, as is the basis for a simple linked list</span>
-<span class="kd">class</span> <span class="nx">Node</span> <span class="p">{</span>
-  <span class="kd">constructor</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="nc">Node</span> <span class="p">{</span>
+  <span class="nf">constructor</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">key</span> <span class="o">=</span> <span class="nx">key</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">class</span> <span class="nx">HashMap</span> <span class="p">{</span>
-  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="nc">HashMap</span> <span class="p">{</span>
+  <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// We use for example a 20 element array.</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
     <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// as usual validation, just make sure both the key and the value are valid</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">||</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span><span class="p">)</span>
+    <span class="k">if </span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">||</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span><span class="p">)</span>
       <span class="k">return</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nx">hashForString</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">])</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nf">hashForString</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">])</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="c1">// this code happens in case of (hash % 20) collisions</span>
       <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">];</span>
-      <span class="k">while</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">while </span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">node</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
       <span class="p">}</span>
-      <span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+      <span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="kd">get</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span><span class="p">)</span>
+  <span class="nf">get</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span><span class="p">)</span>
       <span class="k">return</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nx">hashForString</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nf">hashForString</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">];</span>
     <span class="c1">// we start on the first node in the table</span>
     <span class="c1">// and iterate until we reach the end or the requested key</span>
-    <span class="k">while</span> <span class="p">(</span><span class="nx">node</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">key</span> <span class="o">!==</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while </span><span class="p">(</span><span class="nx">node</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">key</span> <span class="o">!==</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">node</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="nx">node</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -284,11 +324,11 @@ or adapted to your preferred language.</p>
   <span class="p">}</span>
 
   <span class="c1">// an example of how to use it:</span>
-  <span class="kd">var</span> <span class="nx">hm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashMap</span><span class="p">();</span>
-  <span class="nx">hm</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">one</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text 1</span><span class="dl">"</span><span class="p">);</span>
-  <span class="nx">hm</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text 2</span><span class="dl">"</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hm</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">one</span><span class="dl">"</span><span class="p">));</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hm</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">));</span></code></pre></figure>
+  <span class="kd">var</span> <span class="nx">hm</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="p">();</span>
+  <span class="nx">hm</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">one</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text 1</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">hm</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text 2</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">hm</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">one</span><span class="dl">"</span><span class="p">));</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">hm</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">));</span></code></pre></figure>
 
 <p>Please let me know below your comments, and what other programming challenges you would like to get explained here.</p>]]></content><author><name></name></author><category term="HashMap" /><category term="Data structures" /><category term="Programing" /><summary type="html"><![CDATA[Explaining what a hash map is.]]></summary></entry><entry><title type="html">Binary Search Tree in Javascript</title><link href="https://frsanchez.github.io//2020/02/24/BinaryTreeInJavascript.html" rel="alternate" type="text/html" title="Binary Search Tree in Javascript" /><published>2020-02-24T00:00:00-08:00</published><updated>2020-02-24T00:00:00-08:00</updated><id>https://frsanchez.github.io//2020/02/24/BinaryTreeInJavascript</id><content type="html" xml:base="https://frsanchez.github.io//2020/02/24/BinaryTreeInJavascript.html"><![CDATA[<p>This is a sample implementation of a Binary Serach Tree in JavaScript. Right now it is a work in progress, please
 keep looking for updates for this post, as I will keep working on it.</p>
@@ -305,8 +345,8 @@ as I keep progressing in this code.</p>
 
 <p>First we have to define the basic piece, and that is going to be a Node:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">class</span> <span class="nx">Node</span> <span class="p">{</span>
-  <span class="kd">constructor</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">class</span> <span class="nc">Node</span> <span class="p">{</span>
+  <span class="nf">constructor</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
@@ -324,25 +364,25 @@ from the chosen node, like the code below that returns a boolean value to indica
 was inserted or not:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// ...</span>
-  <span class="nx">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>    
+  <span class="nf">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>    
     <span class="c1">// First make sure we are inserting data but we also prevent duplicates</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">node</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">===</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">node</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">===</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="c1">// now chose whether go left</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">&gt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">&gt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
         <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
       <span class="p">}</span>
-      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="c1">// or go right</span>
-      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
         <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
       <span class="p">}</span>
-      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
   <span class="p">}</span>
@@ -377,20 +417,20 @@ was inserted or not:</p>
 
 <p>To read the names, the code takes the contents of the textarea and puts it into an array line by line to be able to manipulate it. JQuery makes it easy by using the textarea locator, retrieving the value and the using split() by newline, then sorting is native in javascript for an array:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#names</span><span class="dl">'</span><span class="p">).</span><span class="nx">val</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">);</span>
-<span class="nx">names</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#names</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">().</span><span class="nf">split</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">names</span><span class="p">.</span><span class="nf">sort</span><span class="p">();</span></code></pre></figure>
 
 <p>Javascript provides a pseudo-random number generator that produces number in the range (0, 1). For the case presented here we need an integer number in the range [0, names.length] for that we can write a simple function to take an upper boundary and produce a pseudo-random integer in that range:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">random</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">bound</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">bound</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">bound</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
 <p>To be able to generate a random list, the code needs to iterate through the whole list of names and randomly select a new position for every entry:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">dest</span> <span class="o">=</span> <span class="nx">random</span><span class="p">(</span><span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">dest</span> <span class="o">!=</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">dest</span> <span class="o">=</span> <span class="nf">random</span><span class="p">(</span><span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">dest</span> <span class="o">!=</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">names</span><span class="p">[</span><span class="nx">dest</span><span class="p">];</span>
     <span class="nx">names</span><span class="p">[</span><span class="nx">dest</span><span class="p">]</span> <span class="o">=</span> <span class="nx">names</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
     <span class="nx">names</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">t</span><span class="p">;</span>
@@ -400,12 +440,12 @@ was inserted or not:</p>
 <h3 id="handling-files">Handling files</h3>
 <p>To be able to manipulate files, the browser will generate events related to drag and drop, for which the program needs to handle <em>dragOver</em>, <em>dragEnter</em>, and <em>drop</em>. Within the drop handler, the program can instantiate the HTML5 FileReader object, that will read the local file. The reader works on events to avoid blocking the main (and only) thread executing the script. Within the handler of the reader, I load the contents of the file into the textarea using JQuery $.text() method.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
-<span class="nx">reader</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">load</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileReader</span><span class="p">();</span>
+<span class="nx">reader</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">load</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">fileText</span> <span class="o">=</span> <span class="nx">reader</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#names</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">fileText</span><span class="p">);</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#names</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">fileText</span><span class="p">);</span>
 <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
-<span class="nx">reader</span><span class="p">.</span><span class="nx">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span></code></pre></figure>
+<span class="nx">reader</span><span class="p">.</span><span class="nf">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span></code></pre></figure>
 
 <h2 id="conclusion">Conclusion</h2>
 
@@ -545,7 +585,7 @@ piece of code is written in Java:</p>
     <span class="n">Node</span><span class="o">*</span> <span class="n">right</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
 <span class="p">};</span>
 
-<span class="n">Node</span><span class="o">*</span> <span class="n">search</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">node</span><span class="p">,</span> <span class="n">Data</span> <span class="o">&amp;</span><span class="n">target</span><span class="p">)</span>
+<span class="n">Node</span><span class="o">*</span> <span class="nf">search</span><span class="p">(</span><span class="n">Node</span> <span class="o">*</span><span class="n">node</span><span class="p">,</span> <span class="n">Data</span> <span class="o">&amp;</span><span class="n">target</span><span class="p">)</span>
 <span class="p">{</span>
   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">node</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
@@ -684,8 +724,4 @@ the price at amazon is just so much better and the subscription quite convenient
 But the other six survived and started growing at regular rate. Whenever we leave on vacation we ask some
 of our neighbors to feed the fish once a day.</p>
 
-<p>The filter requires regular maintenance, every 2-3 months cleaning and changing the carbon filters. And so far after 1 and a half years we had to change the light bulb for a new one.  And that is pretty much all the maintenance.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Having a water feature in the backyard is always nice, but there are some steps to maintain the feature that come along with any installation. If properly cared for the feature can last for years and give a nice touch to your house.]]></summary></entry><entry><title type="html">First post!</title><link href="https://frsanchez.github.io//2019/11/28/Hello-World.html" rel="alternate" type="text/html" title="First post!" /><published>2019-11-28T00:00:00-08:00</published><updated>2019-11-28T00:00:00-08:00</updated><id>https://frsanchez.github.io//2019/11/28/Hello-World</id><content type="html" xml:base="https://frsanchez.github.io//2019/11/28/Hello-World.html"><![CDATA[<p><img src="/assets/img/pondfountain.jpg" alt="my pond" title="my pond" /></p>
-
-<p>This is the first post on my new blog. I’m just getting this new blog going, so stay tuned for more.</p>
-
-<p>The picture in the heading is a close-up of my backyard pond. We dug it and installed a few years back, and put about a dozen small fish. About a year later half of them were dead, but the rest survived the first winter and so far it has been 2 full seasons and they are still growing.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>The filter requires regular maintenance, every 2-3 months cleaning and changing the carbon filters. And so far after 1 and a half years we had to change the light bulb for a new one.  And that is pretty much all the maintenance.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Having a water feature in the backyard is always nice, but there are some steps to maintain the feature that come along with any installation. If properly cared for the feature can last for years and give a nice touch to your house.]]></summary></entry></feed>

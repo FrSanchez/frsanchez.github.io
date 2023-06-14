@@ -83,7 +83,7 @@
     <!-- seo tags -->
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>HashMap | Sanchez Parra Labs Blog</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="HashMap" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Explaining what a hash map is." />
@@ -292,10 +292,10 @@ an empty spot in the table. In my opinion the first one is a cleaner one and the
 
 <p>If we wanted to calculate a simple hash value for the string in the input box below, we can use the following code</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">hashForString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nf">hashForString</span><span class="p">(</span><span class="nx">str</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">var</span> <span class="nx">total</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
   <span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">str</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">total</span> <span class="o">+=</span> <span class="nx">str</span><span class="p">.</span><span class="nx">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
+    <span class="nx">total</span> <span class="o">+=</span> <span class="nx">str</span><span class="p">.</span><span class="nf">charCodeAt</span><span class="p">(</span><span class="nx">i</span><span class="p">);</span>
   <span class="p">};</span>
   <span class="k">return</span> <span class="nx">total</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
@@ -308,51 +308,51 @@ instead of writing pseudocode I prefer giving fully working javascript that can 
 or adapted to your preferred language.</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Holds the key value pair, as is the basis for a simple linked list</span>
-<span class="kd">class</span> <span class="nx">Node</span> <span class="p">{</span>
-  <span class="kd">constructor</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="nc">Node</span> <span class="p">{</span>
+  <span class="nf">constructor</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">key</span> <span class="o">=</span> <span class="nx">key</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">value</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
   <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="kd">class</span> <span class="nx">HashMap</span> <span class="p">{</span>
-  <span class="kd">constructor</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="nc">HashMap</span> <span class="p">{</span>
+  <span class="nf">constructor</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">// We use for example a 20 element array.</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">table</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Array</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
     <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">20</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="nx">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nf">put</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// as usual validation, just make sure both the key and the value are valid</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">||</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span><span class="p">)</span>
+    <span class="k">if </span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">||</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span><span class="p">)</span>
       <span class="k">return</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nx">hashForString</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">])</span> <span class="p">{</span>
-      <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nf">hashForString</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="k">if </span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">])</span> <span class="p">{</span>
+      <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="c1">// this code happens in case of (hash % 20) collisions</span>
       <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">];</span>
-      <span class="k">while</span> <span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">while </span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
         <span class="nx">node</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
       <span class="p">}</span>
-      <span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
+      <span class="nx">node</span><span class="p">.</span><span class="nx">next</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Node</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">value</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="kd">get</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span><span class="p">)</span>
+  <span class="nf">get</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">===</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span><span class="p">)</span>
       <span class="k">return</span><span class="p">;</span>
-    <span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nx">hashForString</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">hash</span> <span class="o">=</span> <span class="nf">hashForString</span><span class="p">(</span><span class="nx">key</span><span class="p">)</span> <span class="o">%</span> <span class="mi">20</span><span class="p">;</span>
     <span class="kd">var</span> <span class="nx">node</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">table</span><span class="p">[</span><span class="nx">hash</span><span class="p">];</span>
     <span class="c1">// we start on the first node in the table</span>
     <span class="c1">// and iterate until we reach the end or the requested key</span>
-    <span class="k">while</span> <span class="p">(</span><span class="nx">node</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">key</span> <span class="o">!==</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">while </span><span class="p">(</span><span class="nx">node</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">key</span> <span class="o">!==</span> <span class="nx">key</span><span class="p">)</span> <span class="p">{</span>
       <span class="nx">node</span> <span class="o">=</span> <span class="nx">node</span><span class="p">.</span><span class="nx">next</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="nx">node</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
@@ -360,11 +360,11 @@ or adapted to your preferred language.</p>
   <span class="p">}</span>
 
   <span class="c1">// an example of how to use it:</span>
-  <span class="kd">var</span> <span class="nx">hm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">HashMap</span><span class="p">();</span>
-  <span class="nx">hm</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">one</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text 1</span><span class="dl">"</span><span class="p">);</span>
-  <span class="nx">hm</span><span class="p">.</span><span class="nx">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text 2</span><span class="dl">"</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hm</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">one</span><span class="dl">"</span><span class="p">));</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hm</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">));</span></code></pre></figure>
+  <span class="kd">var</span> <span class="nx">hm</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">HashMap</span><span class="p">();</span>
+  <span class="nx">hm</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">one</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text 1</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">hm</span><span class="p">.</span><span class="nf">put</span><span class="p">(</span><span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">text 2</span><span class="dl">"</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">hm</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">one</span><span class="dl">"</span><span class="p">));</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">hm</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="dl">"</span><span class="s2">two</span><span class="dl">"</span><span class="p">));</span></code></pre></figure>
 
 <p>Please let me know below your comments, and what other programming challenges you would like to get explained here.</p>
 

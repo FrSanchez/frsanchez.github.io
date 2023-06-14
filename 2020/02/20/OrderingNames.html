@@ -83,7 +83,7 @@
     <!-- seo tags -->
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Ordering names | Sanchez Parra Labs Blog</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Ordering names" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Using javscript to order lists" />
@@ -284,20 +284,20 @@
 
 <p>To read the names, the code takes the contents of the textarea and puts it into an array line by line to be able to manipulate it. JQuery makes it easy by using the textarea locator, retrieving the value and the using split() by newline, then sorting is native in javascript for an array:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#names</span><span class="dl">'</span><span class="p">).</span><span class="nx">val</span><span class="p">().</span><span class="nx">split</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">);</span>
-<span class="nx">names</span><span class="p">.</span><span class="nx">sort</span><span class="p">();</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">names</span> <span class="o">=</span> <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#names</span><span class="dl">'</span><span class="p">).</span><span class="nf">val</span><span class="p">().</span><span class="nf">split</span><span class="p">(</span><span class="dl">"</span><span class="se">\n</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">names</span><span class="p">.</span><span class="nf">sort</span><span class="p">();</span></code></pre></figure>
 
 <p>Javascript provides a pseudo-random number generator that produces number in the range (0, 1). For the case presented here we need an integer number in the range [0, names.length] for that we can write a simple function to take an upper boundary and produce a pseudo-random integer in that range:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="nx">random</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">bound</span><span class="p">)</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">bound</span><span class="p">);</span>
+  <span class="k">return</span> <span class="nb">Math</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nf">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">bound</span><span class="p">);</span>
 <span class="p">}</span></code></pre></figure>
 
 <p>To be able to generate a random list, the code needs to iterate through the whole list of names and randomly select a new position for every entry:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kd">var</span> <span class="nx">dest</span> <span class="o">=</span> <span class="nx">random</span><span class="p">(</span><span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
-  <span class="k">if</span> <span class="p">(</span><span class="nx">dest</span> <span class="o">!=</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">dest</span> <span class="o">=</span> <span class="nf">random</span><span class="p">(</span><span class="nx">names</span><span class="p">.</span><span class="nx">length</span><span class="p">);</span>
+  <span class="k">if </span><span class="p">(</span><span class="nx">dest</span> <span class="o">!=</span> <span class="nx">i</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">names</span><span class="p">[</span><span class="nx">dest</span><span class="p">];</span>
     <span class="nx">names</span><span class="p">[</span><span class="nx">dest</span><span class="p">]</span> <span class="o">=</span> <span class="nx">names</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
     <span class="nx">names</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">t</span><span class="p">;</span>
@@ -307,12 +307,12 @@
 <h3 id="handling-files">Handling files</h3>
 <p>To be able to manipulate files, the browser will generate events related to drag and drop, for which the program needs to handle <em>dragOver</em>, <em>dragEnter</em>, and <em>drop</em>. Within the drop handler, the program can instantiate the HTML5 FileReader object, that will read the local file. The reader works on events to avoid blocking the main (and only) thread executing the script. Within the handler of the reader, I load the contents of the file into the textarea using JQuery $.text() method.</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">FileReader</span><span class="p">();</span>
-<span class="nx">reader</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">load</span><span class="dl">"</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">reader</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">FileReader</span><span class="p">();</span>
+<span class="nx">reader</span><span class="p">.</span><span class="nf">addEventListener</span><span class="p">(</span><span class="dl">"</span><span class="s2">load</span><span class="dl">"</span><span class="p">,</span> <span class="nf">function </span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">fileText</span> <span class="o">=</span> <span class="nx">reader</span><span class="p">.</span><span class="nx">result</span><span class="p">;</span>
-    <span class="nx">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#names</span><span class="dl">'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="nx">fileText</span><span class="p">);</span>
+    <span class="nf">$</span><span class="p">(</span><span class="dl">'</span><span class="s1">#names</span><span class="dl">'</span><span class="p">).</span><span class="nf">text</span><span class="p">(</span><span class="nx">fileText</span><span class="p">);</span>
 <span class="p">},</span> <span class="kc">false</span><span class="p">);</span>
-<span class="nx">reader</span><span class="p">.</span><span class="nx">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span></code></pre></figure>
+<span class="nx">reader</span><span class="p">.</span><span class="nf">readAsText</span><span class="p">(</span><span class="nx">file</span><span class="p">);</span></code></pre></figure>
 
 <h2 id="conclusion">Conclusion</h2>
 

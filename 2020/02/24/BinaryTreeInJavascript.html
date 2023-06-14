@@ -83,7 +83,7 @@
     <!-- seo tags -->
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Binary Search Tree in Javascript | Sanchez Parra Labs Blog</title>
-<meta name="generator" content="Jekyll v4.2.2" />
+<meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Binary Search Tree in Javascript" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Sample implementation of a binary search tree in JavaScript." />
@@ -270,8 +270,8 @@ as I keep progressing in this code.</p>
 
 <p>First we have to define the basic piece, and that is going to be a Node:</p>
 
-<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">class</span> <span class="nx">Node</span> <span class="p">{</span>
-  <span class="kd">constructor</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">class</span> <span class="nc">Node</span> <span class="p">{</span>
+  <span class="nf">constructor</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">=</span> <span class="nx">data</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
     <span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
@@ -289,25 +289,25 @@ from the chosen node, like the code below that returns a boolean value to indica
 was inserted or not:</p>
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// ...</span>
-  <span class="nx">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>    
+  <span class="nf">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="p">{</span>    
     <span class="c1">// First make sure we are inserting data but we also prevent duplicates</span>
-    <span class="k">if</span> <span class="p">(</span><span class="nx">node</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">===</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="nx">node</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="k">typeof</span><span class="p">(</span><span class="nx">node</span><span class="p">)</span> <span class="o">==</span> <span class="dl">'</span><span class="s1">undefined</span><span class="dl">'</span> <span class="o">||</span> <span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">===</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
       <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="c1">// now chose whether go left</span>
-    <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">&gt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">data</span> <span class="o">&gt;</span> <span class="nx">node</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">left</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
         <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
       <span class="p">}</span>
-      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">left</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
     <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
       <span class="c1">// or go right</span>
-      <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">if </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">===</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="nx">right</span> <span class="o">=</span> <span class="nx">node</span><span class="p">;</span>
         <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
       <span class="p">}</span>
-      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nx">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
+      <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">right</span><span class="p">.</span><span class="nf">insert</span><span class="p">(</span><span class="nx">node</span><span class="p">);</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
   <span class="p">}</span>
