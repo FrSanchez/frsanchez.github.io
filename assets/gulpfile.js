@@ -1,84 +1,48 @@
-/*
- * Here are all of the gulp tasks you can use to help manage your blog
- * Use `npm install` to install all the dependencies located in package.json
- * Then `gulp default` to minimize css and images.
- */
-const gulp = require('gulp');
+const { src, dest, series, parallel } = require('gulp');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const imagemin = require('gulp-imagemin');
-const less = require('gulp-less');
-const cleanCSS = require('gulp-clean-css');
-const replace = require('gulp-replace');
-const webp = require('gulp-webp');
 const minify = require('gulp-minify');
+const cleanCSS = require('gulp-clean-css');
 
-gulp.task('js', function minijs() {
-  return gulp.src(['js/partials/**.js'])
+function miniJs(cb) {
+  cb();
+  return src(['js/partials/**.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .on('error', (err) => {
       console.log(err.toString());
     })
-    .pipe(gulp.dest("js/"))
-});
+    .pipe(dest('js/'));
+}
 
-gulp.task('js2', function () {
-  return gulp.src(['js-src/*.js'])
-    .pipe(minify({
-        ext:{
-            min:'.min.js'
+function js2(cb) {
+  cb();
+  return src(['js-src/*.js'])
+    .pipe(
+      minify({
+        ext: {
+          min: '.min.js',
         },
         exclude: ['tasks'],
         mangle: true,
         noSource: true,
-        ignoreFiles: ['.combo.js', '.min.js']
-    }))
+        ignoreFiles: ['.combo.js', '.min.js'],
+      })
+    )
     .on('error', (err) => {
       console.log(err.toString());
     })
-    .pipe(gulp.dest("js"))
-})
+    .pipe(dest('js'));
+}
 
-gulp.task("img", function imging() {
-  return gulp.src('img/**/*.{png,svg,jpg,webp,jpeg,gif}')
-    .pipe(imagemin())
-    .on('error', (err) => {
-      console.log(err.toString());
-    })
-    .pipe(gulp.dest('img/'))
-});
-
-gulp.task('webp', () =>
-  gulp.src('img/**/*.{png,svg,jpg,jpeg,gif}')
-    .pipe(webp({
-      quality: 60,
-      preset: 'photo',
-      method: 6
-    }))
-    .pipe(gulp.dest('img/'))
-);
-
-gulp.task('css', function minicss() {
-  return gulp.src('css/vendor/bootstrap-iso.css')
+function minicss() {
+  return src('css/vendor/bootstrap-iso.css')
     .pipe(cleanCSS())
     .on('error', (err) => {
       console.log(err.toString());
     })
     .pipe(concat('bootstrap-iso.min.css'))
-    .pipe(gulp.dest('css/vendor/'));
-});
+    .pipe(dest('css/vendor/'));
+}
 
-gulp.task('isolate', function isolateBootstrap() {
-  return gulp.src('css/bootstrap-iso.less')
-    .pipe(less({strictMath: 'on'}))
-    .pipe(replace('.bootstrap-iso html', ''))
-    .pipe(replace('.bootstrap-iso body', ''))
-    .pipe(gulp.dest('css/vendor/'));
-});
-
-gulp.task("isolate-bootstrap-css", gulp.series('isolate', 'css'));
-
-
-// gulp.task("default", gulp.series(gulp.parallel('js', 'js2', 'css', 'img')));
-gulp.task("default", gulp.series(gulp.parallel('js', 'js2','img')));
+exports.default = parallel(miniJs, js2, minicss);

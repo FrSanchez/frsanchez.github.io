@@ -54,21 +54,14 @@
 
     <!-- Google Analytics -->
     {% if site.google_analytics %}
-    <!-- Global site tag (gtag.js) -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
-    </script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-    <!-- Page analysis (analytics.js) -->
-    <script async src='https://www.google-analytics.com/analytics.js'></script>
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
+        gtag('config', '{{ site.google_analytics }}');
     </script>
     {% endif %} <!-- End Google Analytics -->
 
@@ -79,5 +72,6 @@
     <title>{% if page.title %}{{ page.title }} |{% endif %} {{ site.title }}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     -->
-    <script data-ad-client="ca-pub-8521880323242125" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8521880323242125"
+            crossorigin="anonymous"></script>
 </head>
