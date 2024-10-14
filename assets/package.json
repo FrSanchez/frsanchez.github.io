@@ -24,9 +24,9 @@
   },
   "homepage": "https://sanchezparralabs.com/",
   "devDependencies": {
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-clean-css": "^4.3.0",
-    "gulp-cli": "^2.3.0",
+    "gulp-cli": "^3.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^8.0.0",
     "gulp-less": "^4.0.1",
