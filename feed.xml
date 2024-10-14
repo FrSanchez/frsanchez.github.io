@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://frsanchez.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://frsanchez.github.io//" rel="alternate" type="text/html" /><updated>2024-10-14T10:25:23-07:00</updated><id>https://frsanchez.github.io//feed.xml</id><title type="html">Sanchez Parra Labs Blog</title><subtitle>A blog about coding, photography and weekenders</subtitle><entry><title type="html">La Importancia de las APIs en el Mundo Tecnológico</title><link href="https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs.html" rel="alternate" type="text/html" title="La Importancia de las APIs en el Mundo Tecnológico" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs</id><content type="html" xml:base="https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs.html"><![CDATA[<p>En el vertiginoso mundo tecnológico de hoy en día, las APIs (Interfaces de Programación de Aplicaciones, por sus siglas en inglés) desempeñan un papel fundamental en el funcionamiento y la interconexión de diferentes sistemas y aplicaciones. Desde el ámbito empresarial hasta el desarrollo de software, las APIs han revolucionado la forma en que las empresas interactúan con sus clientes, optimizan sus operaciones y promueven la colaboración entre diversas plataformas.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://frsanchez.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://frsanchez.github.io//" rel="alternate" type="text/html" /><updated>2024-10-14T10:26:51-07:00</updated><id>https://frsanchez.github.io//feed.xml</id><title type="html">Sanchez Parra Labs Blog</title><subtitle>A blog about coding, photography and weekenders</subtitle><entry><title type="html">API First as a Competitive Strategy</title><link href="https://frsanchez.github.io//2024/10/10/APIFirst.html" rel="alternate" type="text/html" title="API First as a Competitive Strategy" /><published>2024-10-10T00:00:00-07:00</published><updated>2024-10-10T00:00:00-07:00</updated><id>https://frsanchez.github.io//2024/10/10/APIFirst</id><content type="html" xml:base="https://frsanchez.github.io//2024/10/10/APIFirst.html"><![CDATA[<h1 id="1-introduction">1. Introduction</h1>
+<p>APIs, or application programming interfaces, have been present in the field of computer programming for decades. However, in recent years, they have gained much more relevance in the hyperconnected world we live in today.</p>
+<h2 id="11-objectives">1.1 Objectives</h2>
+<p>The main objective of this document is to present the API first approach as a model for organizing the design and development of software, recognizing the current importance of APIs in the world. It also aims to understand their lifecycle and how the model offers advantages in terms of implementation times, development costs, and maintenance, among others.
+As an introduction to the topic, both the advantages and disadvantages are presented. However, the document will not delve into development methodologies, and although modern API development technologies are mentioned, the goal is not to present all options in detail.</p>
+<h2 id="12-document-organization">1.2 Document Organization</h2>
+<p>The document is divided into the following parts:</p>
+<ul>
+  <li>API Economy: Presents how a market has formed around APIs, which is constantly expanding.</li>
+  <li>API First Strategy: Describes the software development model required to take advantage of the API economy.</li>
+  <li>Benefits of API First: Specific points about the advantages of using the development model are discussed.</li>
+  <li>Implementation Example: A practical case is provided.</li>
+  <li>Integration Costs: More details about the associated costs of integrating APIs and how the API first approach can reduce them.</li>
+  <li>API First Challenges: Potential obstacles and limitations of the API first approach are examined.</li>
+  <li>Conclusion and Future Directions: Final thoughts on the topic.
+ 
+    <h1 id="2-api-economy">2. API Economy</h1>
+  </li>
+</ul>
+
+<p>The importance of APIs lies in their function as intermediaries between two applications that need to share information. These interfaces define how applications should interact with each other, which requests and responses are allowed, and what data formats they will accept. This allows a system to provide external connectivity by exposing objects and actions without needing to reveal its internal implementation.</p>
+
+<p>Over the last two decades, APIs have become an integral part of any modern software development, revolutionizing industries. They have enabled greater connectivity between different organizations, regardless of geographical location, and have transformed the way we communicate. Additionally, with innovations such as generative artificial intelligence, blockchain, and other emerging technologies, the use of APIs continues to grow at an accelerated pace.
+A widely known example is the map service offered by Google. The company allows third parties to consume its mapping service through a well-defined and documented set of APIs. This has led many individuals and companies to incorporate map functionality directly into their applications, which is essential in cases like ride-sharing services that require the user’s geographical location.</p>
+
+<p>This example illustrates why service providers are interested in monetizing their APIs, as they can generate a steady stream of income due to the large number of calls to their services. This has led to what we now call the API economy. Since in most cases there is not a single service provider but several companies offering similar services, the market opens up to competition. Developers tend to opt for the service that offers the best features at the best price.
+The API economy is not only about offering services in the market, but also about the need for skilled personnel to implement these APIs to meet customer needs. Often, this work is carried out by integration service companies.
+Integration is not limited to programming to consume the APIs. It involves extensive testing to ensure that data flows correctly between the systems involved. This includes unit testing to verify that individual API functions work as expected, integration testing to assess interoperability between different APIs, and load and performance testing to ensure that the integrations can handle significant workloads without speed or capacity issues.
+In summary, the API economy encompasses both the offering of services for the interoperability of external processes and the offering of integration services. In a constantly evolving market environment, companies and technology leaders have accelerated the use and integration of APIs, which presents the challenge of consuming them securely and efficiently, considering aspects such as the API first model and the measurement of benefits in terms of implementation and development and maintenance costs.
+ </p>
+<h1 id="3-api-first-strategy">3. API First Strategy</h1>
+
+<p>The term API first refers to an approach in software development that places the creation of APIs at the center of the development process. With this strategy, the planning of how data will be exposed in a logical and easy-to-consume way is prioritized, along with the implementation of security measures to protect the data. The result is a modular system that integrates effectively with other software systems, facilitating the addition of new functions and features in the future without needing to rewrite the entire system.</p>
+
+<p>The API first approach is not only relevant for companies offering services through these interfaces but also for those consuming services provided by third parties or other internal departments. The creation and design of APIs are an essential part of the critical infrastructure in any organization.</p>
+
+<p>Just like a building is not constructed without complete blueprints reviewed by all stakeholders, the API first methodology requires a complete design of the data and system connectivity before writing a single line of code. This design phase allows for changes at minimal cost since the details are documented. Additionally, all involved teams, from development to marketing and API support, have the opportunity to make revisions that lead to a robust and thoroughly tested design. This allows the engineering team to develop the system with clarity and efficiency and provides the interface that will allow third parties to connect to the system in the future without having to wait for the services behind the APIs to be fully completed.</p>
+
+<p>API first is not just a development methodology; it represents a shift in the prioritization of design phases, making APIs an integral part of the product, not a byproduct or an additional task. The goal is to create a set of consistent and reusable APIs through clear documentation that describes their behavior. In this sense, API description languages like OpenAPI or RAML can be used to ensure a complete design with all the details of inputs, outputs, and possible errors at each endpoint, facilitating third-party consumption.</p>
+
+<p>Although it may seem like a return to waterfall methodologies, planning in an agile development environment is feasible. During the design phase, API emulators or facades can be used to evaluate their effectiveness and make design changes without writing all the code to get real responses. These facades also allow different stakeholders to start designing and even implementing the client code that will consume the APIs without depending on the completion of the underlying functionality.</p>
+
+<p>An important outcome of the API first strategy is the creation of a system architecture where APIs are the core of communication between applications and business functions. This facilitates the delivery of consistent features across all available digital channels, both now and in the future.
+Among the concrete advantages of adopting an API first approach are a reduction in development time, allowing multiple teams to work simultaneously on implementing data services and their consumers without waiting for one to be completed before starting the other.
+ </p>
+<h1 id="4-benefits-of-api-first">4. Benefits of API First</h1>
+
+<p>The adoption of the API first strategy in software development, whether for internal use or for interoperability with third parties, offers a series of competitive advantages that can be measured directly in terms of revenue, efficiency, and flexibility. Below are some of the most notable benefits:</p>
+
+<h2 id="41-faster-time-to-market">4.1 Faster Time to Market</h2>
+<p>By prioritizing API design from the beginning, developers can work simultaneously on the communication between different system components. This is because there is a clear contract that dictates how data flows between components. As a result, teams don’t need to wait for an API to be fully functional to start consuming it or conducting tests. This speeds up the development process, allowing new products or features to reach the market more quickly, giving the company a competitive advantage by being able to introduce innovations swiftly.</p>
+<h2 id="42-improved-scalability-and-flexibility">4.2 Improved Scalability and Flexibility</h2>
+<p>APIs provide a flexible foundation that facilitates system scalability. When APIs are considered from the start, companies can easily add new functionalities, integrate third-party services, and adapt to changing business needs. This flexibility is particularly beneficial in agile development, where the rapid delivery of software is essential. This agility allows companies to stay ahead of the competition and quickly respond to market demands.</p>
+<h2 id="43-enhanced-collaboration-and-partnerships">4.3 Enhanced Collaboration and Partnerships</h2>
+<p>APIs enable seamless integration with external partners and developers, fostering greater collaboration outside the company. By exposing their APIs, companies can attract external developers to build complementary applications and services on their platforms, which expands the ecosystem and broadens the audience reach. This collaboration drives innovation, attracts customers, and generates new revenue streams. Additionally, it strengthens partner and consumer loyalty since the investment in integrating with a company’s APIs makes it costly to switch to a different provider.</p>
+<h2 id="44-revenue-opportunities">4.4 Revenue Opportunities</h2>
+<p>APIs can be a valuable resource for generating additional income. By offering them as a service to external developers or companies, a new source of revenue is created. Providing well-documented and valuable APIs attracts developers and partners willing to pay for access, which can lead to new revenue streams and strengthen the company’s market position. Moreover, this strategy opens the door for companies to offer integration services between service providers and consumers, which in turn can generate additional income.
+API providers can even add value by offering a development kit in various programming languages that facilitates integration, reducing costs and simplifying the process. This allows each customer to save resources by not having to carry out exhaustive tests separately since these tests can be included as part of the publication of these libraries, ensuring high performance and security.</p>
+<h2 id="45-cost-reduction">4.5 Cost Reduction</h2>
+<p>The API first approach also offers the advantage of reducing maintenance and upgrade costs. A standardized set of APIs reduces complexity, minimizes the duplication of efforts, and improves scalability. Moreover, companies can leverage standards and best practices published by industry leaders like Google, Microsoft, and Facebook, among others, to optimize the implementation of API routes, the format of exchanged data, and authorization standards. This leads to greater efficiency during design by adopting such practices and better adherence to proven standards in the global market.
+ </p>
+<h1 id="5-implementation-example">5. Implementation Example</h1>
+
+<p>The development of any modern software product involving API creation or integration is rarely a linear task with a clear start and finish. It is more of an iterative cycle where, with each iteration, functionalities are added, performance is improved, and existing implementation errors are fixed.
+Below is a description of a company that sought to update the APIs available to its customers and integrators, used both for extracting and inserting or updating data. The APIs had been written as an additional product with the goal of offering communication functionality through a program. However, no proper planning was done, and different teams added APIs to expose system objects, resulting in inconsistencies in field naming and lack of adherence to any communication standards.</p>
+
+<p>With the initial objective of exposing system objects via APIs to perform basic CRUD (Create, Read, Update, Delete) operations whenever required by the business, the API development cycle was adopted with strong planning at the start to determine what infrastructure needed to be built. The following suggested steps for API development were followed:</p>
+<ul>
+  <li>The objective of the APIs was first defined, focusing on making the application objects available for customer consumption.</li>
+  <li>The APIs were designed following the suggestions of modern APIs adhering to the REST model, aiming for consistency when putting them into production. To maintain internal consistency, a data model with uniform names was created, and automated tools were used to ensure that the API definitions remained consistent. These tools also allowed the generation of the final code automatically, without needing to individually program each API. It was also agreed to gradually release the new version of the APIs so that customers could benefit from the new version for the most used objects first, and then gradually for the remaining objects.</li>
+  <li>A unified library was developed, which takes a formal definition of each object that needs to be exposed through an API and generates the required code to expose the functionality using the existing service. This allowed the API code creation to be introduced into an automated build pipeline, following modern Continuous Integration and Continuous Deployment practices.</li>
+  <li>With a way to generate APIs from a definition of the objects in an automated build pipeline, unit and functional tests could be added to the produced APIs. This ensured that any change to the data contract or functionality would cause a build break and require developers to assess whether the change was acceptable or if a redesign was needed to avoid affecting the expected functionality for consumers.</li>
+  <li>The final step was the deployment of the produced APIs for public availability. This also required planning the observation of the APIs to measure their effectiveness and proactively address any issues.
+The steps described above constitute the API lifecycle that my team defined. With each iteration of the cycle, new objects were added to the company’s offering, as well as new functionalities to the existing APIs. Since the design was clear from the beginning and adhered to standards, and we had automated tests at every stage to ensure that new changes did not introduce errors or undesired changes, we were able to migrate from previous versions very quickly.
+Security and performance tests could also be run each time a new set of APIs became available or when changes were made to the code generation libraries. This made it part of the build pipeline to constantly obtain data on performance and scalability.</li>
+</ul>
+
+<p>A team of five developers focused on building the infrastructure to produce the APIs, adding the necessary instrumentation to measure the amount of data flowing through the new APIs and the format of the data itself, which allowed us to make improvements and plan which objects should be made available in each cycle. Over a period of three years, we delivered a set of 26 APIs with consistent naming, adhering to REST standards, and with the necessary instrumentation that provided us with data on traffic and usage of the APIs.</p>
+
+<p>We reduced the support call rate by more than 80% due to the new versions having uniform names and functionality. Since they adhered to REST standards, the API responses were consistent across all of them. And by running performance tests constantly, we ensured that our consumers had a satisfying experience.</p>
+
+<p>Another advantage we achieved was that, by having a unified development model using a formal API definition language, adding new objects and making them available for customer consumption became extremely simple, requiring less than a week of work for a developer to deliver a new object.
+ </p>
+<h1 id="6-integration-costs">6. Integration Costs</h1>
+
+<p>For a company that needs to integrate third-party APIs, there will always be additional costs and complexities for customers. These costs typically include hiring integrators or developers to perform the initial connectivity, and they will likely need to continue employing their services for updates and maintenance. While this can be challenging, it is important to note that with an API first approach, significant savings can be realized, adding value to customers. I will explore these options below.</p>
+<h2 id="61-initial-integration-efficiency">6.1 Initial Integration Efficiency</h2>
+<p>The API first approach ensures that APIs are fully documented and designed for ease of use and connectivity. This leads to a significant reduction in the time and effort required for initial integration. This is where the added value of an integrator with experienced personnel in the field of integrations comes into play. APIs that follow standards and are accompanied by clear documentation allow developers to understand and implement them efficiently.</p>
+<h2 id="62-long-term-savings">6.2 Long-Term Savings</h2>
+<p>The cost of integration, as described in the previous section, can be understood as the initial cost, but it must also include an ongoing maintenance cost. By using standardized APIs, long-term savings are often realized since updates to APIs designed for a long lifespan are usually backward compatible. This means that with each update, customers do not have to rewrite their integration to accommodate new versions.
+Some companies offer support for older versions of APIs, which, while not providing all the functionalities of new products, do not force customers to migrate to new versions if they do not need to consume the new features.</p>
+<h2 id="63-scalability-and-versatility">6.3 Scalability and Versatility</h2>
+<p>Adopting an API first approach gives customers the ability to integrate numerous third-party services, providing considerable flexibility. While integration carries costs, the ability to choose from a wide range of services to build a complete product reduces the need for future modifications. This results in lower long-term maintenance and operational costs.</p>
+
+<h1 id="7-api-first-challenges">7. API First Challenges</h1>
+
+<p>Despite the significant benefits of the API first approach previously discussed, there are also limitations and potential risks to consider:</p>
+<h2 id="71-initial-investment">7.1 Initial Investment</h2>
+<p>Transitioning to an API first approach requires an initial investment in infrastructure, technology, and training. Companies will need to allocate resources to redesign existing systems, create standards-compliant APIs, and train developers. For fully established companies, the initial investment can be substantial.</p>
+<h2 id="72-complexity-and-maintenance">7.2 Complexity and Maintenance</h2>
+<p>Maintaining permanently operational servers and having monitoring and alert services to detect and fix failures are required to ensure the reliability and security of APIs. Currently, cloud service providers such as Amazon, Google, or Microsoft have made the total operational costs much lower compared to a company handling the installation and operation of all infrastructure themselves. However, this is not a negligible cost and requires personnel who can take advantage of these services.
+To offer APIs to third parties, companies must provide documentation and maintain it to ensure that it meets the needs of both internal and external clients. Maintaining compatibility when releasing new API versions requires careful planning and execution.</p>
+<h2 id="73-organizational-and-cultural-changes">7.3 Organizational and Cultural Changes</h2>
+<p>Shifting to an API first approach involves a mindset change and necessitates cultural and organizational changes within the company. This may require breaking down communication barriers between different teams, promoting collaboration, and sharing ownership and responsibility for APIs throughout the company. People tend to resist change to varying degrees, and a lack of interest from management levels or internal disagreements among executives can jeopardize a successful implementation of the API first approach.</p>
+<h2 id="74-security-and-regulatory-risks">7.4 Security and Regulatory Risks</h2>
+<p>Offering APIs to external developers and partners can introduce security risks, such as unauthorized access to sensitive or private data, abuse of API calls, and compliance violations. Companies must implement robust security measures, including authentication, authorization, encryption, and monitoring, to mitigate risks. They must also keep up with ever-changing regulatory requirements, which can vary significantly across different markets, as seen with the introduction of GDPR in the European Union or CCPA in the United States, to name a few.
+ </p>
+<h1 id="8-conclusion-and-future-directions">8. Conclusion and Future Directions</h1>
+<p>With the previously outlined advantages and disadvantages, we can understand why a company that opts to adopt an API first approach will experience significant improvements in product and software service development costs, leading to greater satisfaction for both customers and partners. This, in turn, will result in a stronger market position and ultimately translate into increased profits and greater long-term stability.
+To delve deeper into this topic, it is recommended to explore the lifecycle of APIs and familiarize oneself with the methodologies and tools for their management, as well as to investigate the concept of monetization to diversify the company’s revenue sources.</p>
+
+<p>This document serves as an introduction to the API first approach. However, it is important to highlight that in the field of internet development, the topic of APIs is constantly evolving. New trends are being incorporated to fully leverage the connectivity that the network offers, focusing on aspects such as security, data transmission optimization, and cost reduction related to both development and consumption of available services.
+In summary, the API economy has transformed the way companies grow and remain relevant in today’s technological environment. The API first strategy brings agility, innovation, and the ability to create value in a hyperconnected digital world.
+ </p>
+<h1 id="references">References</h1>
+<ul>
+  <li>Cloudflare. (n.d.). What is the General Data Protection Regulation (GDPR)? Retrieved from <a href="https://www.cloudflare.com/en-us/learning/privacy/what-is-the-gdpr">Cloudflare</a></li>
+  <li>Cloudflare. (n.d.). What is the California Consumer Privacy Act (CCPA)? Retrieved from <a href="https://www.cloudflare.com/en-us/learning/privacy/what-is-the-ccpa/">Cloudflare</a></li>
+  <li>Dyrsdale, B. (July 6, 2022). What is the API Economy? Retrieved from <a href="https://konghq.com/blog/enterprise/api-economy">Kong</a></li>
+  <li>Lane, K. (2022). The API-First Transformation. San Francisco: Postman.</li>
+  <li>Postman. (n.d.). Guide to API-first. Retrieved from <a href="https://www.postman.com/api-first">Postman</a></li>
+  <li>Postman. (n.d.). What is an API-first company? Retrieved from <a href="https://blog.postman.com/what-is-an-api-first-company/">Postman</a></li>
+  <li>Wagner, J. (n.d.). Understanding the API First approach to building products. Retrieved from <a href="https://swagger.io/resources/articles/adopting-an-api-first-approach">Swagger</a></li>
+  <li>LanguageTool. (n.d.). What are “acronyms” and how are they written in Spanish? Retrieved from <a href="https://languagetool.org/insights/es/publicacion/como-se-escriben-las-siglas/">LanguageTool</a></li>
+</ul>]]></content><author><name></name></author><category term="API First Strategy" /><category term="API economy" /><category term="API development" /><category term="API design" /><category term="API lifecycle" /><category term="REST APIs" /><category term="API integration" /><category term="Software development with APIs" /><category term="Scalability with APIs" /><category term="API monetization" /><category term="API interoperability" /><category term="API-first company" /><category term="API testing and performance" /><category term="Continuous integration with APIs" /><category term="Microservices architecture" /><category term="API automation" /><category term="API documentation best practices" /><summary type="html"><![CDATA[1. Introduction APIs, or application programming interfaces, have been present in the field of computer programming for decades. However, in recent years, they have gained much more relevance in the hyperconnected world we live in today. 1.1 Objectives The main objective of this document is to present the API first approach as a model for organizing the design and development of software, recognizing the current importance of APIs in the world. It also aims to understand their lifecycle and how the model offers advantages in terms of implementation times, development costs, and maintenance, among others. As an introduction to the topic, both the advantages and disadvantages are presented. However, the document will not delve into development methodologies, and although modern API development technologies are mentioned, the goal is not to present all options in detail. 1.2 Document Organization The document is divided into the following parts: API Economy: Presents how a market has formed around APIs, which is constantly expanding. API First Strategy: Describes the software development model required to take advantage of the API economy. Benefits of API First: Specific points about the advantages of using the development model are discussed. Implementation Example: A practical case is provided. Integration Costs: More details about the associated costs of integrating APIs and how the API first approach can reduce them. API First Challenges: Potential obstacles and limitations of the API first approach are examined. Conclusion and Future Directions: Final thoughts on the topic.   2. API Economy]]></summary></entry><entry><title type="html">La Importancia de las APIs en el Mundo Tecnológico</title><link href="https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs.html" rel="alternate" type="text/html" title="La Importancia de las APIs en el Mundo Tecnológico" /><published>2021-06-15T00:00:00-07:00</published><updated>2021-06-15T00:00:00-07:00</updated><id>https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs</id><content type="html" xml:base="https://frsanchez.github.io//2021/06/15/ImportanciaDeLasAPIs.html"><![CDATA[<p>En el vertiginoso mundo tecnológico de hoy en día, las APIs (Interfaces de Programación de Aplicaciones, por sus siglas en inglés) desempeñan un papel fundamental en el funcionamiento y la interconexión de diferentes sistemas y aplicaciones. Desde el ámbito empresarial hasta el desarrollo de software, las APIs han revolucionado la forma en que las empresas interactúan con sus clientes, optimizan sus operaciones y promueven la colaboración entre diversas plataformas.</p>
 
 <h1 id="qué-es-un-api-y-por-qué-es-relevante">¿Qué es un API y por qué es relevante?</h1>
 
@@ -655,73 +779,4 @@ I used the data and formulas from the guys at
 <p>Is it open source? Well of course <a href="https://github.com/FrSanchez/TowingCapacity" target="_blank">it is</a>, but even better, you can access it
 from your phone or computer. I also added the <a href="/calculator">calculator</a> to this website.</p>
 
-<p>Hopefully it works for a lot of people and please leave a comment here if you use it.</p>]]></content><author><name>Francisco Sanchez</name></author><category term="Towing" /><category term="RV" /><category term="Calculator" /><summary type="html"><![CDATA[As we decided to get a travel trailer, we quickly discovered that a towing capacity stated in the manual of my car is not actually even remotely the only value needed to safely tow a trailer.]]></summary></entry><entry><title type="html">Building a backyard pond</title><link href="https://frsanchez.github.io//2019/11/29/BuildingAPond.html" rel="alternate" type="text/html" title="Building a backyard pond" /><published>2019-11-29T00:00:00-08:00</published><updated>2019-11-29T00:00:00-08:00</updated><id>https://frsanchez.github.io//2019/11/29/BuildingAPond</id><content type="html" xml:base="https://frsanchez.github.io//2019/11/29/BuildingAPond.html"><![CDATA[<p>Having a water feature in the backyard is always nice, but there are
-some steps to maintain the feature that come along with any installation.
-If properly cared for the feature can last for years and give a nice touch
-to your house.</p>
-
-<p>It all started after few years we put sod in my backyard. It is below grade, what means
-there is a slope from the front porch to the backyard, that makes it pretty much at
-the basement level. Because of this situation, the backyard doesn’t drain much, and it
-remains wet most of the year. It is usually good to keep the grass green all year long.
-The problem was that we didn’t notice the grass was wet naturally because we setup
-a timer with a sprinkler that took care of watering my backyard sod all summer long.</p>
-
-<p>After two years, a big portion of the backyard was too wet and died, I guess you can stay
-it drowned. At that point we could either put more sod, but with proper cleanup first or
-build some water feature that could cover the area that was lost. It was not that bad,
-probably around 190 to 250 square feet needed some fixing. Also I have this fascination
-for fish tanks, which then took to the next level and finally decided to build a pond.</p>
-
-<p>Deciding on the location was the easiest thing, because I explained above, the grass
-was already dead in a large area, and we needed to cover it with something. Then we opted
-for a prefab <a href="https://amzn.to/30pb12B">hard shell</a>
-similar to the one shown below.</p>
-
-<p>The process was more work than planning after that.
-It should start with digging a hole big enough to fit the pond, but in preparation for
-digging, having the shape in the ground makes the process a somewhat easier. What I mean is
-taking the liner and placing it upside down over the ground, then using some
-<a href="https://amzn.to/30mAee2">Rust-Oleum Marking Spray Paint</a> to draw
-the shape and make the whole reach those edges.</p>
-
-<p>As I mentioned before there is a slope that goes from the front of my property to the backyard
-and we used this opportunity to use the extra dirt and start shaping some stairs (that eventually
-completed) and that took care of the extra dirt. It took me and my son two days to finish digging
-the whole. Meanwhile my wife purchased a few bags of gravel from the local hardware store along
-with couple of decorative plants.</p>
-
-<p>When placing the prefab it is important to check for proper leveling, otherwise the water will get out of the pond.
-It is just common sense. And then it is time to fill back all the edges of the prefab with some of the dirt
-that was dug out earlier. Place the plants near the edge of the pond, and put the gravel around the pond.</p>
-
-<p>Before introducing any fish or plants into the pond, we decided to fill it with water to the middle, to kind of
-wash out all the dirt during the process. Then dumped the water out by using the hose as a syphon. I’m glad
-we did it because a lot of debris fell into the liner just by filling the holes around it and when doing
-the plants.</p>
-
-<p>Next should be the filter. When visiting the hardware store, I asked about pond supplies and they have a good variety
-but boy those are expensive. Thankfully Amazon came to the rescue and found the same <a href="https://amzn.to/2NtIpQC">InPond 5 in 1</a>
-model but for about 80% of the store price, with next day delivery. We chose that because the guys at
-the hardware store recommended - that made it easier when navigating all the options in Amazon.
-It contains an ultra-violet lamp that gets rid of organic matter entering the filter and several biological
-and mechanical filters that require little maintenance. It also comes with a fountain and it just looks cool.
-Installing the filter was really easy. Just follow the included instructions and place it in the center of the pond.</p>
-
-<p>At this moment, the next step was to let the filter run for a few days before introducing the fish.
-When visiting the pet store we didn’t really have any high expectations, therefore we purchased
-a dozen of comet gold fish like for 35 cents each. They were tiny - about half an inch. Also with the filter we
-started an amazon subscription for <a href="https://www.amazon.com/gp/product/B00176IK5S/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00176IK5S&amp;linkCode=as2&amp;tag=frsanchezgith-20&amp;linkId=0c0f40c1e5634f153d7b88109e65f11b">fish food</a>, again after a recommendation from the pet store, but
-the price at amazon is just so much better and the subscription quite convenient. If you didn’t know, Amazon offers a “Subscribe &amp; Save” option in several of their products, which for me works like a charm sending me the needed fish food every quarter and at the same time it reduces the price even more!</p>
-
-<p>And that was it! The finished product is shown below:
-<img src="/assets/img/pondtop.jpg" alt="pond with fish" title="pond with fish" /></p>
-
-<h2 id="a-short-video">A short video</h2>
-<iframe width="720" height="450" src="https://www.youtube.com/embed/6nGO3nnOEL8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-
-<p>It has been already two years since we installed the pond. Half of the fish died during the first two weeks.
-But the other six survived and started growing at regular rate. Whenever we leave on vacation we ask some
-of our neighbors to feed the fish once a day.</p>
-
-<p>The filter requires regular maintenance, every 2-3 months cleaning and changing the carbon filters. And so far after 1 and a half years we had to change the light bulb for a new one.  And that is pretty much all the maintenance.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Having a water feature in the backyard is always nice, but there are some steps to maintain the feature that come along with any installation. If properly cared for the feature can last for years and give a nice touch to your house.]]></summary></entry></feed>
+<p>Hopefully it works for a lot of people and please leave a comment here if you use it.</p>]]></content><author><name>Francisco Sanchez</name></author><category term="Towing" /><category term="RV" /><category term="Calculator" /><summary type="html"><![CDATA[As we decided to get a travel trailer, we quickly discovered that a towing capacity stated in the manual of my car is not actually even remotely the only value needed to safely tow a trailer.]]></summary></entry></feed>
