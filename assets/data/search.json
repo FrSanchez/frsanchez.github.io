@@ -1,6 +1,16 @@
 [
   
   {
+    "title"    : "The Bridge",
+    "category" : "",
+    "tags"     : " ",
+    "url"      : "/2026/03/01/TheBridge.html",
+    "date"     : "March 1, 2026",
+    "excerpt"  : "\n",
+  "content"  : "\n"
+} ,
+  
+  {
     "title"    : "API First as a Competitive Strategy",
     "category" : "",
     "tags"     : " API First Strategy, API economy, API development, API design, API lifecycle, REST APIs, API integration, Software development with APIs, Scalability with APIs, API monetization, API interoperability, API-first company, API testing and performance, Continuous integration with APIs, Microservices architecture, API automation, API documentation best practices",
