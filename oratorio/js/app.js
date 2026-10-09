@@ -13,7 +13,7 @@
   const elements = Object.fromEntries([
     'daily-group', 'page-count', 'progress', 'progress-fill', 'step-markers',
     'section-label', 'page-title', 'mystery-title', 'mystery-description',
-    'prayers', 'next-button', 'home-button',
+    'prayers', 'next-button', 'home-button', 'closing-symbol',
   ].map(id => [id, document.getElementById(id)]));
   let groupKey = groupForDate();
   let pageIndex = indexForHash(window.location.hash);
@@ -66,18 +66,41 @@
       for (const text of section.paragraphs) {
         const paragraph = document.createElement('p');
         paragraph.className = 'prayer-paragraph';
-        const label = ui.speakers.find(speaker => text.startsWith(`${speaker}:`));
-        if (label) {
-          const speaker = document.createElement('strong');
-          speaker.textContent = `${label}: `;
-          paragraph.append(speaker, document.createTextNode(text.slice(label.length + 1).trimStart()));
-        } else {
-          paragraph.textContent = text;
-        }
+        text.split('\n').forEach((line, index) => {
+          if (index > 0) paragraph.append(document.createTextNode('\n'));
+          if (section.emphasizedResponses?.includes(line)) {
+            const response = document.createElement('em');
+            response.className = 'litany-response';
+            response.textContent = line;
+            paragraph.append(response);
+            return;
+          }
+          const label = ui.speakers.find(speaker => line.startsWith(`${speaker}:`));
+          if (label) {
+            const speaker = document.createElement('strong');
+            speaker.textContent = `${label}: `;
+            paragraph.append(speaker, document.createTextNode(line.slice(label.length + 1).trimStart()));
+          } else {
+            paragraph.append(document.createTextNode(line));
+          }
+        });
+        container.append(paragraph);
+      }
+      if (section.link) {
+        const paragraph = document.createElement('p');
+        paragraph.className = 'prayer-paragraph';
+        const link = document.createElement('a');
+        link.href = section.link.href;
+        link.textContent = section.link.label;
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', section.link.ariaLabel);
+        paragraph.append(link);
         container.append(paragraph);
       }
       return container;
     }));
+    elements['closing-symbol'].hidden = routes[pageIndex] !== 'cierre';
     elements['next-button'].hidden = pageIndex === pages.length - 1;
     elements['home-button'].closest('footer').hidden = pageIndex === 0;
     document.body.classList.toggle('at-start', pageIndex === 0);

@@ -1,5 +1,4 @@
-// Add your meditation text to each mystery’s description field.
-// Keep this file separate so translations and prayer edits are easy to maintain.
+// Add meditation text to each mystery’s description field.
 (function (root) {
   const content = {
   "groups": {
@@ -8,24 +7,24 @@
       "kind": "gozo",
       "mysteries": [
         {
-          "title": "La Encarnación del Hijo de Dios (Lucas 1, 37).",
-          "description": ""
+          "title": "La Encarnación del Hijo de Dios (Lc 1,28.31.38).",
+          "description": "El Ángel entró en su casa y la saludó, diciendo: “¡Alégrate!, llena de gracia, el Señor está contigo”… “Concebirás y darás a luz un hijo, y le pondrás por nombre Jesús”… María dijo entonces: “Yo soy la servidora del Señor, que se cumpla en mí lo que has dicho”"
         },
         {
-          "title": "La visita de la Virgen María a Santa Isabel (Lucas 1, 39-56).",
-          "description": ""
+          "title": "La visita de la Virgen María a Santa Isabel (Lc 1,39-42.45-46).",
+          "description": "«María partió y fue sin demora a un pueblo de la montaña de Judá. Entró en la casa de Zacarías y saludó a Isabel… Isabel… exclamó: “¡Tú eres bendita entre todas las mujeres y bendito es el fruto de tu vientre!… Feliz de ti por haber creído”. María dijo entonces: “Mi alma canta la grandeza del Señor”"
         },
         {
-          "title": "El nacimiento del Niño Jesús (Lucas 2, 1-20).",
-          "description": ""
+          "title": "El nacimiento del Niño Jesús (Lc 2,6-7.10-11).",
+          "description": "Mientras se encontraban en Belén, le llegó el tiempo de ser madre; y María dio a luz a su Hijo primogénito, lo envolvió en pañales y lo acostó en un pesebre, porque no había lugar para ellos en el albergue… El Ángel les dijo: “Hoy, en la ciudad de David, les ha nacido un Salvador, que es el Mesías, el Señor"
         },
         {
-          "title": "La presentación del Niño Jesús en el Templo (Lucas 2, 22-40).",
-          "description": ""
+          "title": "La Presentación de Jesús en el Templo (Lc 2,22.28-30).",
+          "description": "Llevaron al niño a Jerusalén para presentarlo al Señor… Simeón lo tomó en sus brazos y alabó a Dios, diciendo: “Ahora, Señor, puedes dejar que tu servidor muera en paz, como lo has prometido, porque mis ojos han visto la salvación"
         },
         {
-          "title": "El Niño Jesús perdido y hallado en el Templo (Lucas 2, 41-52).",
-          "description": ""
+          "title": "El Niño Jesús perdido y hallado en el Templo (Lc 2,42-43.46).",
+          "description": "Cuando el niño cumplió doce años, subieron como de costumbre, y acabada la fiesta, María y José regresaron, pero Jesús permaneció en Jerusalén sin que ellos se dieran cuenta… Al tercer día, lo hallaron en el Templo en medio de los doctores de la Ley, escuchándolos y haciéndoles preguntas"
         }
       ]
     },
@@ -34,12 +33,12 @@
       "kind": "dolor",
       "mysteries": [
         {
-          "title": "La oración de Jesús en el huerto (Marcos 14, 22-42).",
-          "description": ""
+          "title": "La oración en el huerto (Lc 22,41-42.44).",
+          "description": "Se alejó de ellos, más o menos a la distancia de un tiro de piedra, y puesto de rodillas, oraba: “Padre, si quieres, aleja de mí este cáliz. Pero que no se haga mi voluntad, sino la tuya”… En medio de la angustia, él oraba más intensamente"
         },
         {
-          "title": "La flagelación de nuestro Señor Jesucristo (Marcos 15, 1-15).",
-          "description": ""
+          "title": "La flagelación de Jesús (Jn 19,1; Mc 15,15).",
+          "description": "«Pilato mandó entonces azotar a Jesús». «Pilato, para contentar a la multitud, les puso en libertad a Barrabás; y a Jesús, después de haberlo hecho azotar, lo entregó para que fuera crucificado"
         },
         {
           "title": "Jesús es coronado de espinas (Marcos 15, 16-20).",
@@ -86,24 +85,24 @@
       "kind": "luz",
       "mysteries": [
         {
-          "title": "El bautismo de Jesús en el Jordán (Mateo 3, 13-17).",
-          "description": ""
+          "title": "El bautismo de Jesús (Mt 3,13.16-17).",
+          "description": "Jesús fue desde Galilea hasta el Jordán y se presentó a Juan para ser bautizado por él… Apenas fue bautizado, Jesús salió del agua. En ese momento se abrieron los cielos, y vio al Espíritu de Dios descender como una paloma y dirigirse hacia él. Y se oyó una voz del cielo que decía: “Este es mi Hijo muy querido, en quien tengo puesta toda mi predilección”"
         },
         {
-          "title": "Jesús se da a conocer en las bodas de Caná (Juan 2, 1-12).",
-          "description": ""
+          "title": "Las bodas de Caná (Jn 2,1.3.5.11).",
+          "description": "Se celebraron unas bodas en Caná de Galilea, y la madre de Jesús estaba allí… Como faltaba vino, la madre de Jesús le dijo: “No tienen vino”… Su madre dijo a los sirvientes: “Hagan todo lo que él les diga”… Así manifestó su gloria, y sus discípulos creyeron en él"
         },
         {
-          "title": "Jesús anuncia el Reino de Dios invitando a la conversión (Marcos 1, 15).",
-          "description": ""
+          "title": "El anuncio del Reino (Mc 1,14-15).",
+          "description": "Jesús se dirigió a Galilea. Allí proclamaba la Buena Noticia de Dios, diciendo: “El tiempo se ha cumplido: el Reino de Dios está cerca. Conviértanse y crean en la Buena Noticia"
         },
         {
-          "title": "La Transfiguración de Jesús (Lucas 9, 35).",
-          "description": ""
+          "title": "La transfiguración del Señor (Mt 17,1-2.5).",
+          "description": "Jesús tomó a Pedro, a Santiago y a su hermano Juan, y los llevó aparte a un monte elevado. Allí se transfiguró en presencia de ellos: su rostro resplandecía como el sol y sus vestiduras se volvieron blancas como la luz… Se oyó una voz que decía desde la nube: “Este es mi Hijo muy querido, en quien tengo puesta mi predilección: escúchenlo”"
         },
         {
-          "title": "La institución de la Eucaristía, expresión sacramental del Misterio Pascual (Juan 13, 1).",
-          "description": ""
+          "title": "La institución de la Eucaristía (1 Cor 11,23-25).",
+          "description": "El Señor Jesús, la noche en que fue entregado, tomó el pan, dio gracias, lo partió y dijo: “Esto es mi Cuerpo, que se entrega por ustedes”… De la misma manera, después de cenar, tomó la copa, diciendo: “Esta copa es la Nueva Alianza que se sella con mi Sangre”"
         }
       ]
     }
@@ -112,115 +111,111 @@
     "ourFather": "Padre nuestro, que estás en el cielo, santificado sea tu nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo. Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal. Amén.",
     "hailMary": "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén.",
     "glory": "Gloria al Padre, al Hijo y al Espíritu Santo, como era en un principio, ahora y siempre, por los siglos de los siglos. Amén.",
-    "maryGrace": "Guía: María, Madre de gracia, Madre de Misericordia.",
-    "maryResponse": "Todos: En la vida y en la muerte, ampáranos, gran Señora.",
-    "fatimaPrayer": "Guía: ¡Oh, Jesús mío! Perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas especialmente a las más necesitadas de tu divina misericordia.",
-    "offering": "Por estos Misterios santos de que hemos hecho recuerdo, te pedimos, ¡oh, María!, de la Fe santa el aumento; la exaltación de la Iglesia; del Papa el mejor acierto; de la Nación Mexicana y el mundo, la unión y feliz gobierno. Que el no cristiano conozca a Dios, y el que se ha alejado reconozca sus errores. Que todos los pecadores tengamos arrepentimiento. Que los cristianos perseguidos puedan practicar su fe. Goce puerto el navegante y de salud los enfermos. Que en el Purgatorio logren las ánimas refrigerio. Y que este santo ejercicio tenga efecto tan completo en toda la cristiandad, que alcancemos por su medio, el ir a alabar a Dios en tu compañía en el cielo. Amén.",
+    "maryGrace": "Guía: María, Madre de gracia y Madre de misericordia,",
+    "maryResponse": "Todos: en la vida y en la muerte ampáranos, gran Señora.",
+    "fatimaPrayer": "Oh Jesús mío, perdona nuestros pecados y líbranos del fuego del infierno, lleva al cielo a todas las almas y socorre especialmente a las más necesitadas de tu misericordia. Amén.",
     "initialPrayers": [
-      "Por la señal de la Santa Cruz ....",
-      "En el nombre del Padre, del Hijo y del Espíritu Santo. Amén.",
-      "Señor mío Jesucristo, Dios y Hombre verdadero, me pesa de todo corazón de haber pecado, porque he merecido el infierno y perdido el cielo, y sobre todo, porque te ofendí a Ti, que eres bondad infinita, a quien amo sobre todas las cosas.",
-      "Propongo firmemente, con tu gracia, enmendarme y alejarme de las ocasiones de pecar, confesarme y cumplir la penitencia. Confío me perdonarás por tu infinita misericordia. Amén.",
-      "Creo en Dios, Padre Todopoderoso, Creador del cielo y de la tierra. Creo en Jesucristo, su único Hijo, Nuestro Señor, que fue concebido por obra y gracia del Espíritu Santo, nació de Santa María Virgen, padeció bajo el poder de Poncio Pilato, fue crucificado, muerto y sepultado, descendió a los infiernos, al tercer día resucitó de entre los muertos, subió a los cielos y está sentado a la derecha de Dios, Padre todopoderoso. Desde allí ha de venir a juzgar a vivos y muertos. Creo en el Espíritu Santo, la Santa Iglesia Católica, la comunión de los santos, el perdón de los pecados, la resurrección de la carne y la vida eterna. Amén.",
-      "¡Abre Señor mis labios\npara alabar tu nombre y el de tu Santa Madre!",
-      "Gloria al Padre, al Hijo y al Espíritu Santo, como era en un principio, ahora y siempre, por los siglos de los siglos. Amén.",
-      "Guía: María, Madre de gracia, Madre de Misericordia.",
-      "Todos: En la vida y en la muerte, ampáranos, gran Señora.",
-      "Guía: ¡Oh, Jesús mío! Perdona nuestros pecados, líbranos del fuego del infierno, lleva al cielo a todas las almas especialmente a las más necesitadas de tu divina misericordia."
+      "Por la señal de la Santa Cruz, de nuestros enemigos, líbranos, Señor, Dios nuestro. En el nombre del Padre y del Hijo y del Espíritu Santo. Amén.",
+      "Señor mío Jesucristo, Dios y hombre verdadero, Creador y Redentor mío, por ser tú quien eres y porque te amo sobre todas las cosas, me pesa de todo corazón haberte ofendido. Quiero y propongo firmemente confesarme a su tiempo. Ofrezco mi vida, obras y trabajos en satisfacción de mis pecados. Y confío en que, en tu bondad y misericordia infinita, me los perdonarás y me darás la gracia para no volver a ofenderte. Amén.",
+      "V: Ven, Espíritu Santo, llena los corazones de tus fieles",
+      "R: y enciende en ellos el fuego de tu amor.",
+      "V: Envía tu Espíritu Creador",
+      "R: y renueva la faz de la tierra.",
+      "Oh Dios, que has iluminado los corazones de tus hijos con la luz del Espíritu Santo; haznos dóciles a sus inspiraciones para gustar siempre del bien y gozar de su consuelo. Por Cristo nuestro Señor. Amén.",
+      "Ofrecemos este rosario por las intenciones del Santo Padre, del arzobispo, del párroco, por la paz en el mundo y por…"
     ],
     "closingPrayers": [
-      "Guía: Oh Soberano Santuario, Sagrario del Verbo Eterno.",
-      "Todos: Libra, Virgen, del infierno a los que rezan tu Rosario.",
-      "Guía: Emperatriz poderosa de los mortales consuelo.",
-      "Todos: Ábrenos, Virgen, el cielo con una muerte dichosa, y danos pureza de alma ya que eres tan poderosa.",
-      "Guía: Padre nuestro, que estás en el cielo, santificado sea tu nombre; venga a nosotros tu reino; hágase tu voluntad en la tierra como en el cielo.",
-      "Todos: Danos hoy nuestro pan de cada día; perdona nuestras ofensas, como también nosotros perdonamos a los que nos ofenden; no nos dejes caer en la tentación, y líbranos del mal.",
-      "Guía: Dios te salve, María Santísima, hija de Dios Padre, Virgen purísima y castísima antes del parto, en tus manos encomiendo mi fe para que la alumbres, llena eres de gracia, etc.",
-      "Todos: Santa María...",
-      "Guía: Dios te salve, María, Madre de Dios Hijo, Virgen purísima y castísima en el parto, en tus manos encomiendo mi esperanza para que la alientes, llena eres de gracia, etc.",
-      "Todos: Santa María...",
-      "Guía: Dios te salve, María, esposa del Espíritu Santo, Virgen purísima y castísima después del parto, en tus manos encomiendo mi caridad para que la inflames, llena eres de gracia, etc.",
-      "Todos: Santa María...",
-      "Guía: Dios te salve, María, templo, trono y sagrario de la Santísima Trinidad, Virgen concebida sin la culpa original, Dios te salve.",
-      "Todos: Reina y Madre de misericordia, vida, dulzura y esperanza nuestra, Dios te salve. A ti llamamos los desterrados hijos de Eva, a ti suspiramos, gimiendo y llorando, en este valle de lágrimas. ¡Ea!, pues, Señora, abogada nuestra, vuelve a nosotros esos tus ojos misericordiosos, y después de este destierro muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clemente, oh piadosa, oh, dulce Virgen María! Ruega por nosotros, Santa Madre de Dios, para que seamos dignos de alcanzar las promesas de nuestro Señor Jesucristo. Amén."
+      "Por las intenciones del Santo Padre, del arzobispo de Seattle y de nuestro párroco",
+      "Dios te salve, María, Hija de Dios Padre, Virgen purísima antes del parto; en tus manos encomendamos nuestra fe para que la ilumines. Llena eres de gracia…",
+      "Dios te salve, María, Madre de Dios Hijo, Virgen purísima en el parto; en tus manos encomendamos nuestra esperanza para que la alientes. Llena eres de gracia…",
+      "Dios te salve, María, Esposa de Dios Espíritu Santo, Virgen purísima después del parto; en tus manos encomendamos nuestra caridad para que la inflames. Llena eres de gracia…"
     ],
     "litanyOpening": [
-      "Señor, ten piedad de nosotros.",
-      "Cristo, ten piedad de nosotros.",
-      "Señor, ten piedad de nosotros.",
+      "Señor, ten piedad.",
+      "Cristo, ten piedad.",
+      "Señor, ten piedad.",
       "Cristo, óyenos.",
       "Cristo, escúchanos.",
-      "Dios, Padre Celestial que eres Dios.\nTen piedad de nosotros.",
-      "Dios Hijo. Redentor del mundo que eres Dios.\nTen piedad de nosotros.",
-      "Espíritu Santo que eres Dios.\nTen piedad de nosotros.",
-      "Santísima Trinidad, que eres un solo Dios.\nTen piedad de nosotros."
+      "Dios, Padre celestial,\nten piedad de nosotros.",
+      "Dios Hijo, Redentor del mundo,",
+      "Dios Espíritu Santo,",
+      "Santísima Trinidad, un solo Dios,"
     ],
     "litanyInvocations": [
-      "Santa María.",
-      "Santa Madre de Dios.",
-      "Santa Virgen de las vírgenes.",
-      "Madre de Jesucristo.",
-      "Madre de la divina gracia.",
-      "Madre purísima.",
-      "Madre castísima.",
-      "Madre intacta.",
-      "Madre sin mancha.",
-      "Madre amable.",
-      "Madre del buen consejo.",
-      "Madre del Creador.",
-      "Madre del Salvador.",
-      "Madre de la Iglesia.",
-      "Virgen prudentísima.",
-      "Virgen venerable.",
-      "Virgen digna de alabanza.",
-      "Virgen poderosa.",
-      "Virgen misericordiosa.",
-      "Virgen fiel.",
-      "Espejo de justicia.",
-      "Trono de la Sabiduría.",
-      "Causa de nuestra alegría.",
-      "Vaso espiritual.",
-      "Vaso honorable.",
-      "Rosa Mística.",
-      "Torre de David.",
-      "Torre de Marfil.",
-      "Casa de Oro.",
-      "Arca de la alianza.",
-      "Puerta del cielo.",
-      "Estrella de la mañana.",
-      "Salud de los enfermos.",
-      "Refugio de los pecadores.",
-      "Consoladora de los afligidos.",
-      "Auxilio de los Cristianos.",
-      "Reina de los Ángeles.",
-      "Reina de los Patriarcas.",
-      "Reina de los Profetas.",
-      "Reina de los Apóstoles.",
-      "Reina de los Mártires.",
-      "Reina de los Confesores.",
-      "Reina de las Vírgenes.",
-      "Reina de todos los Santos.",
-      "Reina concebida sin pecado original.",
-      "Reina subida al cielo en cuerpo y alma.",
-      "Reina del Santísimo Rosario.",
+      "Santa María,",
+      "Santa Madre de Dios,",
+      "Santa Virgen de las vírgenes,",
+      "Madre de Cristo,",
+      "Madre de la Iglesia,",
+      "Madre de la misericordia,",
+      "Madre de la divina gracia,",
+      "Madre de la esperanza,",
+      "Madre purísima,",
+      "Madre castísima,",
+      "Madre siempre virgen,",
+      "Madre inmaculada,",
+      "Madre amable,",
+      "Madre admirable,",
+      "Madre del buen consejo,",
+      "Madre del Creador,",
+      "Madre del Salvador,",
+      "Virgen prudentísima,",
+      "Virgen digna de veneración,",
+      "Virgen digna de alabanza,",
+      "Virgen poderosa,",
+      "Virgen clemente,",
+      "Virgen fiel,",
+      "Espejo de justicia,",
+      "Trono de la sabiduría,",
+      "Causa de nuestra alegría,",
+      "Vaso espiritual,",
+      "Vaso digno de honor,",
+      "Vaso de insigne devoción,",
+      "Rosa mística,",
+      "Torre de David,",
+      "Torre de marfil,",
+      "Casa de oro,",
+      "Arca de la Alianza,",
+      "Puerta del cielo,",
+      "Estrella de la mañana,",
+      "Salud de los enfermos,",
+      "Refugio de los pecadores,",
+      "Consuelo de los migrantes,",
+      "Consoladora de los afligidos,",
+      "Auxilio de los cristianos,",
+      "Reina de los Ángeles,",
+      "Reina de los Patriarcas,",
+      "Reina de los Profetas,",
+      "Reina de los Apóstoles,",
+      "Reina de los Mártires,",
+      "Reina de los Confesores,",
+      "Reina de las Vírgenes,",
+      "Reina de todos los Santos,",
+      "Reina concebida sin pecado original,",
+      "Reina asunta a los Cielos,",
+      "Reina del Santísimo Rosario,",
+      "Reina de la familia,",
       "Reina de la paz."
     ],
     "finalPrayers": [
-      "Cordero de Dios, que quitas el pecado del mundo. Perdónanos, Señor.",
-      "Cordero de Dios, que quitas el pecado del mundo, Escúchanos, Señor.",
-      "Cordero de Dios, que quitas el pecado del mundo. Ten piedad y misericordia de nosotros.",
-      "Guía: Bajo tu amparo nos acogemos, Santa Madre de Dios, no desprecies las súplicas que te dirigimos en nuestras necesidades, antes bien, líbranos de todos los peligros, oh, Virgen gloriosa y bendita. Ruega por nosotros, Santa Madre de Dios.",
-      "Todos: Para que seamos dignos de alcanzar las promesas de nuestro Señor Jesucristo.",
-      "Guía: Oh Dios, cuyo Unigénito Hijo, con su vida, muerte y resurrección, nos alcanzó el premio de la vida eterna: concédenos, a los que recordamos estos misterios del Santo Rosario, imitar lo que contienen y alcanzar lo que prometen. Por el mismo Jesucristo, nuestro Señor.",
-      "Amén."
+      "Infinitas gracias te damos, soberana Princesa, por los beneficios que a diario recibimos de tus generosas manos. Dígnate, ahora y siempre, tomarnos bajo tu poderoso amparo, y para más obligarte a ello, te saludamos diciendo:",
+      "Dios te salve, Reina y Madre de misericordia, vida, dulzura y esperanza nuestra; Dios te salve. A ti llamamos los desterrados hijos de Eva; a ti suspiramos, gimiendo y llorando en este valle de lágrimas. ¡Ea, pues!, Señora y abogada nuestra, vuelve a nosotros tus ojos misericordiosos, y después de este destierro, muéstranos a Jesús, fruto bendito de tu vientre. ¡Oh clemente, oh piadosa, oh dulce Virgen María!",
+      "Guía: Ruega por nosotros, Santa Madre de Dios,",
+      "Todos: para que seamos dignos de las promesas de Cristo.",
+      "Te rogamos nos concedas, Señor Dios nuestro, gozar de continua salud de alma y cuerpo, y por la gloriosa intercesión de la bienaventurada siempre Virgen María, vernos libres de las tristezas de la vida presente y disfrutar de las alegrías eternas. Por Cristo nuestro Señor. Amén."
     ],
-    "conclusion": [
-      "Guía: Reina del Santísimo Rosario.",
-      "Todos: Ruega por nosotros.",
-      "Guía: Viva la gracia.",
-      "Todos: Muera el pecado.",
-      "Guía: Ave María purísima.",
-      "Todos: En gracia de Dios concebida."
+    "rosaryVirginLeader": "Guía: Oh Virgen Santísima del Rosario, no permitas",
+    "rosaryVirginResponse": "Todos: que vivamos y muramos en pecado mortal.",
+    "ourLadyFatimaLeader": "Guía: Nuestra Señora de Fátima,",
+    "ourLadyFatimaResponse": "Todos: ruega por nosotros.",
+    "immaculateHeartLeader": "Guía: Corazón Inmaculado de María,",
+    "immaculateHeartResponse": "Todos: sé la salvación del alma mía.",
+    "litanyMercyResponse": "ten piedad de nosotros.",
+    "litanyResponse": "ruega por nosotros.",
+    "litanyClosing": [
+      "Guía: Cordero de Dios, que quitas el pecado del mundo,\nTodos: perdónanos, Señor.",
+      "Guía: Cordero de Dios, que quitas el pecado del mundo,\nTodos: escúchanos, Señor.",
+      "Guía: Cordero de Dios, que quitas el pecado del mundo,\nTodos: ten misericordia de nosotros."
     ]
   }
 };

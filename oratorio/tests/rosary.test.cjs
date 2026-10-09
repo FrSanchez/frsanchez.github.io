@@ -12,7 +12,7 @@ test('Each group has the full nine-page flow and all decade prayers', () => {
   for (const key of Object.keys(content.groups)) {
     const pages = pagesForGroup(key);
     assert.equal(pages.length, 9);
-    assert.equal(pages[0].title, 'Oraciones iniciales');
+    assert.equal(pages[0].title, 'Introducción');
     assert.equal(pages[6].title, 'Oraciones finales');
     assert.equal(pages[7].title, 'Letanías de la Santísima Virgen');
     assert.equal(pages[8].title, 'Cierre');
@@ -21,7 +21,7 @@ test('Each group has the full nine-page flow and all decade prayers', () => {
       assert.equal(pages[i].sections.length, 5);
       assert.ok(pages[i].sections.flatMap(s => s.paragraphs).every(p => typeof p === 'string' && p.length > 0));
     }
-    assert.equal(pages[7].sections[1].paragraphs.length, 48);
+    assert.equal(pages[7].sections[1].paragraphs.length, 54);
   }
 });
 
@@ -71,11 +71,76 @@ test('Both languages cover every UI key, prayer, and mystery', () => {
 
 test('English renders translated page headings, prayers, and litany responses', () => {
   const pages = pagesForGroup('gozosos', 'en');
-  assert.equal(pages[0].title, 'Opening Prayers');
+  assert.equal(pages[0].title, 'Introduction');
   assert.equal(pages[1].title, 'First Joyful Mystery');
   assert.ok(pages[1].sections[0].paragraphs[0].startsWith('Our Father'));
   assert.equal(pages[7].title, 'Litany of the Blessed Virgin Mary');
-  assert.ok(pages[7].sections[1].paragraphs.every(p => p.endsWith('Pray for us.')));
+  assert.equal(pages[7].sections[1].paragraphs[0], 'Holy Mary,\npray for us.');
+  assert.equal(pages[7].sections[2].paragraphs.length, 3);
   assert.equal(format(getLocale('en').ui.pageCount, {current: 8, total: 9}), 'Page 8 of 9');
   assert.equal(getLocale('unsupported'), getLocale('es'));
+});
+
+
+test('New introduction has the requested prayer sections and Gospel link in both languages', () => {
+  for (const language of ['es', 'en']) {
+    const {ui, content} = getLocale(language);
+    const intro = pagesForGroup('luminosos', language)[0];
+    assert.equal(intro.title, ui.initialTitle);
+    assert.deepEqual(intro.sections.map(s => s.heading).filter(Boolean), [ui.contritionTitle, ui.spiritTitle, ui.gospelTitle, ui.petitionsTitle]);
+    assert.equal(intro.sections[3].link.href, 'https://bible.usccb.org/daily-bible-reading');
+    assert.equal(intro.sections[2].paragraphs.length, 5);
+    assert.ok(content.prayers.initialPrayers[7].endsWith('…'));
+    for (const mystery of pagesForGroup('luminosos', language).slice(1, 6)) {
+      assert.equal(mystery.sections[3].heading, ui.maryGraceTitle);
+    }
+  }
+});
+
+
+test('Every mystery ends with the complete Jaculatorias and Fátima prayer', () => {
+  for (const language of ['es', 'en']) {
+    const { content: localized } = getLocale(language);
+    const p = localized.prayers;
+    for (const key of Object.keys(content.groups)) {
+      for (const mystery of pagesForGroup(key, language).slice(1, 6)) {
+        assert.deepEqual(mystery.sections[3].paragraphs, [p.maryGrace, p.maryResponse, p.rosaryVirginLeader, p.rosaryVirginResponse]);
+        assert.deepEqual(mystery.sections[4].paragraphs, [p.fatimaPrayer, p.ourLadyFatimaLeader, p.ourLadyFatimaResponse, p.immaculateHeartLeader, p.immaculateHeartResponse]);
+      }
+    }
+  }
+});
+
+
+test('Closing prayers and updated litany follow the supplied content in both languages', () => {
+  for (const language of ['es', 'en']) {
+    const { content: localized, ui } = getLocale(language);
+    const p = localized.prayers;
+    const pages = pagesForGroup('luminosos', language);
+    assert.ok(pages[6].sections[0].paragraphs[0].includes('Seattle'));
+    assert.equal(pages[6].sections[1].heading, ui.ourFatherTitle);
+    assert.deepEqual(pages[6].sections[1].paragraphs, [p.ourFather]);
+    assert.equal(pages[6].sections[2].paragraphs.length, 3);
+    assert.deepEqual(pages[6].sections[3].paragraphs, [p.glory]);
+    const litany = pages[7];
+    assert.deepEqual(litany.sections[0].emphasizedResponses, [p.litanyMercyResponse]);
+    assert.deepEqual(litany.sections[1].emphasizedResponses, [p.litanyResponse]);
+    assert.equal(litany.sections[1].paragraphs.filter(t => t.includes(p.litanyResponse)).length, 1);
+    assert.equal(litany.sections[2].paragraphs.length, 3);
+    assert.ok(litany.sections[2].paragraphs.every(t => t.split('\n').length === 2));
+  }
+});
+
+
+test('Cierre contains only Thanksgiving, Salve, and Let Us Pray in both languages', () => {
+  for (const language of ['es', 'en']) {
+    const { ui, content: localized } = getLocale(language);
+    const final = pagesForGroup('gozosos', language)[8];
+    assert.deepEqual(final.sections.map(s => s.heading), [ui.thanksgivingTitle, ui.salveTitle, ui.letUsPrayTitle]);
+    assert.deepEqual(final.sections.flatMap(s => s.paragraphs), localized.prayers.finalPrayers);
+    assert.equal(final.sections[1].paragraphs.length, 3);
+    assert.ok(final.sections[2].paragraphs[0].endsWith(language === 'es' ? 'Amén.' : 'Amen.'));
+    assert.ok(!('offering' in localized.prayers));
+    assert.ok(!('conclusion' in localized.prayers));
+  }
 });

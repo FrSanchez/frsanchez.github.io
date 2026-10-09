@@ -15,11 +15,20 @@
       { heading: ui.ourFatherTitle, paragraphs: [p.ourFather] },
       { heading: ui.hailMaryTitle, paragraphs: [p.hailMary] },
       { heading: ui.gloryTitle, paragraphs: [p.glory] },
-      { heading: ui.maryGraceTitle, paragraphs: [p.maryGrace, p.maryResponse] },
-      { heading: ui.fatimaPrayerTitle, paragraphs: [p.fatimaPrayer] },
+      { heading: ui.maryGraceTitle, paragraphs: [p.maryGrace, p.maryResponse, p.rosaryVirginLeader, p.rosaryVirginResponse] },
+      { heading: ui.fatimaPrayerTitle, paragraphs: [p.fatimaPrayer, p.ourLadyFatimaLeader, p.ourLadyFatimaResponse, p.immaculateHeartLeader, p.immaculateHeartResponse] },
     ];
     return [
-      { title: ui.initialTitle, label: ui.initialLabel, mystery: format(ui.todayMysteries, { group: group.name }), sections: [{ paragraphs: p.initialPrayers }] },
+      { title: ui.initialTitle, label: ui.initialLabel, mystery: format(ui.todayMysteries, { group: group.name }), sections: [
+        { paragraphs: p.initialPrayers.slice(0, 1) },
+        { heading: ui.contritionTitle, paragraphs: p.initialPrayers.slice(1, 2) },
+        { heading: ui.spiritTitle, paragraphs: p.initialPrayers.slice(2, 7) },
+        { heading: ui.gospelTitle, paragraphs: [], link: {
+          href: 'https://bible.usccb.org/daily-bible-reading', label: ui.gospelLink,
+          ariaLabel: `${ui.gospelLink} (${ui.newTab})`,
+        } },
+        { heading: ui.petitionsTitle, paragraphs: p.initialPrayers.slice(7) },
+      ] },
       ...group.mysteries.map((mystery, index) => ({
         title: format(ui.mysteryHeading, { ordinal: ui.ordinals[index], kind: group.kind }),
         label: format(ui.contemplation, { current: index + 1, total: 5 }),
@@ -27,15 +36,22 @@
         description: mystery.description,
         sections: decade,
       })),
-      { title: ui.closingTitle, label: ui.closingLabel, sections: [{ paragraphs: p.closingPrayers }] },
+      { title: ui.closingTitle, label: ui.closingLabel, sections: [
+        { paragraphs: p.closingPrayers.slice(0, 1) },
+        { heading: ui.ourFatherTitle, paragraphs: [p.ourFather] },
+        { paragraphs: p.closingPrayers.slice(1) },
+        { paragraphs: [p.glory] },
+      ] },
       { title: ui.litanyTitle, label: ui.litanyLabel, sections: [
-        { paragraphs: p.litanyOpening },
-        { paragraphs: p.litanyInvocations.map(invocation => `${invocation}\n${ui.prayForUs}`) },
+        { paragraphs: p.litanyOpening, emphasizedResponses: [p.litanyMercyResponse] },
+        { paragraphs: p.litanyInvocations.map((invocation, index) => index === 0
+          ? `${invocation}\n${p.litanyResponse}` : invocation), emphasizedResponses: [p.litanyResponse] },
+        { paragraphs: p.litanyClosing },
       ] },
       { title: ui.finalTitle, label: ui.finalLabel, sections: [
-        { paragraphs: p.finalPrayers },
-        { heading: ui.offeringTitle, paragraphs: [p.offering] },
-        { heading: ui.conclusionTitle, paragraphs: p.conclusion },
+        { heading: ui.thanksgivingTitle, paragraphs: p.finalPrayers.slice(0, 1) },
+        { heading: ui.salveTitle, paragraphs: p.finalPrayers.slice(1, 4) },
+        { heading: ui.letUsPrayTitle, paragraphs: p.finalPrayers.slice(4) },
       ] },
     ];
   }

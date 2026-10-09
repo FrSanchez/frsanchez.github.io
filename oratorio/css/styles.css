@@ -181,3 +181,7 @@ body.at-start { padding-bottom: 0; }
 .settings-content h2 { font-size: 1.5rem; color: var(--oratorio-navy); margin-bottom: 24px; }
 #language-select { min-height: 48px; }
 @media print { .settings-button, #settings-dialog { display: none; } }
+
+.litany-response { color: #b3261e; font-style: italic; }
+
+.closing-symbol { text-align: center; color: var(--oratorio-navy); font-size: 2rem; margin: 32px 0 0; line-height: 1.5; }
