@@ -47,3 +47,9 @@ test('Spanish and English include complete matching pages and working cross-link
   for (const key of infoRoutes) assert.equal(spanish[key].sections.length, english[key].sections.length);
   assert.deepEqual(spanish.cancionero.sections.map(s=>s.id), english.cancionero.sections.map(s=>s.id));
 });
+
+
+test('Rosary consecration and standalone consecration have distinct routes', () => {
+  assert.deepEqual(routeForHash('#rosario-consagracion', routes), {view:'rosario',anchor:'',index:9});
+  assert.deepEqual(routeForHash('#consagracion', routes), {view:'consagracion',anchor:'',index:0});
+});

@@ -8,10 +8,10 @@ test('Every local weekday selects the requested mysteries', () => {
   expected.forEach((group, offset) => assert.equal(groupForDate(new Date(2026, 9, 5 + offset)), group));
 });
 
-test('Each group has the full nine-page flow and all decade prayers', () => {
+test('Each group has the full ten-page flow and all decade prayers', () => {
   for (const key of Object.keys(content.groups)) {
     const pages = pagesForGroup(key);
-    assert.equal(pages.length, 9);
+    assert.equal(pages.length, 10);
     assert.equal(pages[0].title, 'Introducción');
     assert.equal(pages[6].title, 'Oraciones finales');
     assert.equal(pages[7].title, 'Letanías de la Santísima Virgen');
@@ -57,7 +57,7 @@ test('Both languages cover every UI key, prayer, and mystery', () => {
   for (const language of Object.keys(locales)) {
     for (const key of Object.keys(content.groups)) {
       const pages = pagesForGroup(key, language);
-      assert.equal(pages.length, 9);
+      assert.equal(pages.length, 10);
       for (const page of pages) {
         assert.ok(page.title.length > 0 && !page.title.includes('{'));
         for (const section of page.sections) {
@@ -77,7 +77,7 @@ test('English renders translated page headings, prayers, and litany responses', 
   assert.equal(pages[7].title, 'Litany of the Blessed Virgin Mary');
   assert.equal(pages[7].sections[1].paragraphs[0], 'Holy Mary,\npray for us.');
   assert.equal(pages[7].sections[2].paragraphs.length, 3);
-  assert.equal(format(getLocale('en').ui.pageCount, {current: 8, total: 9}), 'Page 8 of 9');
+  assert.equal(format(getLocale('en').ui.pageCount, {current: 8, total: 10}), 'Page 8 of 10');
   assert.equal(getLocale('unsupported'), getLocale('es'));
 });
 
@@ -143,4 +143,18 @@ test('Cierre contains only Thanksgiving, Salve, and Let Us Pray in both language
     assert.ok(!('offering' in localized.prayers));
     assert.ok(!('conclusion' in localized.prayers));
   }
+});
+
+
+test('Rosary ends with the same consecration content as the standalone page', () => {
+  const { getPages } = require('../js/pages.js');
+  for (const language of ['es', 'en']) {
+    for (const group of Object.keys(content.groups)) {
+      const pages = pagesForGroup(group, language);
+      assert.equal(pages[8].title, getLocale(language).ui.finalTitle);
+      assert.equal(pages[9].title, getLocale(language).ui.menuConsecration);
+      assert.deepEqual(pages[9].sections, getPages(language).consagracion.sections);
+    }
+  }
+  assert.equal(indexForHash('#rosario-consagracion'), 9);
 });

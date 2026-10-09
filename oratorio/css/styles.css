@@ -229,3 +229,9 @@ body.at-start { padding-bottom: 0; }
 @media (min-width: 576px) {
   .checklist-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+button.step-marker { padding: 0; background: transparent; cursor: pointer; }
+button.step-marker.completed { background: #e0e6e2; }
+button.step-marker[aria-current="step"] { background: var(--oratorio-green); }
+button.step-marker:not([aria-current]):hover { background: #e0e6e2; border-color: var(--oratorio-green); }
+button.step-marker:focus-visible { outline: 3px solid var(--oratorio-button); outline-offset: 2px; }

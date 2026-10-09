@@ -111,16 +111,22 @@
     elements['daily-group'].textContent = content.groups[groupKey].name;
     const pageCount = format(ui.pageCount, { current: current.index + 1, total: pages.length });
     elements['page-count'].textContent = pageCount;
+    elements.progress.setAttribute('aria-valuemax', pages.length);
     elements.progress.setAttribute('aria-valuenow', current.index + 1);
     elements.progress.setAttribute('aria-valuetext', `${pageCount}: ${page.title}`);
     elements['progress-fill'].style.width = `${(current.index + 1) / pages.length * 100}%`;
     elements['step-markers'].replaceChildren(...pages.map((step, index) => {
-      const marker = document.createElement('li');
+      const item = document.createElement('li');
+      const marker = document.createElement('button');
+      marker.type = 'button';
       marker.className = `step-marker${index < current.index ? ' completed' : ''}`;
       marker.textContent = index + 1;
-      marker.setAttribute('aria-label', `${index + 1}. ${step.title}`);
+      marker.dataset.pageIndex = index;
+      marker.setAttribute('aria-label', format(ui.jumpToPage, { current: index + 1, title: step.title }));
+      marker.setAttribute('aria-controls', 'prayer-page');
       if (index === current.index) marker.setAttribute('aria-current', 'step');
-      return marker;
+      item.append(marker);
+      return item;
     }));
     elements['section-label'].textContent = page.label;
     elements['page-title'].textContent = page.title;
@@ -202,6 +208,12 @@
     language = selected;
     try { window.localStorage.setItem(storageKey, language); } catch { /* Optional persistence. */ }
     render();
+  });
+  elements['step-markers'].addEventListener('click', event => {
+    const marker = event.target.closest('button[data-page-index]');
+    if (!marker || current.view !== 'rosario') return;
+    const index = Number(marker.dataset.pageIndex);
+    if (Number.isInteger(index) && index >= 0 && index < routes.length) navigateTo(`#${routes[index]}`);
   });
   elements['next-button'].addEventListener('click', () => {
     if (current.view === 'rosario' && current.index < routes.length - 1) navigateTo(`#${routes[current.index + 1]}`);

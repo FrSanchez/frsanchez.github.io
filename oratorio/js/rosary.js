@@ -1,7 +1,9 @@
 (function (root) {
   const { getLocale, format } = typeof module !== 'undefined' && module.exports
     ? require('./locales.js') : root.RosaryLocales;
-  const routes = ['inicio', 'misterio-1', 'misterio-2', 'misterio-3', 'misterio-4', 'misterio-5', 'oraciones-finales', 'letanias', 'cierre'];
+  const { getPages } = typeof module !== 'undefined' && module.exports
+    ? require('./pages.js') : root.OratorioPages;
+  const routes = ['inicio', 'misterio-1', 'misterio-2', 'misterio-3', 'misterio-4', 'misterio-5', 'oraciones-finales', 'letanias', 'cierre', 'rosario-consagracion'];
 
   function groupForDate(date = new Date()) {
     return ['gloriosos', 'gozosos', 'dolorosos', 'gloriosos', 'luminosos', 'dolorosos', 'gozosos'][date.getDay()];
@@ -53,6 +55,7 @@
         { heading: ui.salveTitle, paragraphs: p.finalPrayers.slice(1, 4) },
         { heading: ui.letUsPrayTitle, paragraphs: p.finalPrayers.slice(4) },
       ] },
+      { ...getPages(language).consagracion, title: ui.menuConsecration },
     ];
   }
 
