@@ -7,36 +7,44 @@
     <meta name="description" content="Reza el Santo Rosario con las oraciones en español y los misterios de cada día.">
     <title>Oratorio de la Virgen de Fátima</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=769c9d313b24">
     <link rel="icon" type="image/png" href="favicon.png">
     <script src="js/content.js" defer></script>
+    <script src="js/content-en.js" defer></script>
+    <script src="js/locales.js" defer></script>
     <script src="js/rosary.js" defer></script>
     <script src="js/app.js" defer></script>
   </head>
   <body>
-    <a class="visually-hidden-focusable skip-link" href="#page-title">Ir a las oraciones</a>
+    <a class="visually-hidden-focusable skip-link" href="#page-title" data-i18n="skipLink">Ir a las oraciones</a>
     <header class="site-header">
+      <button type="button" id="settings-button" class="settings-button" aria-label="Configuración" data-i18n-aria="settings" aria-haspopup="dialog" aria-controls="settings-dialog">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M9.5 3h5l.6 2.6 2.1 1.2 2.5-.8 2.5 4.3-1.9 1.8v2.4l1.9 1.8-2.5 4.3-2.5-.8-2.1 1.2-.6 2.6h-5l-.6-2.6-2.1-1.2-2.5.8-2.5-4.3 1.9-1.8v-2.4L1.8 8.3 4.3 4l2.5.8 2.1-1.2Z" transform="translate(1 0) scale(.9)"/>
+          <circle cx="12" cy="12" r="3.2"/>
+        </svg>
+      </button>
       <div class="container reading-width px-4 header-layout">
         <div class="header-image-wrap">
-          <img class="header-image" src="oratorio.webp" alt="Imagen de la Virgen de Fátima">
+          <img class="header-image" src="oratorio.webp" width="100" height="132" alt="Imagen de la Virgen de Fátima" data-i18n-alt="imageAlt">
         </div>
         <div class="header-text">
-          <h1>Oratorio de la Virgen de Fátima</h1>
-          <p class="mb-0 header-subtitle">Un momento de oración, cada día</p>
+          <h1 data-i18n="siteTitle">Oratorio de la Virgen de Fátima</h1>
+          <p class="mb-0 header-subtitle" data-i18n="subtitle">Un momento de oración, cada día</p>
         </div>
       </div>
     </header>
 
     <main class="container reading-width px-4" id="rosary">
-      <section class="progress-panel" aria-label="Progreso del Santo Rosario">
+      <section class="progress-panel" aria-label="Progreso del Santo Rosario" data-i18n-aria="progressLabel">
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
-          <p class="m-0 daily-label">Santo Rosario · <span id="daily-group"></span></p>
+          <p class="m-0 daily-label"><span data-i18n="rosary">Santo Rosario</span> · <span id="daily-group"></span></p>
           <p class="m-0 page-count" id="page-count" aria-live="polite" aria-atomic="true"></p>
         </div>
-        <div class="progress" role="progressbar" id="progress" aria-label="Progreso del Rosario" aria-valuemin="0" aria-valuemax="9" aria-valuenow="1">
+        <div class="progress" role="progressbar" id="progress" aria-label="Progreso del Rosario" data-i18n-aria="progressBarLabel" aria-valuemin="0" aria-valuemax="9" aria-valuenow="1">
           <div class="progress-bar" id="progress-fill"></div>
         </div>
-        <ol class="step-markers" id="step-markers" aria-label="Etapas del Rosario"></ol>
+        <ol class="step-markers" id="step-markers" aria-label="Etapas del Rosario" data-i18n-aria="stagesLabel"></ol>
       </section>
 
       <article id="prayer-page" class="prayer-page">
@@ -47,16 +55,30 @@
         <div id="prayers"></div>
         <div class="d-flex justify-content-end next-navigation">
           <button type="button" id="next-button" class="btn btn-primary btn-lg">
-            SIGUE <span class="ms-2" aria-hidden="true">→</span>
+            <span data-i18n="next">SIGUE</span> <span class="ms-2" aria-hidden="true">→</span>
           </button>
         </div>
       </article>
-      <noscript><p class="alert alert-info">Activa JavaScript para ver los misterios del día y seguir las oraciones del Rosario.</p></noscript>
+      <noscript><p class="alert alert-info" data-i18n="noScriptMessage">Activa JavaScript para ver los misterios del día y seguir las oraciones del Rosario.</p></noscript>
     </main>
+
+    <dialog id="settings-dialog" aria-labelledby="settings-title">
+      <div class="settings-content">
+        <h2 id="settings-title" data-i18n="settings">Configuración</h2>
+        <label class="form-label" for="language-select" data-i18n="language">Idioma</label>
+        <select id="language-select" class="form-select mb-4">
+          <option value="es" lang="es" data-i18n="spanish">Español</option>
+          <option value="en" lang="en" data-i18n="english">English</option>
+        </select>
+        <form method="dialog" class="text-end">
+          <button type="submit" class="btn btn-primary" data-i18n="close">Cerrar</button>
+        </form>
+      </div>
+    </dialog>
 
     <footer class="home-navigation" hidden>
       <div class="container reading-width px-4">
-        <button type="button" class="btn btn-primary" id="home-button">INICIO</button>
+        <button type="button" class="btn btn-primary" id="home-button" data-i18n="home">INICIO</button>
       </div>
     </footer>
   </body>

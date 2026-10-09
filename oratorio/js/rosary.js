@@ -1,41 +1,41 @@
 (function (root) {
-  const content = typeof module !== 'undefined' && module.exports
-    ? require('./content.js') : root.RosaryContent;
-  const ordinals = ['Primer', 'Segundo', 'Tercer', 'Cuarto', 'Quinto'];
+  const { getLocale, format } = typeof module !== 'undefined' && module.exports
+    ? require('./locales.js') : root.RosaryLocales;
   const routes = ['inicio', 'misterio-1', 'misterio-2', 'misterio-3', 'misterio-4', 'misterio-5', 'oraciones-finales', 'letanias', 'cierre'];
 
   function groupForDate(date = new Date()) {
     return ['gloriosos', 'gozosos', 'dolorosos', 'gloriosos', 'luminosos', 'dolorosos', 'gozosos'][date.getDay()];
   }
 
-  function pagesForGroup(groupKey) {
+  function pagesForGroup(groupKey, language = 'es') {
+    const { content, ui } = getLocale(language);
     const group = content.groups[groupKey];
     const p = content.prayers;
     const decade = [
-      { heading: 'Padre nuestro', paragraphs: [p.ourFather] },
-      { heading: 'Ave María · 10 veces', paragraphs: [p.hailMary] },
-      { heading: 'Gloria', paragraphs: [p.glory] },
-      { heading: 'María, Madre de gracia', paragraphs: [p.maryGrace, p.maryResponse] },
-      { heading: 'Oración de Fátima', paragraphs: [p.fatimaPrayer] },
+      { heading: ui.ourFatherTitle, paragraphs: [p.ourFather] },
+      { heading: ui.hailMaryTitle, paragraphs: [p.hailMary] },
+      { heading: ui.gloryTitle, paragraphs: [p.glory] },
+      { heading: ui.maryGraceTitle, paragraphs: [p.maryGrace, p.maryResponse] },
+      { heading: ui.fatimaPrayerTitle, paragraphs: [p.fatimaPrayer] },
     ];
     return [
-      { title: 'Oraciones iniciales', label: 'Comenzamos en oración', mystery: `Misterios de hoy: ${group.name}`, sections: [{ paragraphs: p.initialPrayers }] },
+      { title: ui.initialTitle, label: ui.initialLabel, mystery: format(ui.todayMysteries, { group: group.name }), sections: [{ paragraphs: p.initialPrayers }] },
       ...group.mysteries.map((mystery, index) => ({
-        title: `${ordinals[index]} misterio de ${group.kind}`,
-        label: `Contemplamos · ${index + 1} de 5`,
+        title: format(ui.mysteryHeading, { ordinal: ui.ordinals[index], kind: group.kind }),
+        label: format(ui.contemplation, { current: index + 1, total: 5 }),
         mystery: mystery.title,
         description: mystery.description,
         sections: decade,
       })),
-      { title: 'Oraciones finales', label: 'A nuestra Madre', sections: [{ paragraphs: p.closingPrayers }] },
-      { title: 'Letanías de la Santísima Virgen', label: 'Ruega por nosotros', sections: [
+      { title: ui.closingTitle, label: ui.closingLabel, sections: [{ paragraphs: p.closingPrayers }] },
+      { title: ui.litanyTitle, label: ui.litanyLabel, sections: [
         { paragraphs: p.litanyOpening },
-        { paragraphs: p.litanyInvocations.map(invocation => `${invocation}\nRuega por nosotros.`) },
+        { paragraphs: p.litanyInvocations.map(invocation => `${invocation}\n${ui.prayForUs}`) },
       ] },
-      { title: 'Cierre', label: 'Concluimos en oración', sections: [
+      { title: ui.finalTitle, label: ui.finalLabel, sections: [
         { paragraphs: p.finalPrayers },
-        { heading: 'Ofrecimiento del Santo Rosario', paragraphs: [p.offering] },
-        { heading: 'Conclusión', paragraphs: p.conclusion },
+        { heading: ui.offeringTitle, paragraphs: [p.offering] },
+        { heading: ui.conclusionTitle, paragraphs: p.conclusion },
       ] },
     ];
   }

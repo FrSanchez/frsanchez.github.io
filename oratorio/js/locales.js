@@ -1,0 +1,104 @@
+// UI strings live here; prayers and mystery descriptions live in content.js (es)
+// and content-en.js (en). Use matching keys when adding another language.
+(function (root) {
+  const isNode = typeof module !== 'undefined' && module.exports;
+  const locales = {
+    es: {
+      content: isNode ? require('./content.js') : root.RosaryContent,
+      ui: {
+        siteTitle: 'Oratorio de la Virgen de Fátima',
+        subtitle: 'Un momento de oración, cada día',
+        metaDescription: 'Reza el Santo Rosario con las oraciones en español y los misterios de cada día.',
+        imageAlt: 'Imagen de la Virgen de Fátima',
+        skipLink: 'Ir a las oraciones',
+        noScriptMessage: 'Activa JavaScript para ver los misterios del día y seguir las oraciones del Rosario.',
+        rosary: 'Santo Rosario',
+        progressLabel: 'Progreso del Santo Rosario',
+        progressBarLabel: 'Progreso del Rosario',
+        stagesLabel: 'Etapas del Rosario',
+        pageCount: 'Página {current} de {total}',
+        settings: 'Configuración',
+        language: 'Idioma',
+        spanish: 'Español',
+        english: 'English',
+        close: 'Cerrar',
+        next: 'SIGUE',
+        home: 'INICIO',
+        ordinals: ['Primer', 'Segundo', 'Tercer', 'Cuarto', 'Quinto'],
+        mysteryHeading: '{ordinal} misterio de {kind}',
+        initialTitle: 'Oraciones iniciales',
+        initialLabel: 'Comenzamos en oración',
+        todayMysteries: 'Misterios de hoy: {group}',
+        contemplation: 'Contemplamos · {current} de {total}',
+        closingTitle: 'Oraciones finales',
+        closingLabel: 'A nuestra Madre',
+        litanyTitle: 'Letanías de la Santísima Virgen',
+        prayForUs: 'Ruega por nosotros.',
+        litanyLabel: 'Ruega por nosotros',
+        finalTitle: 'Cierre',
+        finalLabel: 'Concluimos en oración',
+        offeringTitle: 'Ofrecimiento del Santo Rosario',
+        conclusionTitle: 'Conclusión',
+        ourFatherTitle: 'Padre nuestro',
+        hailMaryTitle: 'Ave María · 10 veces',
+        gloryTitle: 'Gloria',
+        maryGraceTitle: 'María, Madre de gracia',
+        fatimaPrayerTitle: 'Oración de Fátima',
+        speakers: ['Guía', 'Todos'],
+      },
+    },
+    en: {
+      content: isNode ? require('./content-en.js') : root.RosaryContentEn,
+      ui: {
+        siteTitle: 'Oratory of Our Lady of Fátima',
+        subtitle: 'A moment of prayer, every day',
+        metaDescription: 'Pray the Holy Rosary with the prayers and mysteries for each day.',
+        imageAlt: 'Image of Our Lady of Fátima',
+        skipLink: 'Skip to the prayers',
+        noScriptMessage: 'Enable JavaScript to see the daily mysteries and follow the Rosary prayers.',
+        rosary: 'Holy Rosary',
+        progressLabel: 'Holy Rosary progress',
+        progressBarLabel: 'Rosary progress',
+        stagesLabel: 'Rosary stages',
+        pageCount: 'Page {current} of {total}',
+        settings: 'Settings',
+        language: 'Language',
+        spanish: 'Español',
+        english: 'English',
+        close: 'Close',
+        next: 'NEXT',
+        home: 'HOME',
+        ordinals: ['First', 'Second', 'Third', 'Fourth', 'Fifth'],
+        mysteryHeading: '{ordinal} {kind} Mystery',
+        initialTitle: 'Opening Prayers',
+        initialLabel: 'We begin in prayer',
+        todayMysteries: 'Today’s mysteries: {group}',
+        contemplation: 'We contemplate · {current} of {total}',
+        closingTitle: 'Closing Prayers',
+        closingLabel: 'To Our Mother',
+        litanyTitle: 'Litany of the Blessed Virgin Mary',
+        prayForUs: 'Pray for us.',
+        litanyLabel: 'Pray for us',
+        finalTitle: 'Conclusion',
+        finalLabel: 'We conclude in prayer',
+        offeringTitle: 'Offering of the Holy Rosary',
+        conclusionTitle: 'Final Acclamations',
+        ourFatherTitle: 'Our Father',
+        hailMaryTitle: 'Hail Mary · 10 times',
+        gloryTitle: 'Glory Be',
+        maryGraceTitle: 'Mary, Mother of Grace',
+        fatimaPrayerTitle: 'Fátima Prayer',
+        speakers: ['Leader', 'All'],
+      },
+    },
+  };
+  function getLocale(language = 'es') {
+    return Object.hasOwn(locales, language) ? locales[language] : locales.es;
+  }
+  function format(template, values) {
+    return template.replace(/\{(\w+)\}/g, (_, key) => values[key] ?? `{${key}}`);
+  }
+  const api = { locales, getLocale, format };
+  if (isNode) module.exports = api;
+  else root.RosaryLocales = api;
+})(typeof globalThis !== 'undefined' ? globalThis : this);

@@ -148,3 +148,36 @@ body.at-start { padding-bottom: 0; }
     column-rule: 1px solid #e4dfd3;
   }
 }
+
+/* Native dialog supplies focus trapping and Escape-to-close behavior. */
+.site-header { position: relative; padding-top: 60px; }
+.settings-button {
+  position: absolute;
+  top: 10px;
+  right: max(12px, env(safe-area-inset-right));
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e4dfd3;
+  border-radius: 8px;
+  background: var(--oratorio-paper);
+  color: var(--oratorio-navy);
+}
+.settings-button:hover { background: #eee9df; }
+.settings-button:focus-visible { outline: 3px solid var(--oratorio-button); outline-offset: 2px; }
+#settings-dialog {
+  width: min(400px, calc(100% - 32px));
+  max-height: calc(100dvh - 32px);
+  padding: 0;
+  border: 1px solid #e4dfd3;
+  border-radius: 12px;
+  color: var(--oratorio-text);
+  background: var(--oratorio-paper);
+  box-shadow: 0 16px 48px #0c234030;
+}
+#settings-dialog::backdrop { background: #0c234066; }
+.settings-content { padding: 28px; }
+.settings-content h2 { font-size: 1.5rem; color: var(--oratorio-navy); margin-bottom: 24px; }
+#language-select { min-height: 48px; }
+@media print { .settings-button, #settings-dialog { display: none; } }
