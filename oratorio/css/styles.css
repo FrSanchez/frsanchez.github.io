@@ -18,7 +18,7 @@ body {
 
 .reading-width { max-width: 760px; }
 .site-header {
-  padding: 32px 24px 28px;
+  padding: 32px 0 28px;
   border-top: 6px solid var(--oratorio-navy);
   border-bottom: 1px solid #e4dfd3;
   color: var(--oratorio-navy);
@@ -28,10 +28,33 @@ body {
   font-size: clamp(1.65rem, 5vw, 2.35rem);
   font-weight: 500;
   line-height: 1.3;
-  margin: 8px 0 12px;
+  margin: 0 0 12px;
   text-wrap: balance;
 }
-.header-cross { font-size: 1.65rem; }
+
+.header-layout {
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr);
+  gap: 24px;
+  align-items: stretch;
+}
+.header-image-wrap { position: relative; }
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+.header-text { min-width: 0; }
+@media (max-width: 575px) {
+  .header-layout { grid-template-columns: 100px minmax(0, 1fr); gap: 16px; }
+  .site-header h1 { font-size: 1.4rem; }
+  .header-subtitle { font-size: .85rem; }
+}
+
 .header-subtitle { color: var(--oratorio-text); font-size: .95rem; }
 .progress-panel { padding: 28px 0 24px; border-bottom: 1px solid #e4dfd3; }
 .daily-label { color: var(--oratorio-green); font-weight: 600; }
@@ -92,7 +115,8 @@ body {
   padding: 12px 24px;
   border-radius: 8px;
 }
-#next-button { min-width: 150px; }
+#next-button, #home-button { width: 150px; }
+body.at-start { padding-bottom: 0; }
 .home-navigation {
   position: fixed;
   z-index: 10;
@@ -107,10 +131,20 @@ body {
 #page-title:focus-visible { outline: 2px solid var(--oratorio-button); outline-offset: 6px; }
 [hidden] { display: none !important; }
 @media (max-width: 380px) {
-  .site-header { padding: 24px 16px; }
+  .site-header { padding: 24px 0; }
   .prayer-paragraph, .mystery-description { font-size: 1.05rem; }
 }
 @media print {
   body { padding-bottom: 0; }
   .home-navigation, .next-navigation, .skip-link { display: none; }
+}
+
+/* Read down the first litany column, then continue down the second. */
+.litany-columns .prayer-paragraph { break-inside: avoid; }
+@media (min-width: 576px) {
+  .litany-columns {
+    column-count: 2;
+    column-gap: 32px;
+    column-rule: 1px solid #e4dfd3;
+  }
 }

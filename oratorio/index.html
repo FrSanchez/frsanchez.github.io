@@ -8,6 +8,7 @@
     <title>Oratorio de la Virgen de Fátima</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="js/content.js" defer></script>
     <script src="js/rosary.js" defer></script>
     <script src="js/app.js" defer></script>
@@ -15,10 +16,14 @@
   <body>
     <a class="visually-hidden-focusable skip-link" href="#page-title">Ir a las oraciones</a>
     <header class="site-header">
-      <div class="container reading-width text-center">
-        <span class="header-cross" aria-hidden="true">✝</span>
-        <h1>Oratorio de la Virgen de Fátima</h1>
-        <p class="mb-0 header-subtitle">Un momento de oración, cada día</p>
+      <div class="container reading-width px-4 header-layout">
+        <div class="header-image-wrap">
+          <img class="header-image" src="oratorio.webp" alt="Imagen de la Virgen de Fátima">
+        </div>
+        <div class="header-text">
+          <h1>Oratorio de la Virgen de Fátima</h1>
+          <p class="mb-0 header-subtitle">Un momento de oración, cada día</p>
+        </div>
       </div>
     </header>
 
@@ -49,9 +54,9 @@
       <noscript><p class="alert alert-info">Activa JavaScript para ver los misterios del día y seguir las oraciones del Rosario.</p></noscript>
     </main>
 
-    <footer class="home-navigation">
+    <footer class="home-navigation" hidden>
       <div class="container reading-width px-4">
-        <button type="button" class="btn btn-primary w-100" id="home-button">INICIO</button>
+        <button type="button" class="btn btn-primary" id="home-button">INICIO</button>
       </div>
     </footer>
   </body>

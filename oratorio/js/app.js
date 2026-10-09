@@ -30,6 +30,7 @@
       elements[id].textContent = value || '';
       elements[id].hidden = !value;
     }
+    elements.prayers.classList.toggle('litany-columns', routes[pageIndex] === 'letanias');
     elements.prayers.replaceChildren(...page.sections.map(section => {
       const container = document.createElement('section');
       container.className = 'prayer-section';
@@ -54,6 +55,8 @@
       return container;
     }));
     elements['next-button'].hidden = pageIndex === pages.length - 1;
+    elements['home-button'].closest('footer').hidden = pageIndex === 0;
+    document.body.classList.toggle('at-start', pageIndex === 0);
     document.title = `${page.title} · Oratorio de la Virgen de Fátima`;
     if (moveFocus) {
       elements['page-title'].focus({ preventScroll: true });
