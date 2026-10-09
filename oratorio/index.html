@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0c2340">
+    <meta name="description" content="Reza el Santo Rosario con las oraciones en español y los misterios de cada día.">
+    <title>Oratorio de la Virgen de Fátima</title>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/content.js" defer></script>
+    <script src="js/rosary.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="visually-hidden-focusable skip-link" href="#page-title">Ir a las oraciones</a>
+    <header class="site-header">
+      <div class="container reading-width text-center">
+        <span class="header-cross" aria-hidden="true">✝</span>
+        <h1>Oratorio de la Virgen de Fátima</h1>
+        <p class="mb-0 header-subtitle">Un momento de oración, cada día</p>
+      </div>
+    </header>
+
+    <main class="container reading-width px-4" id="rosary">
+      <section class="progress-panel" aria-label="Progreso del Santo Rosario">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+          <p class="m-0 daily-label">Santo Rosario · <span id="daily-group"></span></p>
+          <p class="m-0 page-count" id="page-count" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <div class="progress" role="progressbar" id="progress" aria-label="Progreso del Rosario" aria-valuemin="0" aria-valuemax="9" aria-valuenow="1">
+          <div class="progress-bar" id="progress-fill"></div>
+        </div>
+        <ol class="step-markers" id="step-markers" aria-label="Etapas del Rosario"></ol>
+      </section>
+
+      <article id="prayer-page" class="prayer-page">
+        <p class="section-label" id="section-label"></p>
+        <h2 id="page-title" tabindex="-1"></h2>
+        <p class="mystery-title" id="mystery-title" hidden></p>
+        <p class="mystery-description" id="mystery-description" hidden></p>
+        <div id="prayers"></div>
+        <div class="d-flex justify-content-end next-navigation">
+          <button type="button" id="next-button" class="btn btn-primary btn-lg">
+            SIGUE <span class="ms-2" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </article>
+      <noscript><p class="alert alert-info">Activa JavaScript para ver los misterios del día y seguir las oraciones del Rosario.</p></noscript>
+    </main>
+
+    <footer class="home-navigation">
+      <div class="container reading-width px-4">
+        <button type="button" class="btn btn-primary w-100" id="home-button">INICIO</button>
+      </div>
+    </footer>
+  </body>
+</html>

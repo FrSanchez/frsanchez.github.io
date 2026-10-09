@@ -1,0 +1,116 @@
+:root {
+  --oratorio-navy: #0c2340;
+  --oratorio-text: #444;
+  --oratorio-button: #226bc9;
+  --oratorio-paper: #faf7f0;
+  --oratorio-green: #375a58;
+  --bs-body-color: var(--oratorio-text);
+  --bs-body-bg: var(--oratorio-paper);
+}
+
+body {
+  margin: 0;
+  color: var(--oratorio-text);
+  background: var(--oratorio-paper);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  padding-bottom: calc(100px + env(safe-area-inset-bottom));
+}
+
+.reading-width { max-width: 760px; }
+.site-header {
+  padding: 32px 24px 28px;
+  border-top: 6px solid var(--oratorio-navy);
+  border-bottom: 1px solid #e4dfd3;
+  color: var(--oratorio-navy);
+}
+.site-header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.65rem, 5vw, 2.35rem);
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 8px 0 12px;
+  text-wrap: balance;
+}
+.header-cross { font-size: 1.65rem; }
+.header-subtitle { color: var(--oratorio-text); font-size: .95rem; }
+.progress-panel { padding: 28px 0 24px; border-bottom: 1px solid #e4dfd3; }
+.daily-label { color: var(--oratorio-green); font-weight: 600; }
+.page-count { font-size: .85rem; }
+.progress { height: 6px; background: #e0e6e2; }
+.progress-bar { background: var(--oratorio-green); }
+.step-markers {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 18px 0 0;
+}
+.step-marker {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #bfcac6;
+  border-radius: 50%;
+  font-size: .7rem;
+  color: var(--oratorio-green);
+}
+.step-marker.completed { background: #e0e6e2; }
+.step-marker[aria-current="step"] {
+  background: var(--oratorio-green);
+  border-color: var(--oratorio-green);
+  color: #fff;
+  outline: 3px solid #e0e6e2;
+  outline-offset: 2px;
+}
+.prayer-page { padding: 32px 0 28px; }
+.section-label { color: var(--oratorio-green); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
+.prayer-page h2 { font-size: clamp(1.65rem, 5vw, 2rem); color: var(--oratorio-navy); font-weight: 600; line-height: 1.3; margin-bottom: 24px; }
+.mystery-title { color: var(--oratorio-green); font-weight: 500; font-size: 1.2rem; line-height: 1.7; margin-bottom: 28px; }
+.mystery-description { border-left: 3px solid #bfcac6; padding-left: 20px; margin-bottom: 28px; white-space: pre-line; }
+.prayer-section + .prayer-section { margin-top: 32px; }
+.prayer-section h3 { font-size: 1.2rem; color: var(--oratorio-navy); font-weight: 600; margin: 0 0 16px; }
+.prayer-paragraph, .mystery-description { font-size: 1.15rem; line-height: 1.85; }
+.prayer-paragraph { margin-bottom: 22px; white-space: pre-line; overflow-wrap: break-word; }
+.prayer-paragraph strong { font-weight: 650; }
+.next-navigation { margin-top: 36px; }
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--oratorio-button);
+  --bs-btn-border-color: var(--oratorio-button);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #1b57a4;
+  --bs-btn-hover-border-color: #1b57a4;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #17498a;
+  --bs-btn-active-border-color: #17498a;
+  --bs-btn-focus-shadow-rgb: 34, 107, 201;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  min-height: 48px;
+  padding: 12px 24px;
+  border-radius: 8px;
+}
+#next-button { min-width: 150px; }
+.home-navigation {
+  position: fixed;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 0 calc(14px + env(safe-area-inset-bottom));
+  background: var(--oratorio-paper);
+  border-top: 1px solid #e4dfd3;
+}
+.skip-link { position: absolute; z-index: 20; padding: 12px; background: var(--oratorio-paper); color: var(--oratorio-navy); }
+#page-title:focus-visible { outline: 2px solid var(--oratorio-button); outline-offset: 6px; }
+[hidden] { display: none !important; }
+@media (max-width: 380px) {
+  .site-header { padding: 24px 16px; }
+  .prayer-paragraph, .mystery-description { font-size: 1.05rem; }
+}
+@media print {
+  body { padding-bottom: 0; }
+  .home-navigation, .next-navigation, .skip-link { display: none; }
+}
