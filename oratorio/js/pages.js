@@ -205,49 +205,49 @@
       "sections": [
         {
           "paragraphs": [
-            "El trece de mayo\nla Virgen María\nbajó de los cielos\na Cova de Iría.\nAve, Ave, Ave María.\nAve, Ave, Ave María.\nA tres pastorcitos\nla Madre de Dios\ndescubre el misterio\nde su Corazón.\nEl Santo Rosario\nconstantes rezad,\ny la paz del mundo\nel Señor dará.\nHaced penitencia,\nhaced oración,\npor los pecadores\nimplorad perdón.\nMi amparo a los pueblos\nhabré de prestar,\nsi el Santo Rosario\nme quieren rezar."
+            "El trece de mayo\nla Virgen María\nbajó de los cielos\na Cova de Iría.\n\nAve, Ave, Ave María.\nAve, Ave, Ave María.\n\nA tres pastorcitos\nla Madre de Dios\ndescubre el misterio\nde su Corazón.\n\nEl Santo Rosario\nconstantes rezad,\ny la paz del mundo\nel Señor dará.\n\nHaced penitencia,\nhaced oración,\npor los pecadores\nimplorad perdón.\n\nMi amparo a los pueblos\nhabré de prestar,\nsi el Santo Rosario\nme quieren rezar."
           ],
           "heading": "1. El trece de mayo",
           "id": "el-trece-de-mayo"
         },
         {
           "paragraphs": [
-            "Es María la blanca paloma\nque ha venido a América\na traer la paz.\nEn el centro de una blanca nube\nse vino volando desde Portugal.\nPastorcitos humildes de Fátima\nla vieron llorando\npor nuestra maldad.\nLes mandó a rezar el rosario\npor los pecadores\npara que haya paz.\nQuerubines rodean su trono,\npalomitas blancas nos trae en sus manos.\nUn rosario nos trae en sus manos,\npara defendernos contra Satanás.\nDoce estrellas rodean su frente,\nsímbolo de gloria y de majestad.\nTe queremos, oh Virgen de Fátima,\nporque tú eres Madre, Madre Celestial.\nTuyos son nuestros montes y valles,\nbienvenida sea a nuestra ciudad.\nTuyos son nuestros santos amores,\nte los consagramos a tu corazón."
+            "Es María la blanca paloma\nque ha venido a América\na traer la paz.\nEn el centro de una blanca nube\nse vino volando desde Portugal.\n\nPastorcitos humildes de Fátima\nla vieron llorando\npor nuestra maldad.\nLes mandó a rezar el rosario\npor los pecadores\npara que haya paz.\n\nQuerubines rodean su trono,\npalomitas blancas nos trae en sus manos.\nUn rosario nos trae en sus manos,\npara defendernos contra Satanás.\n\nDoce estrellas rodean su frente,\nsímbolo de gloria y de majestad.\nTe queremos, oh Virgen de Fátima,\nporque tú eres Madre, Madre Celestial.\n\nTuyos son nuestros montes y valles,\nbienvenida sea a nuestra ciudad.\nTuyos son nuestros santos amores,\nte los consagramos a tu corazón."
           ],
           "heading": "2. Es María la blanca paloma",
           "id": "es-maria-la-blanca-paloma"
         },
         {
           "paragraphs": [
-            "Buenas tardes, paloma blanca,\nhoy te vengo a saludar,\nsaludando a tu belleza\nen tu Reino Celestial.\nEres Madre del Creador,\nque a mi corazón encanta,\ngracias te doy con amor,\nbuenas tardes, Paloma Blanca.\nFeliz día, Peregrina,\neres la estrella del mar,\nen la tierra y en el cielo,\nyo te vengo a saludar.\nSapientísima Señora,\nde belleza sin igual,\ndel edén radiante aurora,\nyo te vengo a saludar."
+            "Buenas tardes, paloma blanca,\nhoy te vengo a saludar,\nsaludando a tu belleza\nen tu Reino Celestial.\n\nEres Madre del Creador,\nque a mi corazón encanta,\ngracias te doy con amor,\nbuenas tardes, Paloma Blanca.\n\nFeliz día, Peregrina,\neres la estrella del mar,\nen la tierra y en el cielo,\nyo te vengo a saludar.\n\nSapientísima Señora,\nde belleza sin igual,\ndel edén radiante aurora,\nyo te vengo a saludar."
           ],
           "heading": "3. Buenas tardes, paloma blanca",
           "id": "buenas-tardes-paloma-blanca"
         },
         {
           "paragraphs": [
-            "Estas son las mañanitas\nque cantaba el rey David;\na mi linda Virgencita\nse las cantamos así.\nDespierta, Madre, despierta,\nmira a tus hijitos hoy,\nque alegres te festejamos\ny damos gracias a Dios.\nEl día que tú viniste\na mi vida y a mi hogar,\nbendiciones nos trajiste\ny felicidad sin par.\nGracias, mi buena Señora,\nno me canso de decir;\nfeliz día, Peregrina,\nnunca te apartes de mí."
+            "Estas son las mañanitas\nque cantaba el rey David;\na mi linda Virgencita\nse las cantamos así.\n\nDespierta, Madre, despierta,\nmira a tus hijitos hoy,\nque alegres te festejamos\ny damos gracias a Dios.\n\El día que tú viniste\na mi vida y a mi hogar,\nbendiciones nos trajiste\ny felicidad sin par.\n\nGracias, mi buena Señora,\nno me canso de decir;\nfeliz día, Peregrina,\nnunca te apartes de mí."
           ],
           "heading": "4. Mañanitas a la Virgen",
           "id": "mananitas-a-la-virgen"
         },
         {
           "paragraphs": [
-            "Del cielo ha bajado\nla Madre de Dios;\ncantemos el Ave\na su concepción.\nAve, Ave, Ave María.\nAve, Ave, Ave María.\nDel Verbo divino,\nde Cristo Jesús,\nSantísima Madre,\nMaría eres tú.\n¡Oh Virgen sin mancha!,\n¡oh Madre de amor!,\nel ángel te ofrezca\nmi salutación.\n\nTú eres el orgullo\nde Dios Creador,\ny el fruto más digno\nde la redención.\nLas gracias emanan\ndel trono de Dios,\ny todas confluyen\nen tu corazón.\nLa luna humillada\ntus plantas besó,\ny el mundo te aclama\nvestida del sol."
+            "Del cielo ha bajado\nla Madre de Dios;\ncantemos el Ave\na su concepción.\n\nAve, Ave, Ave María.\nAve, Ave, Ave María.\n\nDel Verbo divino,\nde Cristo Jesús,\nSantísima Madre,\nMaría eres tú.\n\n¡Oh Virgen sin mancha!,\n¡oh Madre de amor!,\nel ángel te ofrezca\nmi salutación.\n\nTú eres el orgullo\nde Dios Creador,\ny el fruto más digno\nde la redención.\n\nLas gracias emanan\ndel trono de Dios,\ny todas confluyen\nen tu corazón.\n\nLa luna humillada\ntus plantas besó,\ny el mundo te aclama\nvestida del sol."
           ],
           "heading": "5. Del cielo ha bajado",
           "id": "del-cielo-ha-bajado"
         },
         {
           "paragraphs": [
-            "Adiós, Reina del cielo,\nMadre del Salvador.\nAdiós, ¡oh Madre Virgen!\nAdiós, adiós, adiós.\nAdiós, ¡oh Madre Virgen!,\nmás pura que la luz;\njamás, jamás me olvides\ndelante de Jesús.\nAdiós, del cielo encanto,\ndel universo honor;\nabraza el alma mía\ntu gloria y amor.\nAdiós, Hija del Padre,\nMadre del Hijo de Dios,\ndel Espíritu Santo,\n¡oh casta Esposa, adiós!\nDe tu divino rostro\nla belleza al dejar,\npermíteme que vuelva\ntus plantas a besar.\nMas dejarte, ¡oh María!,\nno acierta el corazón;\nte lo entrego, Señora,\ndame tu bendición."
+            "Adiós, Reina del cielo,\nMadre del Salvador.\nAdiós, ¡oh Madre Virgen!\nAdiós, adiós, adiós.\n\nAdiós, ¡oh Madre Virgen!,\nmás pura que la luz;\njamás, jamás me olvides\ndelante de Jesús.\n\nAdiós, del cielo encanto,\ndel universo honor;\nabraza el alma mía\ntu gloria y amor.\n\nAdiós, Hija del Padre,\nMadre del Hijo de Dios,\ndel Espíritu Santo,\n¡oh casta Esposa, adiós!\n\nDe tu divino rostro\nla belleza al dejar,\npermíteme que vuelva\ntus plantas a besar.\n\nMas dejarte, ¡oh María!,\nno acierta el corazón;\nte lo entrego, Señora,\ndame tu bendición."
           ],
           "heading": "6. Adiós, Reina del Cielo",
           "id": "adios-reina-del-cielo"
         },
         {
           "paragraphs": [
-            "Mientras recorres la vida,\ntú nunca solo estás;\ncontigo por el camino\nSanta María va.\nVen con nosotros al caminar,\nSanta María, ven. (Bis)\nAunque te digan algunos\nque nada puede cambiar,\nlucha por un mundo nuevo,\nlucha por la verdad.\nSi por el mundo los hombres\nsin conocerse van,\nno niegues nunca tu mano\nal que contigo va.\nAunque parezcan tus pasos\ninútil caminar,\ntú vas haciendo caminos:\notros los seguirán."
+            "Mientras recorres la vida,\ntú nunca solo estás;\ncontigo por el camino\nSanta María va.\n\nVen con nosotros al caminar,\nSanta María, ven. (Bis)\n\nAunque te digan algunos\nque nada puede cambiar,\nlucha por un mundo nuevo,\nlucha por la verdad.\n\nSi por el mundo los hombres\nsin conocerse van,\nno niegues nunca tu mano\nal que contigo va.\n\nAunque parezcan tus pasos\ninútil caminar,\ntú vas haciendo caminos:\notros los seguirán."
           ],
           "heading": "7. Santa María del camino",
           "id": "santa-maria-del-camino"
