@@ -36,7 +36,7 @@ Header title: `#0c2340`; reading text: `#444`; buttons: `#226bc9` with `#fff` te
 ## Checks
 
 ```sh
-node --test tests/rosary.test.cjs
+node --test tests/*.test.cjs
 ```
 
 Bootstrap CSS is bundled in `vendor/bootstrap.min.css` so the page does not need a CDN at runtime. Bootstrap is MIT licensed; its license is included in `vendor/LICENSE.bootstrap`.
@@ -58,3 +58,11 @@ To add another language, supply a matching content file and UI dictionary in `lo
 Upload the complete site folder, including `css/styles.css`, all files under `js/`, and the `vendor/` files. The custom stylesheet link includes a version query to avoid reusing older cached CSS. After changing the stylesheet, change this version in `index.html` before deploying. If your host has a CDN cache, purge it when deploying updated files.
 
 The header image also has explicit fallback dimensions, so it remains small if the custom stylesheet fails to load. Its final alignment and responsive size come from the `.header-layout` and `.header-image` rules in `css/styles.css`.
+
+## Navigation and supplementary pages
+
+The top-left menu opens Presentación, Recomendaciones Previas, Rosario, Consagración, Despedida, Cancionero, and Hacer y No Hacer. The latter page is titled Recibir el Apostolado. Every supplementary page includes a Rosario button at the bottom. Rosario remains the default landing page.
+
+Edit Spanish and English supplementary content in `js/pages.js`. Menu labels live in `js/locales.js`; URL routing is defined in `js/navigation.js`. Links use hashes, so no server rewrite configuration is required. Direct links, refresh, and browser Back/Forward work on all pages. The farewell song has a direct link at `#cancionero/adios-reina-del-cielo`.
+
+The songbook uses two columns on wider screens. Recibir el Apostolado has separate Sí/No columns with checkmark/cross bullets. Both layouts stack on narrow screens. English song lyrics are translations of the supplied Spanish text.

@@ -7,17 +7,24 @@
     <meta name="description" content="Reza el Santo Rosario con las oraciones en español y los misterios de cada día.">
     <title>APOSTOLADO DEL ORATORIO</title>
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css?v=50043ee085c0">
+    <link rel="stylesheet" href="css/styles.css?v=513e8d44eda3">
     <link rel="icon" type="image/png" href="favicon.png">
-    <script src="js/content.js?v=f95e9891fad5" defer></script>
+    <script src="js/content.js?v=aee484d379d8" defer></script>
     <script src="js/content-en.js?v=413c094423c6" defer></script>
-    <script src="js/locales.js?v=d3362a75294c" defer></script>
+    <script src="js/locales.js?v=26e69733fe8d" defer></script>
     <script src="js/rosary.js?v=f2074302c614" defer></script>
-    <script src="js/app.js?v=11d7a0066154" defer></script>
+    <script src="js/pages.js?v=1efa243299de" defer></script>
+    <script src="js/navigation.js?v=ee28cf4cab84" defer></script>
+    <script src="js/app.js?v=7c19564e6ded" defer></script>
   </head>
   <body>
     <a class="visually-hidden-focusable skip-link" href="#page-title" data-i18n="skipLink">Ir a las oraciones</a>
     <header class="site-header">
+      <button type="button" id="menu-button" class="settings-button menu-button" aria-label="Abrir menú" data-i18n-aria="openMenu" aria-haspopup="dialog" aria-controls="menu-dialog" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
       <button type="button" id="settings-button" class="settings-button" aria-label="Configuración" data-i18n-aria="settings" aria-haspopup="dialog" aria-controls="settings-dialog">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
           <path d="M9.5 3h5l.6 2.6 2.1 1.2 2.5-.8 2.5 4.3-1.9 1.8v2.4l1.9 1.8-2.5 4.3-2.5-.8-2.1 1.2-.6 2.6h-5l-.6-2.6-2.1-1.2-2.5.8-2.5-4.3 1.9-1.8v-2.4L1.8 8.3 4.3 4l2.5.8 2.1-1.2Z" transform="translate(1 0) scale(.9)"/>
@@ -36,7 +43,7 @@
     </header>
 
     <main class="container reading-width px-4" id="rosary">
-      <section class="progress-panel" aria-label="Progreso del Santo Rosario" data-i18n-aria="progressLabel">
+      <section class="progress-panel" id="progress-panel" aria-label="Progreso del Santo Rosario" data-i18n-aria="progressLabel">
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
           <p class="m-0 daily-label"><span data-i18n="rosary">Santo Rosario</span> · <span id="daily-group"></span></p>
           <p class="m-0 page-count" id="page-count" aria-live="polite" aria-atomic="true"></p>
@@ -62,6 +69,14 @@
       </article>
       <noscript><p class="alert alert-info" data-i18n="noScriptMessage">Activa JavaScript para ver los misterios del día y seguir las oraciones del Rosario.</p></noscript>
     </main>
+
+    <dialog id="menu-dialog" aria-labelledby="menu-title">
+      <div class="menu-heading">
+        <h2 id="menu-title" data-i18n="menu">Menú</h2>
+        <form method="dialog"><button type="submit" class="btn btn-primary" data-i18n="close">Cerrar</button></form>
+      </div>
+      <nav aria-label="Menú" data-i18n-aria="menu"><ul id="menu-links"></ul></nav>
+    </dialog>
 
     <dialog id="settings-dialog" aria-labelledby="settings-title">
       <div class="settings-content">

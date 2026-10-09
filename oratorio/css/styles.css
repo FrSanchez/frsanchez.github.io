@@ -185,3 +185,47 @@ body.at-start { padding-bottom: 0; }
 .litany-response { color: #b3261e; font-style: italic; }
 
 .closing-symbol { text-align: center; color: var(--oratorio-navy); font-size: 2rem; margin: 32px 0 0; line-height: 1.5; }
+
+.menu-button { left: max(12px, env(safe-area-inset-left)); right: auto; }
+#menu-dialog {
+  margin: 0;
+  width: min(360px, 90vw);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  border: 0;
+  border-right: 1px solid #e4dfd3;
+  padding: 24px;
+  color: var(--oratorio-text);
+  background: var(--oratorio-paper);
+}
+#menu-dialog::backdrop { background: #0c234066; }
+.menu-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px; }
+.menu-heading h2 { color: var(--oratorio-navy); font-size: 1.5rem; margin: 0; }
+.menu-heading .btn { padding: 8px 14px; letter-spacing: 0; }
+#menu-links { list-style: none; padding: 0; margin: 0; }
+#menu-links a { display: block; padding: 14px 12px; border-radius: 8px; color: var(--oratorio-navy); text-decoration: none; font-size: 1.05rem; line-height: 1.4; }
+#menu-links a:hover, #menu-links a:focus-visible { background: #eee9df; }
+#menu-links a[aria-current="page"] { color: #fff; background: var(--oratorio-green); font-weight: 600; }
+.recommendation-list, .devotion-list { padding-left: 1.5rem; }
+.recommendation-list > li::marker { font-weight: 600; color: var(--oratorio-navy); }
+.devotion-list { list-style-type: '✦ '; }
+.page-link a { color: var(--oratorio-button); text-underline-offset: 3px; }
+.song-card { break-inside: avoid; scroll-margin-top: 24px; }
+.songbook-columns .prayer-section + .prayer-section { margin-top: 0; }
+.songbook-columns .song-card { padding-bottom: 32px; }
+.songbook-columns .prayer-paragraph { line-height: 1.7; }
+@media (min-width: 576px) {
+  .songbook-columns { column-count: 2; column-gap: 32px; column-rule: 1px solid #e4dfd3; }
+}
+@media print { .menu-button, #menu-dialog { display: none; } }
+
+.checklist-positive .devotion-list { list-style-type: '✓ '; }
+.checklist-negative .devotion-list { list-style-type: '✕ '; }
+.checklist-positive li::marker { color: var(--oratorio-green); font-weight: bold; }
+.checklist-negative li::marker { color: #b3261e; font-weight: bold; }
+.checklist-columns { display: grid; gap: 32px; }
+.checklist-columns .prayer-section + .prayer-section { margin-top: 0; }
+@media (min-width: 576px) {
+  .checklist-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
