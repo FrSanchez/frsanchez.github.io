@@ -24,7 +24,7 @@ function validateSection(section, pages) {
     if (!link.href.startsWith('#')) { assert.equal(link.href, 'https://bible.usccb.org/daily-bible-reading'); continue; }
     const destination = routeForHash(link.href, routes);
     if (destination.view !== 'rosario') assert.ok(pages[destination.view]);
-    if (destination.anchor) assert.ok(pages[destination.view].sections.some(s => s.id === destination.anchor));
+    if (destination.anchor && pages[destination.view].sections.length > 0) assert.ok(pages[destination.view].sections.some(s => s.id === destination.anchor));
   }
 }
 
@@ -39,13 +39,13 @@ test('Spanish and English include complete matching pages and working cross-link
       assert.ok(page.title.length > 0);
       for (const section of page.sections) validateSection(section, pages);
     }
-    assert.equal(pages.cancionero.sections.length, 7);
+    assert.equal(pages.cancionero.sections.length, language === 'es' ? 7 : 0);
     assert.deepEqual(pages.recomendaciones.sections.filter(s => s.items).flatMap(s => s.items.map((_, i) => s.start + i)), [1,2,3,4,5,6]);
     assert.equal(pages['hacer-y-no-hacer'].sections[0].bullets.length, 6);
     assert.equal(pages['hacer-y-no-hacer'].sections[1].bullets.length, 5);
   }
-  for (const key of infoRoutes) assert.equal(spanish[key].sections.length, english[key].sections.length);
-  assert.deepEqual(spanish.cancionero.sections.map(s=>s.id), english.cancionero.sections.map(s=>s.id));
+  for (const key of infoRoutes.filter(key => key !== 'cancionero')) assert.equal(spanish[key].sections.length, english[key].sections.length);
+  assert.deepEqual(english.cancionero.sections, []);
 });
 
 

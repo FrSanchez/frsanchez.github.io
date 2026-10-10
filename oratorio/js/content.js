@@ -38,19 +38,19 @@
         },
         {
           "title": "La flagelación de Jesús (Jn 19,1; Mc 15,15).",
-          "description": "«Pilato mandó entonces azotar a Jesús». «Pilato, para contentar a la multitud, les puso en libertad a Barrabás; y a Jesús, después de haberlo hecho azotar, lo entregó para que fuera crucificado"
+          "description": "Pilato mandó entonces azotar a Jesús. Pilato, para contentar a la multitud, les puso en libertad a Barrabás; y a Jesús, después de haberlo hecho azotar, lo entregó para que fuera crucificado"
         },
         {
-          "title": "Jesús es coronado de espinas (Marcos 15, 16-20).",
-          "description": ""
+          "title": "La coronación de espinas (Jn 19,2.5).",
+          "description": "Los soldados tejieron una corona de espinas y se la pusieron sobre la cabeza. Lo revistieron con un manto rojo… Jesús salió, llevando la corona de espinas y el manto rojo. Pilato les dijo: “¡Aquí tienen al hombre!”"
         },
         {
-          "title": "Jesús con la cruz a cuestas (Marcos 15, 21-28).",
-          "description": ""
+          "title": "Jesús con la cruz a cuestas (Jn 19,17; Lc 23,27).",
+          "description": "Jesús, cargando sobre sí la cruz, salió de la ciudad para dirigirse al lugar llamado “del Cráneo”. Lo seguían muchos del pueblo y un buen número de mujeres, que se golpeaban el pecho y se lamentaban por él"
         },
         {
-          "title": "La Crucifixión y muerte de nuestro Señor Jesucristo (Marcos 15, 29-39).",
-          "description": ""
+          "title": "La crucifixión y muerte de Jesús (Jn 19,18.25-26).",
+          "description": "Allí lo crucificaron; y con él a otros dos, uno a cada lado y Jesús en el medio… Junto a la cruz de Jesús, estaba su madre… Al ver a la madre y cerca de ella al discípulo a quien él amaba, Jesús le dijo: “Mujer, aquí tienes a tu hijo”"
         }
       ]
     },
@@ -59,24 +59,24 @@
       "kind": "gloria",
       "mysteries": [
         {
-          "title": "La Resurrección del Hijo de Dios (Mateo 28, 1-8).",
-          "description": ""
+          "title": "La resurrección del Señor (Mt 28,1.5-6).",
+          "description": "Pasado el sábado, al amanecer del primer día de la semana, María Magdalena y la otra María fueron a visitar el sepulcro… El Ángel dijo a las mujeres: “No teman, yo sé que ustedes buscan a Jesús, el Crucificado. No está aquí, porque ha resucitado como lo había dicho"
         },
         {
-          "title": "La Ascensión del Hijo de Dios (Hechos 1, 6-11).",
-          "description": ""
+          "title": "La Ascensión del Señor (Mt 28,20; Mc 16,19).",
+          "description": "Yo estaré siempre con ustedes hasta el fin del mundo». «Después de decirles esto, el Señor Jesús fue llevado al cielo y está sentado a la derecha de Dios"
         },
         {
-          "title": "La venida del Espíritu Santo sobre los Apóstoles (Hechos 2, 1-13).",
-          "description": ""
+          "title": "La venida del Espíritu Santo (Hech 2,2-4).",
+          "description": "De pronto, vino del cielo un ruido, semejante a una fuerte ráfaga de viento, que resonó en toda la casa donde se encontraban. Entonces vieron aparecer unas lenguas como de fuego, que descendieron por separado sobre cada uno de ellos. Todos quedaron llenos del Espíritu Santo"
         },
         {
-          "title": "La Asunción de María (Apocalipsis 12, 1).",
-          "description": ""
+          "title": "La Asunción de María (Lc 1,48-49; Cant 4,7-8).",
+          "description": "En adelante todas las generaciones me llamarán feliz, porque el Todopoderoso ha hecho en mí grandes cosas». «Eres toda hermosa, amada mía, y no tienes ningún defecto. ¡Ven conmigo del Líbano, novia mía…!"
         },
         {
-          "title": "La Coronación de nuestra Señora, como Reina de cielos y tierra (Lucas 1, 46-50).",
-          "description": ""
+          "title": "La coronación de María Reina de cielos y tierra (Ap 12,1).",
+          "description": "Y apareció en el cielo un gran signo: una Mujer revestida del sol, con la luna bajo sus pies y una corona de doce estrellas en su cabeza"
         }
       ]
     },

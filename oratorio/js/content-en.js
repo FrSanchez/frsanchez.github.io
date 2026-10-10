@@ -7,24 +7,24 @@
       "kind": "Joyful",
       "mysteries": [
         {
-          "title": "The Incarnation of the Son of God (Luke 1:37).",
-          "description": ""
+          "title": "The Incarnation of the Son of God (Luke 1:28,31,38).",
+          "description": "The angel entered her home and greeted her, saying: “Rejoice, full of grace, the Lord is with you”… “You will conceive and give birth to a son, and you will name him Jesus”… Mary then said: “I am the servant of the Lord; let what you have said be fulfilled in me.”"
         },
         {
-          "title": "The Visitation of the Virgin Mary to Saint Elizabeth (Luke 1:39–56).",
-          "description": ""
+          "title": "The Visitation of the Virgin Mary to Saint Elizabeth (Luke 1:39–42,45–46).",
+          "description": "Mary set out and went without delay to a town in the hill country of Judah. She entered the house of Zechariah and greeted Elizabeth… Elizabeth… exclaimed: “Blessed are you among all women, and blessed is the fruit of your womb!… Blessed are you for having believed.” Mary then said: “My soul sings the greatness of the Lord.”"
         },
         {
-          "title": "The Birth of the Child Jesus (Luke 2:1–20).",
-          "description": ""
+          "title": "The Birth of the Child Jesus (Luke 2:6–7,10–11).",
+          "description": "While they were in Bethlehem, the time came for her to become a mother; and Mary gave birth to her firstborn Son, wrapped him in swaddling clothes, and laid him in a manger, because there was no room for them at the inn… The angel said to them: “Today, in the city of David, a Savior has been born to you, who is the Messiah, the Lord.”"
         },
         {
-          "title": "The Presentation of the Child Jesus in the Temple (Luke 2:22–40).",
-          "description": ""
+          "title": "The Presentation of Jesus in the Temple (Luke 2:22,28–30).",
+          "description": "They took the child to Jerusalem to present him to the Lord… Simeon took him in his arms and praised God, saying: “Now, Lord, you may let your servant die in peace, as you have promised, because my eyes have seen salvation.”"
         },
         {
-          "title": "The Child Jesus Lost and Found in the Temple (Luke 2:41–52).",
-          "description": ""
+          "title": "The Child Jesus Lost and Found in the Temple (Luke 2:42–43,46).",
+          "description": "When the child turned twelve, they went up as usual, and when the festival was over, Mary and Joseph returned, but Jesus remained in Jerusalem without their knowing… On the third day, they found him in the Temple among the teachers of the Law, listening to them and asking them questions."
         }
       ]
     },
@@ -33,24 +33,24 @@
       "kind": "Sorrowful",
       "mysteries": [
         {
-          "title": "The Prayer of Jesus in the Garden (Mark 14:22–42).",
-          "description": ""
+          "title": "The Prayer in the Garden (Luke 22:41–42,44).",
+          "description": "He withdrew from them about a stone’s throw, and kneeling down, he prayed: “Father, if you wish, take this cup away from me. But let not my will be done, but yours”… In his anguish, he prayed more intensely."
         },
         {
-          "title": "The Scourging of Our Lord Jesus Christ (Mark 15:1–15).",
-          "description": ""
+          "title": "The Scourging of Jesus (John 19:1; Mark 15:15).",
+          "description": "Pilate then ordered Jesus to be scourged. “Pilate, wishing to satisfy the crowd, released Barabbas to them; and after having Jesus scourged, he handed him over to be crucified.”"
         },
         {
-          "title": "Jesus Is Crowned with Thorns (Mark 15:16–20).",
-          "description": ""
+          "title": "The Crowning with Thorns (John 19:2,5).",
+          "description": "The soldiers wove a crown of thorns and placed it on his head. They clothed him in a red robe… Jesus came out, wearing the crown of thorns and the red robe. Pilate said to them: “Here is the man!”"
         },
         {
-          "title": "Jesus Carries His Cross (Mark 15:21–28).",
-          "description": ""
+          "title": "Jesus Carries His Cross (John 19:17; Luke 23:27).",
+          "description": "Jesus, carrying the cross himself, went out of the city toward the place called “the Skull.” “Many of the people followed him, along with a large number of women who beat their breasts and lamented for him.”"
         },
         {
-          "title": "The Crucifixion and Death of Our Lord Jesus Christ (Mark 15:29–39).",
-          "description": ""
+          "title": "The Crucifixion and Death of Jesus (John 19:18,25–26).",
+          "description": "There they crucified him, and with him two others, one on each side, with Jesus in the middle… Beside the cross of Jesus stood his mother… Seeing his mother and near her the disciple whom he loved, Jesus said to her: “Woman, here is your son.”"
         }
       ]
     },
@@ -59,24 +59,24 @@
       "kind": "Glorious",
       "mysteries": [
         {
-          "title": "The Resurrection of the Son of God (Matthew 28:1–8).",
-          "description": ""
+          "title": "The Resurrection of the Lord (Matthew 28:1,5–6).",
+          "description": "After the Sabbath, at dawn on the first day of the week, Mary Magdalene and the other Mary went to visit the tomb… The angel said to the women: “Do not be afraid. I know that you are looking for Jesus, who was crucified. He is not here, for he has risen, as he said he would.”"
         },
         {
-          "title": "The Ascension of the Son of God (Acts 1:6–11).",
-          "description": ""
+          "title": "The Ascension of the Lord (Matthew 28:20; Mark 16:19).",
+          "description": "“I will be with you always, until the end of the world.” “After saying this to them, the Lord Jesus was taken up into heaven and is seated at the right hand of God.”"
         },
         {
-          "title": "The Descent of the Holy Spirit upon the Apostles (Acts 2:1–13).",
-          "description": ""
+          "title": "The Coming of the Holy Spirit (Acts 2:2–4).",
+          "description": "Suddenly, a sound came from heaven, like a strong gust of wind, and it filled the entire house where they were gathered. Then they saw tongues as of fire appear, which came down separately upon each of them. They were all filled with the Holy Spirit."
         },
         {
-          "title": "The Assumption of Mary (Revelation 12:1).",
-          "description": ""
+          "title": "The Assumption of Mary (Luke 1:48–49; Song of Songs 4:7–8).",
+          "description": "“From now on, all generations will call me blessed, for the Almighty has done great things for me.” “You are altogether beautiful, my beloved, and there is no flaw in you. Come with me from Lebanon, my bride…!”"
         },
         {
-          "title": "The Coronation of Our Lady as Queen of Heaven and Earth (Luke 1:46–50).",
-          "description": ""
+          "title": "The Coronation of Mary as Queen of Heaven and Earth (Revelation 12:1).",
+          "description": "And a great sign appeared in heaven: a Woman clothed with the sun, with the moon under her feet and a crown of twelve stars on her head."
         }
       ]
     },
@@ -85,24 +85,24 @@
       "kind": "Luminous",
       "mysteries": [
         {
-          "title": "The Baptism of Jesus in the Jordan (Matthew 3:13–17).",
-          "description": ""
+          "title": "The Baptism of Jesus (Matthew 3:13,16–17).",
+          "description": "Jesus went from Galilee to the Jordan and came to John to be baptized by him… As soon as he was baptized, Jesus came out of the water. At that moment the heavens opened, and he saw the Spirit of God descend like a dove and come toward him. And a voice was heard from heaven, saying: “This is my dearly beloved Son, in whom I am well pleased.”"
         },
         {
-          "title": "Jesus Reveals Himself at the Wedding at Cana (John 2:1–12).",
-          "description": ""
+          "title": "The Wedding at Cana (John 2:1,3,5,11).",
+          "description": "A wedding was celebrated at Cana in Galilee, and the mother of Jesus was there… When the wine ran out, the mother of Jesus said to him: “They have no wine”… His mother said to the servants: “Do whatever he tells you”… In this way he revealed his glory, and his disciples believed in him."
         },
         {
-          "title": "Jesus Proclaims the Kingdom of God and Calls Us to Conversion (Mark 1:15).",
-          "description": ""
+          "title": "The Proclamation of the Kingdom (Mark 1:14–15).",
+          "description": "Jesus went to Galilee. There he proclaimed the Good News of God, saying: “The time has been fulfilled: the Kingdom of God is near. Repent and believe in the Good News.”"
         },
         {
-          "title": "The Transfiguration of Jesus (Luke 9:35).",
-          "description": ""
+          "title": "The Transfiguration of the Lord (Matthew 17:1–2,5).",
+          "description": "Jesus took Peter, James and his brother John, and led them apart to a high mountain. There he was transfigured before them: his face shone like the sun, and his garments became white as light… A voice was heard from the cloud, saying: “This is my dearly beloved Son, in whom I am well pleased: listen to him.”"
         },
         {
-          "title": "The Institution of the Eucharist, the Sacramental Expression of the Paschal Mystery (John 13:1).",
-          "description": ""
+          "title": "The Institution of the Eucharist (1 Corinthians 11:23–25).",
+          "description": "The Lord Jesus, on the night he was handed over, took bread, gave thanks, broke it and said: “This is my Body, which is given for you”… In the same way, after supper, he took the cup, saying: “This cup is the New Covenant sealed with my Blood.”"
         }
       ]
     }

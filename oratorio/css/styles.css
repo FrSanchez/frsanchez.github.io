@@ -4,6 +4,7 @@
   --oratorio-button: #226bc9;
   --oratorio-paper: #faf7f0;
   --oratorio-green: #375a58;
+  --oratorio-gold: #bfa14a;
   --bs-body-color: var(--oratorio-text);
   --bs-body-bg: var(--oratorio-paper);
 }
@@ -87,7 +88,7 @@ body {
   outline-offset: 2px;
 }
 .prayer-page { padding: 32px 0 28px; }
-.section-label { color: var(--oratorio-green); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
+.section-label { text-align: center; color: var(--oratorio-gold); font-size: 1.15rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; }
 .prayer-page h2 { font-size: clamp(1.65rem, 5vw, 2rem); color: var(--oratorio-navy); font-weight: 600; line-height: 1.3; margin-bottom: 24px; }
 .mystery-title { color: var(--oratorio-green); font-weight: 500; font-size: 1.2rem; line-height: 1.7; margin-bottom: 28px; }
 .mystery-description { border-left: 3px solid #bfcac6; padding-left: 20px; margin-bottom: 28px; white-space: pre-line; }

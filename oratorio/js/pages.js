@@ -1,5 +1,5 @@
 // Supplementary pages. Edit both languages when updating content.
-// English songs are translations of the supplied Spanish lyrics.
+// The English songbook is intentionally empty pending English song selections.
 (function (root) {
   const pages = {
   "es": {
@@ -226,7 +226,7 @@
         },
         {
           "paragraphs": [
-            "Estas son las mañanitas\nque cantaba el rey David;\na mi linda Virgencita\nse las cantamos así.\n\nDespierta, Madre, despierta,\nmira a tus hijitos hoy,\nque alegres te festejamos\ny damos gracias a Dios.\n\El día que tú viniste\na mi vida y a mi hogar,\nbendiciones nos trajiste\ny felicidad sin par.\n\nGracias, mi buena Señora,\nno me canso de decir;\nfeliz día, Peregrina,\nnunca te apartes de mí."
+            "Estas son las mañanitas\nque cantaba el rey David;\na mi linda Virgencita\nse las cantamos así.\n\nDespierta, Madre, despierta,\nmira a tus hijitos hoy,\nque alegres te festejamos\ny damos gracias a Dios.\nEl día que tú viniste\na mi vida y a mi hogar,\nbendiciones nos trajiste\ny felicidad sin par.\n\nGracias, mi buena Señora,\nno me canso de decir;\nfeliz día, Peregrina,\nnunca te apartes de mí."
           ],
           "heading": "4. Mañanitas a la Virgen",
           "id": "mananitas-a-la-virgen"
@@ -488,57 +488,7 @@
     "cancionero": {
       "title": "Songbook",
       "label": "✦ ✦ ✦",
-      "sections": [
-        {
-          "paragraphs": [
-            "On the thirteenth of May,\nthe Virgin Mary\ncame down from heaven\nto Cova da Iria.\nAve, Ave, Ave Maria.\nAve, Ave, Ave Maria.\nTo three little shepherds,\nthe Mother of God\nreveals the mystery\nof her Heart.\nPray the Holy Rosary\nwith constancy,\nand the Lord will grant\npeace to the world.\nDo penance,\npray,\nand for sinners\nimplore forgiveness.\nI will give my protection\nto the peoples,\nif they will pray\nthe Holy Rosary to me."
-          ],
-          "heading": "1. On the Thirteenth of May",
-          "id": "el-trece-de-mayo"
-        },
-        {
-          "paragraphs": [
-            "Mary is the white dove\nwho has come to America\nto bring peace.\nIn the center of a white cloud,\nshe flew here from Portugal.\nThe humble shepherd children of Fátima\nsaw her weeping\nbecause of our wickedness.\nShe told them to pray the Rosary\nfor sinners,\nso that there may be peace.\nCherubim surround her throne;\nshe brings us little white doves in her hands.\nShe brings us a rosary in her hands\nto defend us against Satan.\nTwelve stars surround her brow,\na symbol of glory and majesty.\nWe love you, O Virgin of Fátima,\nbecause you are our Mother, our Heavenly Mother.\nYours are our mountains and valleys;\nwelcome to our city.\nYours are our holy loves;\nwe consecrate them to your heart."
-          ],
-          "heading": "2. Mary Is the White Dove",
-          "id": "es-maria-la-blanca-paloma"
-        },
-        {
-          "paragraphs": [
-            "Good afternoon, white dove,\nI come today to greet you,\ngreeting your beauty\nin your Heavenly Kingdom.\nYou are the Mother of the Creator,\nwho delights my heart.\nWith love I give you thanks;\ngood afternoon, White Dove.\nHappy day, Pilgrim Mother,\nyou are the star of the sea.\nOn earth and in heaven,\nI come to greet you.\nMost wise Lady,\nof beauty beyond compare,\nradiant dawn of Eden,\nI come to greet you."
-          ],
-          "heading": "3. Good Afternoon, White Dove",
-          "id": "buenas-tardes-paloma-blanca"
-        },
-        {
-          "paragraphs": [
-            "These are the morning songs\nthat King David sang;\nto my dear little Virgin,\nwe sing them this way.\nAwake, Mother, awake;\nlook upon your children today,\nwho joyfully celebrate you\nand give thanks to God.\nThe day you came\ninto my life and my home,\nyou brought us blessings\nand happiness beyond compare.\nThank you, my good Lady;\nI never tire of saying:\nhappy day, Pilgrim Mother,\nnever depart from me."
-          ],
-          "heading": "4. Morning Song to the Virgin",
-          "id": "mananitas-a-la-virgen"
-        },
-        {
-          "paragraphs": [
-            "From heaven she has come,\nthe Mother of God.\nLet us sing the Ave\nto her conception.\nAve, Ave, Ave Maria.\nAve, Ave, Ave Maria.\nOf the divine Word,\nof Christ Jesus,\nyou are the Most Holy Mother,\nMary.\nO spotless Virgin,\nO Mother of love,\nmay the angel offer you\nmy greeting.\n\nYou are the pride\nof God the Creator,\nand the most worthy fruit\nof redemption.\nGraces flow\nfrom the throne of God,\nand all come together\nin your heart.\nThe humbled moon\nkissed your feet,\nand the world acclaims you,\nclothed with the sun."
-          ],
-          "heading": "5. From Heaven She Has Come",
-          "id": "del-cielo-ha-bajado"
-        },
-        {
-          "paragraphs": [
-            "Farewell, Queen of heaven,\nMother of the Savior.\nFarewell, O Virgin Mother!\nFarewell, farewell, farewell.\nFarewell, O Virgin Mother,\npurer than the light.\nNever, never forget me\nbefore Jesus.\nFarewell, delight of heaven,\nhonor of the universe.\nMay your glory and love\nembrace my soul.\nFarewell, Daughter of the Father,\nMother of the Son of God,\nof the Holy Spirit,\nO chaste Spouse, farewell!\nAs I leave the beauty\nof your divine face,\nallow me to return\nto kiss your feet.\nBut leaving you, O Mary,\nmy heart cannot manage.\nI give it to you, O Lady;\ngive me your blessing."
-          ],
-          "heading": "6. Farewell, Queen of Heaven",
-          "id": "adios-reina-del-cielo"
-        },
-        {
-          "paragraphs": [
-            "As you journey through life,\nyou are never alone.\nAlong the way with you,\nSaint Mary goes.\nCome with us as we walk;\nSaint Mary, come. (Repeat)\nThough some may tell you\nthat nothing can change,\nstrive for a new world;\nstrive for the truth.\nIf people in the world\npass without knowing one another,\nnever refuse your hand\nto the one who walks with you.\nThough your steps may seem\na useless journey,\nyou are making paths\nthat others will follow."
-          ],
-          "heading": "7. Saint Mary of the Way",
-          "id": "santa-maria-del-camino"
-        }
-      ],
+      "sections": [],
       "songbook": true
     },
     "hacer-y-no-hacer": {
