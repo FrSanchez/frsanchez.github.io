@@ -26,7 +26,7 @@
         { heading: ui.contritionTitle, paragraphs: p.initialPrayers.slice(1, 2) },
         { heading: ui.spiritTitle, paragraphs: p.initialPrayers.slice(2, 7) },
         { heading: ui.gospelTitle, paragraphs: [], link: {
-          href: 'https://bible.usccb.org/daily-bible-reading', label: ui.gospelLink,
+          href: 'https://bible.usccb.org/es', label: ui.gospelLink,
           ariaLabel: `${ui.gospelLink} (${ui.newTab})`,
         } },
         { heading: ui.petitionsTitle, paragraphs: p.initialPrayers.slice(7) },

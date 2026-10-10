@@ -86,7 +86,7 @@
               ],
               "links": [
                 {
-                  "href": "https://bible.usccb.org/daily-bible-reading",
+                  "href": "https://bible.usccb.org/es",
                   "label": "Leer el Evangelio del día"
                 },
                 {
