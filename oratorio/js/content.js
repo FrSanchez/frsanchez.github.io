@@ -64,7 +64,7 @@
         },
         {
           "title": "La Ascensión del Señor (Mt 28,20; Mc 16,19).",
-          "description": "Yo estaré siempre con ustedes hasta el fin del mundo». «Después de decirles esto, el Señor Jesús fue llevado al cielo y está sentado a la derecha de Dios"
+          "description": "«Yo estaré siempre con ustedes hasta el fin del mundo». «Después de decirles esto, el Señor Jesús fue llevado al cielo y está sentado a la derecha de Dios"
         },
         {
           "title": "La venida del Espíritu Santo (Hech 2,2-4).",
@@ -72,7 +72,7 @@
         },
         {
           "title": "La Asunción de María (Lc 1,48-49; Cant 4,7-8).",
-          "description": "En adelante todas las generaciones me llamarán feliz, porque el Todopoderoso ha hecho en mí grandes cosas». «Eres toda hermosa, amada mía, y no tienes ningún defecto. ¡Ven conmigo del Líbano, novia mía…!"
+          "description": "«En adelante todas las generaciones me llamarán feliz, porque el Todopoderoso ha hecho en mí grandes cosas». «Eres toda hermosa, amada mía, y no tienes ningún defecto. ¡Ven conmigo del Líbano, novia mía…!"
         },
         {
           "title": "La coronación de María Reina de cielos y tierra (Ap 12,1).",
