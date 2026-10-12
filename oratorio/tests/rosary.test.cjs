@@ -88,7 +88,10 @@ test('New introduction has the requested prayer sections and Gospel link in both
     const intro = pagesForGroup('luminosos', language)[0];
     assert.equal(intro.title, ui.initialTitle);
     assert.deepEqual(intro.sections.map(s => s.heading).filter(Boolean), [ui.contritionTitle, ui.spiritTitle, ui.gospelTitle, ui.petitionsTitle]);
-    assert.equal(intro.sections[3].link.href, 'https://bible.usccb.org/daily-bible-reading');
+    const expectedReadingUrl = language === 'es'
+      ? 'https://bible.usccb.org/es'
+      : 'https://bible.usccb.org/daily-bible-reading';
+    assert.equal(intro.sections[3].link.href, expectedReadingUrl);
     assert.equal(intro.sections[2].paragraphs.length, 5);
     assert.ok(content.prayers.initialPrayers[7].endsWith('…'));
     for (const mystery of pagesForGroup('luminosos', language).slice(1, 6)) {

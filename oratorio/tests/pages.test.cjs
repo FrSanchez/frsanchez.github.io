@@ -15,13 +15,18 @@ test('All menu pages and rosary steps support direct links', () => {
   assert.equal(routeForHash('#unknown', routes).view, 'rosario');
 });
 
-function validateSection(section, pages) {
+const expectedReadingUrls = {
+  es: 'https://bible.usccb.org/es',
+  en: 'https://bible.usccb.org/daily-bible-reading',
+};
+
+function validateSection(section, pages, language) {
   for (const text of section.paragraphs || []) assert.ok(typeof text === 'string' && text.length > 0);
   for (const text of section.bullets || []) assert.ok(typeof text === 'string' && text.length > 0);
-  for (const item of section.items || []) validateSection(item, pages);
+  for (const item of section.items || []) validateSection(item, pages, language);
   for (const link of section.links || []) {
     assert.ok(link.label.length > 0);
-    if (!link.href.startsWith('#')) { assert.equal(link.href, 'https://bible.usccb.org/daily-bible-reading'); continue; }
+    if (!link.href.startsWith('#')) { assert.equal(link.href, expectedReadingUrls[language], `Daily readings URL for ${language}`); continue; }
     const destination = routeForHash(link.href, routes);
     if (destination.view !== 'rosario') assert.ok(pages[destination.view]);
     if (destination.anchor && pages[destination.view].sections.length > 0) assert.ok(pages[destination.view].sections.some(s => s.id === destination.anchor));
@@ -37,7 +42,7 @@ test('Spanish and English include complete matching pages and working cross-link
     const pages = getPages(language);
     for (const page of Object.values(pages)) {
       assert.ok(page.title.length > 0);
-      for (const section of page.sections) validateSection(section, pages);
+      for (const section of page.sections) validateSection(section, pages, language);
     }
     assert.equal(pages.cancionero.sections.length, language === 'es' ? 7 : 0);
     assert.deepEqual(pages.recomendaciones.sections.filter(s => s.items).flatMap(s => s.items.map((_, i) => s.start + i)), [1,2,3,4,5,6]);
