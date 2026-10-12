@@ -33,7 +33,7 @@
       ] },
       ...group.mysteries.map((mystery, index) => ({
         title: format(ui.mysteryHeading, { ordinal: ui.ordinals[index], kind: group.kind }),
-        label: format(ui.contemplation, { current: index + 1, total: 5 }),
+        // label: format(ui.contemplation, { current: index + 1, total: 5 }),
         mystery: mystery.title,
         description: mystery.description,
         sections: decade,

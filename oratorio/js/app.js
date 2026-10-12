@@ -128,7 +128,7 @@
       item.append(marker);
       return item;
     }));
-    elements['section-label'].textContent = page.label;
+    elements['section-label'].textContent = isRosary ? null : page.label;
     elements['page-title'].textContent = page.title;
     for (const [id, value] of [['mystery-title', page.mystery], ['mystery-description', page.description]]) {
       elements[id].textContent = value || '';
