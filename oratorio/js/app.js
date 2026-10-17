@@ -17,7 +17,7 @@
   const menuLinks = document.getElementById('menu-links');
   let menuNavigated = false;
   const elements = Object.fromEntries([
-    'daily-group', 'page-count', 'progress', 'progress-fill', 'step-markers',
+    'daily-group', 'page-count', 'progress', 'progress-fill', 
     'section-label', 'page-title', 'mystery-title', 'mystery-description',
     'prayers', 'next-button', 'home-button', 'closing-symbol', 'progress-panel',
   ].map(id => [id, document.getElementById(id)]));
@@ -57,6 +57,31 @@
         item.append(makeParagraph(text, section, ui));
         list.append(item);
       }
+      container.append(list);
+    }
+    if (section.markers) {
+      const list = document.createElement('ol');
+      list.className = 'step-markers';
+      list.id = 'step-markers';
+      list.setAttribute('aria-label', ui.stagesLabel);
+      list.setAttribute('data-i18n-aria', 'stagesLabel');
+      const markers = [];
+      for (let i = 0; i < 10; i++) {
+        const item = document.createElement('li');
+        const marker = document.createElement('button');
+        marker.type = 'button';
+        marker.className = 'step-marker';
+        marker.textContent = i + 1;
+        item.append(marker);
+        list.append(item);
+        markers.push(marker);
+      }
+      let counter = 0;
+      container.addEventListener('click', () => {
+        if (counter >= markers.length) return;
+        counter += 1;
+        markers[counter - 1].classList.add('completed');
+      });
       container.append(list);
     }
     if (section.items) {
@@ -110,24 +135,24 @@
     elements['progress-panel'].hidden = !isRosary;
     elements['daily-group'].textContent = content.groups[groupKey].name;
     const pageCount = format(ui.pageCount, { current: current.index + 1, total: pages.length });
-    elements['page-count'].textContent = pageCount;
+    // elements['page-count'].textContent = pageCount;
     elements.progress.setAttribute('aria-valuemax', pages.length);
     elements.progress.setAttribute('aria-valuenow', current.index + 1);
     elements.progress.setAttribute('aria-valuetext', `${pageCount}: ${page.title}`);
     elements['progress-fill'].style.width = `${(current.index + 1) / pages.length * 100}%`;
-    elements['step-markers'].replaceChildren(...pages.map((step, index) => {
-      const item = document.createElement('li');
-      const marker = document.createElement('button');
-      marker.type = 'button';
-      marker.className = `step-marker${index < current.index ? ' completed' : ''}`;
-      marker.textContent = index + 1;
-      marker.dataset.pageIndex = index;
-      marker.setAttribute('aria-label', format(ui.jumpToPage, { current: index + 1, title: step.title }));
-      marker.setAttribute('aria-controls', 'prayer-page');
-      if (index === current.index) marker.setAttribute('aria-current', 'step');
-      item.append(marker);
-      return item;
-    }));
+    // elements['step-markers'].replaceChildren(...pages.map((step, index) => {
+    //   const item = document.createElement('li');
+    //   const marker = document.createElement('button');
+    //   marker.type = 'button';
+    //   marker.className = `step-marker${index < current.index ? ' completed' : ''}`;
+    //   marker.textContent = index + 1;
+    //   marker.dataset.pageIndex = index;
+    //   marker.setAttribute('aria-label', format(ui.jumpToPage, { current: index + 1, title: step.title }));
+    //   marker.setAttribute('aria-controls', 'prayer-page');
+    //   if (index === current.index) marker.setAttribute('aria-current', 'step');
+    //   item.append(marker);
+    //   return item;
+    // }));
     elements['section-label'].textContent = isRosary ? null : page.label;
     elements['page-title'].textContent = page.title;
     for (const [id, value] of [['mystery-title', page.mystery], ['mystery-description', page.description]]) {
@@ -139,6 +164,7 @@
     elements.prayers.classList.toggle('checklist-columns', !!page.checklists);
     elements.prayers.replaceChildren(...page.sections.map(section => {
       const container = document.createElement('section');
+      console.log('section', section);
       container.className = `prayer-section${page.songbook ? ' song-card' : ''}${section.checklist ? ` checklist-${section.checklist}` : ''}`;
       if (section.id) container.id = section.id;
       if (section.heading) {
@@ -209,12 +235,12 @@
     try { window.localStorage.setItem(storageKey, language); } catch { /* Optional persistence. */ }
     render();
   });
-  elements['step-markers'].addEventListener('click', event => {
-    const marker = event.target.closest('button[data-page-index]');
-    if (!marker || current.view !== 'rosario') return;
-    const index = Number(marker.dataset.pageIndex);
-    if (Number.isInteger(index) && index >= 0 && index < routes.length) navigateTo(`#${routes[index]}`);
-  });
+  // elements['step-markers'].addEventListener('click', event => {
+  //   const marker = event.target.closest('button[data-page-index]');
+  //   if (!marker || current.view !== 'rosario') return;
+  //   const index = Number(marker.dataset.pageIndex);
+  //   if (Number.isInteger(index) && index >= 0 && index < routes.length) navigateTo(`#${routes[index]}`);
+  // });
   elements['next-button'].addEventListener('click', () => {
     if (current.view === 'rosario' && current.index < routes.length - 1) navigateTo(`#${routes[current.index + 1]}`);
   });

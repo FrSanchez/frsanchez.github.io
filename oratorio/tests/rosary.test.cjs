@@ -13,7 +13,7 @@ test('Each group has the full ten-page flow and all decade prayers', () => {
     const pages = pagesForGroup(key);
     assert.equal(pages.length, 10);
     assert.equal(pages[0].title, 'Introducción');
-    assert.equal(pages[6].title, 'Oraciones finales');
+    assert.equal(pages[6].title, 'Intenciones');
     assert.equal(pages[7].title, 'Letanías de la Santísima Virgen');
     assert.equal(pages[8].title, 'Cierre');
     for (let i = 1; i <= 5; i++) {
