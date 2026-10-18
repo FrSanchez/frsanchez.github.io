@@ -28,6 +28,13 @@
   function makeParagraph(text, section, ui) {
     const paragraph = document.createElement('p');
     paragraph.className = 'prayer-paragraph';
+    
+    // Right-align paragraphs if they belong to the second section of the "presentacion" page
+    // We pass section index from appendContent to identify the section
+    if (section._isRightAligned) {
+      paragraph.style.textAlign = 'right';
+    }
+
     text.split('\n').forEach((line, index) => {
       if (index > 0) paragraph.append(document.createTextNode('\n'));
       if (section.emphasizedResponses?.includes(line)) {
@@ -47,7 +54,12 @@
     return paragraph;
   }
 
-  function appendContent(container, section, ui) {
+  function appendContent(container, section, ui, sectionIndex = 0) {
+    // Identify if this is the second section of the presentation page
+    if (current.view === 'presentacion' && sectionIndex === 1) {
+      section._isRightAligned = true;
+    }
+
     for (const text of section.paragraphs || []) container.append(makeParagraph(text, section, ui));
     if (section.bullets) {
       const list = document.createElement('ul');
@@ -162,7 +174,7 @@
     elements.prayers.classList.toggle('litany-columns', isRosary && routes[current.index] === 'letanias');
     elements.prayers.classList.toggle('songbook-columns', !!page.songbook);
     elements.prayers.classList.toggle('checklist-columns', !!page.checklists);
-    elements.prayers.replaceChildren(...page.sections.map(section => {
+    elements.prayers.replaceChildren(...page.sections.map((section, index) => {
       const container = document.createElement('section');
       console.log('section', section);
       container.className = `prayer-section${page.songbook ? ' song-card' : ''}${section.checklist ? ` checklist-${section.checklist}` : ''}`;
@@ -173,7 +185,7 @@
         if (section.id) heading.tabIndex = -1;
         container.append(heading);
       }
-      appendContent(container, section, ui);
+      appendContent(container, section, ui, index);
       return container;
     }));
     elements['closing-symbol'].hidden = !isRosary || routes[current.index] !== 'cierre';
