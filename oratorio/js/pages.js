@@ -49,7 +49,9 @@
             {
               "paragraphs": [
                 "Al entrar en la casa el Oratorio, la familia que lo entrega dirá:",
-                "«(Nombre), recibe a la Santísima Virgen en tu casa para que Ella te reciba en el Cielo»."
+                "✦ «(Nombre), recibe a la Santísima Virgen en tu casa para que Ella te reciba en el Cielo».",
+                "La familia que recibe responderá:",
+                "✦ Así sea."
               ]
             },
             {
@@ -344,7 +346,9 @@
             {
               "paragraphs": [
                 "As the Oratory enters the home, the family delivering it says:",
-                "“(Name), receive the Blessed Virgin into your home, so that she may receive you into Heaven.”"
+                "✦ “(Name), receive the Blessed Virgin into your home, so that she may receive you into Heaven.”",
+                "The family receiving it responds:",
+                "✦ So be it."
               ]
             },
             {
