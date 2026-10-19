@@ -44,8 +44,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  height: 110%;
+  width: 110%;
   object-fit: contain;
   object-position: left center;
 }
@@ -55,6 +55,7 @@ body {
   .site-header h1 { font-size: 1.4rem; }
   .header-subtitle { font-size: 0.85rem; }
 }
+.image-section { display: block; max-width: 100%; height: 500px; object-fit: contain; object-position: center; margin: 0 auto 28px; align-self: center; }
 
 .header-subtitle { color: var(--oratorio-text); font-size: 1.4rem; }
 .progress-panel { padding: 28px 0 24px; border-bottom: 1px solid #e4dfd3; }
@@ -232,7 +233,25 @@ body.at-start { padding-bottom: 0; }
 }
 
 button.step-marker { padding: 0; background: transparent; cursor: pointer; }
-button.step-marker.completed { background: #e0e6e2; }
+button.step-marker.completed { background: var(--oratorio-button); }
 button.step-marker[aria-current="step"] { background: var(--oratorio-green); }
 button.step-marker:not([aria-current]):hover { background: #e0e6e2; border-color: var(--oratorio-green); }
 button.step-marker:focus-visible { outline: 3px solid var(--oratorio-button); outline-offset: 2px; }
+
+.page-footer-signature {
+  text-align: center;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid #e4dfd3;
+}
+.footer-cross {
+  color: var(--oratorio-gold);
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 8px;
+}
+.footer-quote {
+  font-style: italic;
+  line-height: 1.6;
+  display: block;
+}

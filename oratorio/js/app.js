@@ -25,15 +25,21 @@
   let current = routeForHash(window.location.hash, routes);
   const menuLabelKeys = ['menuPresentation', 'menuRecommendations', 'menuRosary', 'menuConsecration', 'menuFarewell', 'menuSongbook', 'menuDosDonts'];
 
-  function makeParagraph(text, section, ui) {
+  function makeParagraph(input, section, ui) {
     const paragraph = document.createElement('p');
     paragraph.className = 'prayer-paragraph';
+
+    const text = typeof input === 'string' ? input : input.text;
+    const className = typeof input === 'string' ? null : input.className;
+
     
     // Right-align paragraphs if they belong to the second section of the "presentacion" page
     // We pass section index from appendContent to identify the section
     if (section._isRightAligned) {
       paragraph.style.textAlign = 'right';
     }
+
+    if (className) paragraph.classList.add(className);
 
     text.split('\n').forEach((line, index) => {
       if (index > 0) paragraph.append(document.createTextNode('\n'));
@@ -58,6 +64,13 @@
     // Identify if this is the second section of the presentation page
     if (current.view === 'presentacion' && sectionIndex === 1) {
       section._isRightAligned = true;
+    }
+
+    if (section.image) {
+      const image = document.createElement('img');
+      image.src = section.image;
+      container.append(image);
+      image.classList.add('image-section');
     }
 
     for (const text of section.paragraphs || []) container.append(makeParagraph(text, section, ui));
@@ -153,19 +166,7 @@
     elements.progress.setAttribute('aria-valuenow', current.index + 1);
     elements.progress.setAttribute('aria-valuetext', `${pageCount}: ${page.title}`);
     elements['progress-fill'].style.width = `${(current.index + 1) / pages.length * 100}%`;
-    // elements['step-markers'].replaceChildren(...pages.map((step, index) => {
-    //   const item = document.createElement('li');
-    //   const marker = document.createElement('button');
-    //   marker.type = 'button';
-    //   marker.className = `step-marker${index < current.index ? ' completed' : ''}`;
-    //   marker.textContent = index + 1;
-    //   marker.dataset.pageIndex = index;
-    //   marker.setAttribute('aria-label', format(ui.jumpToPage, { current: index + 1, title: step.title }));
-    //   marker.setAttribute('aria-controls', 'prayer-page');
-    //   if (index === current.index) marker.setAttribute('aria-current', 'step');
-    //   item.append(marker);
-    //   return item;
-    // }));
+
     elements['section-label'].textContent = isRosary ? null : page.label;
     elements['page-title'].textContent = page.title;
     for (const [id, value] of [['mystery-title', page.mystery], ['mystery-description', page.description]]) {
@@ -180,6 +181,9 @@
       console.log('section', section);
       container.className = `prayer-section${page.songbook ? ' song-card' : ''}${section.checklist ? ` checklist-${section.checklist}` : ''}`;
       if (section.id) container.id = section.id;
+      if (section.footer) {
+        container.classList.add('page-footer-signature');
+      }
       if (section.heading) {
         const heading = document.createElement('h3');
         heading.textContent = section.heading;
@@ -248,12 +252,7 @@
     try { window.localStorage.setItem(storageKey, language); } catch { /* Optional persistence. */ }
     render();
   });
-  // elements['step-markers'].addEventListener('click', event => {
-  //   const marker = event.target.closest('button[data-page-index]');
-  //   if (!marker || current.view !== 'rosario') return;
-  //   const index = Number(marker.dataset.pageIndex);
-  //   if (Number.isInteger(index) && index >= 0 && index < routes.length) navigateTo(`#${routes[index]}`);
-  // });
+
   elements['next-button'].addEventListener('click', () => {
     if (current.view === 'rosario' && current.index < routes.length - 1) navigateTo(`#${routes[current.index + 1]}`);
   });
