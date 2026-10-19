@@ -78,7 +78,7 @@
       list.setAttribute('aria-label', ui.stagesLabel);
       list.setAttribute('data-i18n-aria', 'stagesLabel');
       const markers = [];
-      for (let i = 0; i < 10; i++) {
+      for (let i = 0; i < section.numMarkers; i++) {
         const item = document.createElement('li');
         const marker = document.createElement('button');
         marker.type = 'button';
@@ -144,6 +144,7 @@
     }));
     const pages = pagesForGroup(groupKey, language);
     const page = isRosary ? pages[current.index] : getPages(language)[current.view];
+    console.log(page);
     elements['progress-panel'].hidden = !isRosary;
     elements['daily-group'].textContent = content.groups[groupKey].name;
     const pageCount = format(ui.pageCount, { current: current.index + 1, total: pages.length });

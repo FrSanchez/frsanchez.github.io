@@ -22,7 +22,7 @@
         menu: 'Menú',
         openMenu: 'Abrir menú',
         menuPresentation: 'Presentación',
-        menuRecommendations: 'Recomendaciones Previas',
+        menuRecommendations: 'Recibiendo el Oratorio',
         menuRosary: 'Rosario',
         menuConsecration: 'Consagración',
         menuFarewell: 'Despedida',

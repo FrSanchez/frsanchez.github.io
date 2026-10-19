@@ -23,7 +23,7 @@
       ]
     },
     "recomendaciones": {
-      "title": "Recomendaciones Previas",
+      "title": "Recibiendo el Oratorio",
       "label": "✦ ✦ ✦",
       "sections": [
         {
@@ -54,13 +54,22 @@
             },
             {
               "paragraphs": [
-                "En seguida lo colocará en un lugar de honor y saludará a la Santísima Virgen rezando tres avemarías, finalizando con las jaculatorias:"
+                "En seguida lo colocará en un lugar de honor y saludará a la Santísima Virgen rezando tres avemarías:",
+                "Dios te salve, María, llena eres de gracia; el Señor es contigo. Bendita tú eres entre todas las mujeres, y bendito es el fruto de tu vientre, Jesús. Santa María, Madre de Dios, ruega por nosotros, pecadores, ahora y en la hora de nuestra muerte. Amén."
+              ],
+              "markers": true,
+              "numMarkers": 3,
+            },
+            {
+              paragraphs: [
+                "Jaculatorias:"
               ],
               "bullets": [
                 "Oh María sin pecado concebida, ruega por nosotros que recurrimos a ti.",
                 "Nuestra Señora de Fátima, ruega por nosotros.",
                 "Corazón Inmaculado de María, sé la salvación del alma mía."
               ]
+
             }
           ],
           "start": 3
@@ -105,7 +114,7 @@
               ]
             }
           ],
-          "start": 5
+          "start": 6
         },
         {
           "paragraphs": [],
@@ -127,7 +136,7 @@
               ]
             }
           ],
-          "start": 6
+          "start": 7
         }
       ]
     },
@@ -340,7 +349,15 @@
             },
             {
               "paragraphs": [
-                "Then place it in a position of honor and greet the Blessed Virgin by praying three Hail Marys, concluding with these invocations:"
+                "Then place it in a position of honor and greet the Blessed Virgin by praying three Hail Marys",
+                "Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
+              ],
+              "markers": true,
+              "numMarkers": 3,
+            },
+            {
+              "paragraphs": [
+                "Invocations:"
               ],
               "bullets": [
                 "O Mary, conceived without sin, pray for us who have recourse to you.",
@@ -391,7 +408,7 @@
               ]
             }
           ],
-          "start": 5
+          "start": 6
         },
         {
           "paragraphs": [],
@@ -413,7 +430,7 @@
               ]
             }
           ],
-          "start": 6
+          "start": 7
         }
       ]
     },

@@ -15,7 +15,7 @@
     const p = content.prayers;
     const decade = [
       { heading: ui.ourFatherTitle, paragraphs: [p.ourFather] },
-      { heading: ui.hailMaryTitle, paragraphs: [p.hailMary], markers: true },
+      { heading: ui.hailMaryTitle, paragraphs: [p.hailMary], markers: true, numMarkers: 10 },
       { heading: ui.gloryTitle, paragraphs: [p.glory] },
       { heading: ui.maryGraceTitle, paragraphs: [p.maryGrace, p.maryResponse, p.rosaryVirginLeader, p.rosaryVirginResponse] },
       { heading: ui.fatimaPrayerTitle, paragraphs: [p.fatimaPrayer, p.ourLadyFatimaLeader, p.ourLadyFatimaResponse, p.immaculateHeartLeader, p.immaculateHeartResponse] },
