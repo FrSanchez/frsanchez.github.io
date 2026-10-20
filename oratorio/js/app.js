@@ -4,13 +4,14 @@
   const { getPages } = window.OratorioPages;
   const { routeForHash, menuRoutes } = window.OratorioNavigation;
   const storageKey = 'oratorio-language';
-  
-  // 1. Determine language based on path first, then storage, then default
   let language = 'es';
-  const isEnglishPath = window.location.pathname.includes('/en/');
-  if (isEnglishPath) language = 'en';
-
+  try {
+    const saved = window.localStorage.getItem(storageKey);
+    if (saved === 'es' || saved === 'en') language = saved;
+  } catch { /* Language switching works when storage is unavailable. */ }
+  const settingsDialog = document.getElementById('settings-dialog');
   const languageSelect = document.getElementById('language-select');
+  const settingsButton = document.getElementById('settings-button');
   const menuDialog = document.getElementById('menu-dialog');
   const menuButton = document.getElementById('menu-button');
   const menuLinks = document.getElementById('menu-links');
@@ -24,18 +25,15 @@
   let current = routeForHash(window.location.hash, routes);
   const menuLabelKeys = ['menuPresentation', 'menuRecommendations', 'menuRosary', 'menuConsecration', 'menuFarewell', 'menuSongbook', 'menuDosDonts'];
 
-  function makeParagraph(input, section, ui) {
+  function makeParagraph(text, section, ui) {
     const paragraph = document.createElement('p');
     paragraph.className = 'prayer-paragraph';
-
-    const text = typeof input === 'string' ? input : (section.prayers[input.prayer] || input.text || '');
-    const className = typeof input === 'string' ? null : input.className;
-
+    
+    // Right-align paragraphs if they belong to the second section of the "presentacion" page
+    // We pass section index from appendContent to identify the section
     if (section._isRightAligned) {
       paragraph.style.textAlign = 'right';
     }
-
-    if (className) paragraph.classList.add(className);
 
     text.split('\n').forEach((line, index) => {
       if (index > 0) paragraph.append(document.createTextNode('\n'));
@@ -57,6 +55,7 @@
   }
 
   function appendContent(container, section, ui, sectionIndex = 0) {
+    // Identify if this is the second section of the presentation page
     if (current.view === 'presentacion' && sectionIndex === 1) {
       section._isRightAligned = true;
     }
@@ -74,7 +73,7 @@
       list.className = 'devotion-list';
       for (const text of section.bullets) {
         const item = document.createElement('li');
-        appendContent(item, text, ui);
+        item.append(makeParagraph(text, section, ui));
         list.append(item);
       }
       container.append(list);
@@ -136,11 +135,7 @@
     const isRosary = current.view === 'rosario';
     const { content, ui } = getLocale(language);
     document.documentElement.lang = language;
-    
-    // Only update meta description if it exists in the DOM
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.content = ui.metaDescription;
-    
+    document.querySelector('meta[name="description"]').content = ui.metaDescription;
     for (const element of document.querySelectorAll('[data-i18n]')) element.textContent = ui[element.dataset.i18n];
     for (const element of document.querySelectorAll('[data-i18n-aria]')) element.setAttribute('aria-label', ui[element.dataset.i18nAria]);
     for (const element of document.querySelectorAll('[data-i18n-alt]')) element.alt = ui[element.dataset.i18nAlt];
@@ -156,14 +151,28 @@
     }));
     const pages = pagesForGroup(groupKey, language);
     const page = isRosary ? pages[current.index] : getPages(language)[current.view];
+    console.log(page);
     elements['progress-panel'].hidden = !isRosary;
     elements['daily-group'].textContent = content.groups[groupKey].name;
     const pageCount = format(ui.pageCount, { current: current.index + 1, total: pages.length });
+    // elements['page-count'].textContent = pageCount;
     elements.progress.setAttribute('aria-valuemax', pages.length);
     elements.progress.setAttribute('aria-valuenow', current.index + 1);
     elements.progress.setAttribute('aria-valuetext', `${pageCount}: ${page.title}`);
     elements['progress-fill'].style.width = `${(current.index + 1) / pages.length * 100}%`;
-
+    // elements['step-markers'].replaceChildren(...pages.map((step, index) => {
+    //   const item = document.createElement('li');
+    //   const marker = document.createElement('button');
+    //   marker.type = 'button';
+    //   marker.className = `step-marker${index < current.index ? ' completed' : ''}`;
+    //   marker.textContent = index + 1;
+    //   marker.dataset.pageIndex = index;
+    //   marker.setAttribute('aria-label', format(ui.jumpToPage, { current: index + 1, title: step.title }));
+    //   marker.setAttribute('aria-controls', 'prayer-page');
+    //   if (index === current.index) marker.setAttribute('aria-current', 'step');
+    //   item.append(marker);
+    //   return item;
+    // }));
     elements['section-label'].textContent = isRosary ? null : page.label;
     elements['page-title'].textContent = page.title;
     for (const [id, value] of [['mystery-title', page.mystery], ['mystery-description', page.description]]) {
@@ -175,18 +184,15 @@
     elements.prayers.classList.toggle('checklist-columns', !!page.checklists);
     elements.prayers.replaceChildren(...page.sections.map((section, index) => {
       const container = document.createElement('section');
+      console.log('section', section);
       container.className = `prayer-section${page.songbook ? ' song-card' : ''}${section.checklist ? ` checklist-${section.checklist}` : ''}`;
       if (section.id) container.id = section.id;
-      if (section.footer) {
-        container.classList.add('page-footer-signature');
-      }
       if (section.heading) {
         const heading = document.createElement('h3');
         heading.textContent = section.heading;
         if (section.id) heading.tabIndex = -1;
         container.append(heading);
       }
-      section.prayers = content.prayers;
       appendContent(container, section, ui, index);
       return container;
     }));
@@ -239,6 +245,9 @@
     menuDialog.close();
     navigateTo(link.getAttribute('href'));
   });
+  settingsButton.addEventListener('click', () => settingsDialog.showModal());
+  settingsDialog.addEventListener('close', () => settingsButton.focus({ preventScroll: true }));
+  settingsDialog.addEventListener('click', event => dismissOnBackdrop(settingsDialog, event));
   languageSelect.addEventListener('change', () => {
     const selected = languageSelect.value;
     if (selected !== 'es' && selected !== 'en') return;
@@ -246,7 +255,12 @@
     try { window.localStorage.setItem(storageKey, language); } catch { /* Optional persistence. */ }
     render();
   });
-
+  // elements['step-markers'].addEventListener('click', event => {
+  //   const marker = event.target.closest('button[data-page-index]');
+  //   if (!marker || current.view !== 'rosario') return;
+  //   const index = Number(marker.dataset.pageIndex);
+  //   if (Number.isInteger(index) && index >= 0 && index < routes.length) navigateTo(`#${routes[index]}`);
+  // });
   elements['next-button'].addEventListener('click', () => {
     if (current.view === 'rosario' && current.index < routes.length - 1) navigateTo(`#${routes[current.index + 1]}`);
   });

@@ -20,7 +20,7 @@
         },
         {
           "title": "La Presentación de Jesús en el Templo (Lc 2:22,28-30).",
-          "description": "Llevaron al niño a Jerusalén paßra presentarlo al Señor… Simeón lo tomó en sus brazos y alabó a Dios, diciendo: “Ahora, Señor, puedes dejar que tu servidor muera en paz, como lo has prometido, porque mis ojos han visto la salvación"
+          "description": "Llevaron al niño a Jerusalén para presentarlo al Señor… Simeón lo tomó en sus brazos y alabó a Dios, diciendo: “Ahora, Señor, puedes dejar que tu servidor muera en paz, como lo has prometido, porque mis ojos han visto la salvación"
         },
         {
           "title": "El Niño Jesús perdido y hallado en el Templo (Lc 2:42-43,46).",
@@ -75,7 +75,7 @@
           "description": "«En adelante todas las generaciones me llamarán feliz, porque el Todopoderoso ha hecho en mí grandes cosas». «Eres toda hermosa, amada mía, y no tienes ningún defecto. ¡Ven conmigo del Líbano, novia mía…!"
         },
         {
-          "title": "La coronación de María Reina de cielos y tierra (Ap 12:1).",
+          "title": "La coronación de María Reina de cielos y tierra (Ap 12,1).",
           "description": "Y apareció en el cielo un gran signo: una Mujer revestida del sol, con la luna bajo sus pies y una corona de doce estrellas en su cabeza"
         }
       ]
@@ -94,7 +94,7 @@
         },
         {
           "title": "El anuncio del Reino (Mc 1:14-15).",
-          "description": "Jesús se dirigió a Galilea. Allí proclamaba la Buena Noticia de Dios, diciendo: “El tiempo se ha cumplido: el Reino de Dios está cerca. Conviértanse y crean en la Buena Noticia"
+          "description": "Jesús se dirigió a Galilea. Allí proclamaba la Buena Noticia de Dios, diciendo: “El tiempo se ha cumplido: el Reino de Dios está cerca. Conviértanse y crean en la Buena Noticia”"
         },
         {
           "title": "La transfiguración del Señor (Mt 17:1-2,5).",

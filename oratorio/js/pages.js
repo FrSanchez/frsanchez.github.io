@@ -8,7 +8,7 @@
       "label": "✦ ✦ ✦",
       "sections": [
         {
-          "image": "assets/seal.png",
+          "image": "images/seal.png",
           "paragraphs": [
             "Un llamado urgente del Cielo. En la cuarta aparición a los pastorcitos, la Santísima Virgen María, Nuestra Señora de Fátima, les transmitió un mensaje de una trascendencia absoluta: «recen, recen mucho y hagan sacrificios por los pecadores, porque muchas almas van al infierno por no tener quién se sacrifique y rece por ellas». Esta verdad ineludible sobre la salvación de las almas es el motor fundamental que impulsa una poderosa misión de fe que hoy asumimos con vigor.",
             "Hoy, esa misma urgencia divina de la Madre impulsa con renovada energía el Apostolado del Oratorio de Nuestra Señora de Fátima. Este apostolado emprende una nueva y prometedora etapa de intensa labor evangelizadora. Nos anclamos sólidamente en la Parroquia Nuestra Señora de la Esperanza, en Everett, Washington, con la firme esperanza de que esta iniciativa dé muchos frutos. Este es un nuevo y glorioso amanecer para la propagación del rezo del Santo Rosario en familia.",
@@ -50,9 +50,7 @@
             {
               "paragraphs": [
                 "Al entrar en la casa el Oratorio, la familia que lo entrega dirá:",
-                "✦ «(Nombre), recibe a la Santísima Virgen en tu casa para que Ella te reciba en el Cielo».",
-                "La familia que recibe responderá:",
-                "✦ Así sea."
+                "«(Nombre), recibe a la Santísima Virgen en tu casa para que Ella te reciba en el Cielo»."
               ]
             },
             {
@@ -140,12 +138,7 @@
             }
           ],
           "start": 7
-        },
-       {
-          "paragraphs": [{"text": "✠", "className": "footer-cross"}, {"text": "«Hagan todo lo que él les diga».\nJn 2,5", "className": "footer-quote"}],
-          "footer": true
-        },
-
+        }
       ]
     },
     "consagracion": {
@@ -192,9 +185,7 @@
         {
           "paragraphs": [
             "Cuando el Oratorio vaya a partir hacia otra casa, se reza:",
-            { "prayer": "ourFather" },
-            { "prayer": "hailMary" },
-            { "prayer": "glory" }
+            "Padre nuestro…, Ave María…, Gloria…"
           ]
         },
         {
@@ -207,7 +198,7 @@
         },
         {
           "paragraphs": [
-            "Y se canta: "
+            "Y se canta «Adiós, Reina del Cielo»."
           ],
           "links": [
             {
@@ -313,7 +304,7 @@
       "label": "✦ ✦ ✦",
       "sections": [
         {
-          "image": "assets/seal.png",
+          "image": "images/seal.png",
           "paragraphs": [
             "An urgent call from Heaven. In the fourth apparition to the shepherd children, the Blessed Virgin Mary, Our Lady of Fátima, conveyed a message of absolute importance: “Pray, pray much and make sacrifices for sinners, because many souls go to hell because they have no one to sacrifice and pray for them.” This undeniable truth about the salvation of souls is the fundamental force driving a powerful mission of faith that we now undertake with vigor.",
             "Today, that same divine urgency of our Mother inspires the Oratory Apostolate of Our Lady of Fátima with renewed energy. This apostolate begins a new and promising stage of intense evangelization. We are firmly rooted in Our Lady of Hope Parish in Everett, Washington, with the strong hope that this initiative will bear much fruit. This is a new and glorious dawn for spreading the practice of praying the Holy Rosary as a family.",
@@ -355,9 +346,7 @@
             {
               "paragraphs": [
                 "As the Oratory enters the home, the family delivering it says:",
-                "✦ “(Name), receive the Blessed Virgin into your home, so that she may receive you into Heaven.”",
-                "The family receiving it responds:",
-                "✦ So be it."
+                "“(Name), receive the Blessed Virgin into your home, so that she may receive you into Heaven.”"
               ]
             },
             {
@@ -444,11 +433,7 @@
             }
           ],
           "start": 7
-        },
-        {
-          "paragraphs": [{"text": "✠", "className": "footer-cross"}, {"text": "“Do whatever he tells you”.\nJn 2:5", "className": "footer-quote"}],
-          "footer": true
-        },
+        }
       ]
     },
     "consagracion": {
@@ -495,9 +480,7 @@
         {
           "paragraphs": [
             "When the Oratory is about to leave for another home, pray:",
-            { "prayer": "ourFather" },
-            { "prayer": "hailMary" },
-            { "prayer": "glory" }
+            "Our Father…, Hail Mary…, Glory Be…"
           ]
         },
         {
