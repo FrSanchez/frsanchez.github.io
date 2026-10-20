@@ -17,13 +17,22 @@
   const menuLinks = document.getElementById('menu-links');
   let menuNavigated = false;
   const elements = Object.fromEntries([
-    'daily-group', 'page-count', 'progress', 'progress-fill', 
+    'daily-group', 'progress', 'progress-fill', 
     'section-label', 'page-title', 'mystery-title', 'mystery-description',
     'prayers', 'next-button', 'home-button', 'closing-symbol', 'progress-panel',
   ].map(id => [id, document.getElementById(id)]));
   let groupKey = groupForDate();
   let current = routeForHash(window.location.hash, routes);
   const menuLabelKeys = ['menuPresentation', 'menuRecommendations', 'menuRosary', 'menuConsecration', 'menuFarewell', 'menuSongbook', 'menuDosDonts'];
+  const menuIcons = [
+    'images/presentation.svg',
+    'images/recommendations.svg',
+    'images/rosary-svgrepo-com.svg',
+    'images/consecration.svg',
+    'images/farewell.svg',
+    'images/songbook.svg',
+    'images/dosdonts.svg',
+  ];
 
   function makeParagraph(text, section, ui) {
     const paragraph = document.createElement('p');
@@ -33,6 +42,10 @@
     // We pass section index from appendContent to identify the section
     if (section._isRightAligned) {
       paragraph.style.textAlign = 'right';
+    }
+
+    if (typeof text == 'object' && text.prayer) {
+      text = section.prayers[text.prayer] || text.prayer;
     }
 
     text.split('\n').forEach((line, index) => {
@@ -143,8 +156,15 @@
     menuLinks.replaceChildren(...menuRoutes.map((route, index) => {
       const item = document.createElement('li');
       const link = document.createElement('a');
+      const icon = document.createElement('img');
+      icon.src = menuIcons[index] || '';
+      icon.alt ='';
+      icon.className = 'menu-icon';
+      
+      const label = document.createElement('span');
+      label.textContent = ui[menuLabelKeys[index]];
       link.href = `#${route}`;
-      link.textContent = ui[menuLabelKeys[index]];
+      link.append(icon, label);
       if (route === current.view) link.setAttribute('aria-current', 'page');
       item.append(link);
       return item;
@@ -155,24 +175,11 @@
     elements['progress-panel'].hidden = !isRosary;
     elements['daily-group'].textContent = content.groups[groupKey].name;
     const pageCount = format(ui.pageCount, { current: current.index + 1, total: pages.length });
-    // elements['page-count'].textContent = pageCount;
     elements.progress.setAttribute('aria-valuemax', pages.length);
     elements.progress.setAttribute('aria-valuenow', current.index + 1);
     elements.progress.setAttribute('aria-valuetext', `${pageCount}: ${page.title}`);
     elements['progress-fill'].style.width = `${(current.index + 1) / pages.length * 100}%`;
-    // elements['step-markers'].replaceChildren(...pages.map((step, index) => {
-    //   const item = document.createElement('li');
-    //   const marker = document.createElement('button');
-    //   marker.type = 'button';
-    //   marker.className = `step-marker${index < current.index ? ' completed' : ''}`;
-    //   marker.textContent = index + 1;
-    //   marker.dataset.pageIndex = index;
-    //   marker.setAttribute('aria-label', format(ui.jumpToPage, { current: index + 1, title: step.title }));
-    //   marker.setAttribute('aria-controls', 'prayer-page');
-    //   if (index === current.index) marker.setAttribute('aria-current', 'step');
-    //   item.append(marker);
-    //   return item;
-    // }));
+
     elements['section-label'].textContent = isRosary ? null : page.label;
     elements['page-title'].textContent = page.title;
     for (const [id, value] of [['mystery-title', page.mystery], ['mystery-description', page.description]]) {
@@ -193,6 +200,7 @@
         if (section.id) heading.tabIndex = -1;
         container.append(heading);
       }
+      section.prayers = content.prayers;
       appendContent(container, section, ui, index);
       return container;
     }));
@@ -255,12 +263,7 @@
     try { window.localStorage.setItem(storageKey, language); } catch { /* Optional persistence. */ }
     render();
   });
-  // elements['step-markers'].addEventListener('click', event => {
-  //   const marker = event.target.closest('button[data-page-index]');
-  //   if (!marker || current.view !== 'rosario') return;
-  //   const index = Number(marker.dataset.pageIndex);
-  //   if (Number.isInteger(index) && index >= 0 && index < routes.length) navigateTo(`#${routes[index]}`);
-  // });
+
   elements['next-button'].addEventListener('click', () => {
     if (current.view === 'rosario' && current.index < routes.length - 1) navigateTo(`#${routes[current.index + 1]}`);
   });

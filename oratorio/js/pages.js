@@ -185,7 +185,9 @@
         {
           "paragraphs": [
             "Cuando el Oratorio vaya a partir hacia otra casa, se reza:",
-            "Padre nuestro…, Ave María…, Gloria…"
+            { prayer: "ourFather" },
+            { prayer: "hailMary" },
+            { prayer: "glory" }
           ]
         },
         {
@@ -480,7 +482,9 @@
         {
           "paragraphs": [
             "When the Oratory is about to leave for another home, pray:",
-            "Our Father…, Hail Mary…, Glory Be…"
+            { prayer: "ourFather" },
+            { prayer: "hailMary" },
+            { prayer: "glory" }
           ]
         },
         {
