@@ -4,14 +4,13 @@
   const { getPages } = window.OratorioPages;
   const { routeForHash, menuRoutes } = window.OratorioNavigation;
   const storageKey = 'oratorio-language';
+  
+  // 1. Determine language based on path first, then storage, then default
   let language = 'es';
-  try {
-    const saved = window.localStorage.getItem(storageKey);
-    if (saved === 'es' || saved === 'en') language = saved;
-  } catch { /* Language switching works when storage is unavailable. */ }
-  const settingsDialog = document.getElementById('settings-dialog');
+  const isEnglishPath = window.location.pathname.includes('/en/');
+  if (isEnglishPath) language = 'en';
+
   const languageSelect = document.getElementById('language-select');
-  const settingsButton = document.getElementById('settings-button');
   const menuDialog = document.getElementById('menu-dialog');
   const menuButton = document.getElementById('menu-button');
   const menuLinks = document.getElementById('menu-links');
@@ -29,12 +28,9 @@
     const paragraph = document.createElement('p');
     paragraph.className = 'prayer-paragraph';
 
-    const text = typeof input === 'string' ? input : input.text;
+    const text = typeof input === 'string' ? input : (section.prayers[input.prayer] || input.text || '');
     const className = typeof input === 'string' ? null : input.className;
 
-    
-    // Right-align paragraphs if they belong to the second section of the "presentacion" page
-    // We pass section index from appendContent to identify the section
     if (section._isRightAligned) {
       paragraph.style.textAlign = 'right';
     }
@@ -61,7 +57,6 @@
   }
 
   function appendContent(container, section, ui, sectionIndex = 0) {
-    // Identify if this is the second section of the presentation page
     if (current.view === 'presentacion' && sectionIndex === 1) {
       section._isRightAligned = true;
     }
@@ -79,7 +74,7 @@
       list.className = 'devotion-list';
       for (const text of section.bullets) {
         const item = document.createElement('li');
-        item.append(makeParagraph(text, section, ui));
+        appendContent(item, text, ui);
         list.append(item);
       }
       container.append(list);
@@ -141,7 +136,11 @@
     const isRosary = current.view === 'rosario';
     const { content, ui } = getLocale(language);
     document.documentElement.lang = language;
-    document.querySelector('meta[name="description"]').content = ui.metaDescription;
+    
+    // Only update meta description if it exists in the DOM
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.content = ui.metaDescription;
+    
     for (const element of document.querySelectorAll('[data-i18n]')) element.textContent = ui[element.dataset.i18n];
     for (const element of document.querySelectorAll('[data-i18n-aria]')) element.setAttribute('aria-label', ui[element.dataset.i18nAria]);
     for (const element of document.querySelectorAll('[data-i18n-alt]')) element.alt = ui[element.dataset.i18nAlt];
@@ -157,11 +156,9 @@
     }));
     const pages = pagesForGroup(groupKey, language);
     const page = isRosary ? pages[current.index] : getPages(language)[current.view];
-    console.log(page);
     elements['progress-panel'].hidden = !isRosary;
     elements['daily-group'].textContent = content.groups[groupKey].name;
     const pageCount = format(ui.pageCount, { current: current.index + 1, total: pages.length });
-    // elements['page-count'].textContent = pageCount;
     elements.progress.setAttribute('aria-valuemax', pages.length);
     elements.progress.setAttribute('aria-valuenow', current.index + 1);
     elements.progress.setAttribute('aria-valuetext', `${pageCount}: ${page.title}`);
@@ -178,7 +175,6 @@
     elements.prayers.classList.toggle('checklist-columns', !!page.checklists);
     elements.prayers.replaceChildren(...page.sections.map((section, index) => {
       const container = document.createElement('section');
-      console.log('section', section);
       container.className = `prayer-section${page.songbook ? ' song-card' : ''}${section.checklist ? ` checklist-${section.checklist}` : ''}`;
       if (section.id) container.id = section.id;
       if (section.footer) {
@@ -190,6 +186,7 @@
         if (section.id) heading.tabIndex = -1;
         container.append(heading);
       }
+      section.prayers = content.prayers;
       appendContent(container, section, ui, index);
       return container;
     }));
@@ -242,9 +239,6 @@
     menuDialog.close();
     navigateTo(link.getAttribute('href'));
   });
-  settingsButton.addEventListener('click', () => settingsDialog.showModal());
-  settingsDialog.addEventListener('close', () => settingsButton.focus({ preventScroll: true }));
-  settingsDialog.addEventListener('click', event => dismissOnBackdrop(settingsDialog, event));
   languageSelect.addEventListener('change', () => {
     const selected = languageSelect.value;
     if (selected !== 'es' && selected !== 'en') return;

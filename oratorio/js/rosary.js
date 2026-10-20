@@ -50,7 +50,7 @@
           ? `${invocation}\n${p.litanyResponse}` : invocation), emphasizedResponses: [p.litanyResponse] },
         { paragraphs: p.litanyClosing },
       ] },
-      { title: ui.finalTitle, label: ui.finalLabel, sections: [
+      { title: null, label: ui.finalLabel, sections: [
         { heading: ui.thanksgivingTitle, paragraphs: p.finalPrayers.slice(0, 1) },
         { heading: ui.salveTitle, paragraphs: p.finalPrayers.slice(1, 4) },
         { heading: ui.letUsPrayTitle, paragraphs: p.finalPrayers.slice(4) },
