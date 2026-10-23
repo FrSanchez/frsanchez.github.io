@@ -9,7 +9,7 @@
       "sections": [
         {
           "paragraphs": [
-            "Esta aplicación es una colaboración entre Sanchez Parra Labs y el P. Juan Carlos Rivera Zelaya con el propósito de promover el Apostolado del Oratorio de Nuestra Señora de Fátima.",
+            "Esta aplicación es una colaboración entre Sanchez Parra Labs y la parroquia de Nuestra Señora de la Esperanza con el propósito de promover el Apostolado del Oratorio de Nuestra Señora de Fátima.",
             "Para preguntas o problemas relacionados con el uso de la aplicación, por favor contacte a:"
           ],
           "links": [
@@ -325,7 +325,7 @@
       "sections": [
         {
           "paragraphs": [
-            "This application is a collaboration between Sanchez Parra Labs and Fr. Juan Carlos Rivera Zelaya for the purpose of promoting the Apostolate of the Oratory of Our Lady of Fátima.",
+            "This application is a collaboration between Sanchez Parra Labs and Our Lady of Hope Parish for the purpose of promoting the Apostolate of the Oratory of Our Lady of Fátima.",
             "For questions or problems regarding the use of the application, please contact:"
           ],
           "links": [
