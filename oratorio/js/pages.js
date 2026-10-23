@@ -3,6 +3,24 @@
 (function (root) {
   const pages = {
   "es": {
+    "acerca-de": {
+      "title": "Acerca de",
+      "label": "✦ ✦ ✦",
+      "sections": [
+        {
+          "paragraphs": [
+            "Esta aplicación es una colaboración entre Sanchez Parra Labs y el P. Juan Carlos Rivera Zelaya con el propósito de promover el Apostolado del Oratorio de Nuestra Señora de Fátima.",
+            "Para preguntas o problemas relacionados con el uso de la aplicación, por favor contacte a:"
+          ],
+          "links": [
+            {
+              "href": "mailto:sanchezparralabs@outlook.com",
+              "label": "sanchezparralabs@outlook.com"
+            }
+          ]
+        }
+      ]
+    },
     "presentacion": {
       "title": "Presentación",
       "label": "✦ ✦ ✦",
@@ -276,10 +294,10 @@
           "heading": "Sí",
           "bullets": [
             "Prepara el altar e incluye una vela.",
-            "Ponte de acuerdo para recibir la Virgen en tu casa y entregarla en la otra casa. Sé flexible y comprensivo.",
+            "Ponte de acuerdo para recibir a la Virgen en tu casa y entregarla en la otra casa. Sé flexible y comprensivo.",
             "El jefe de hogar debe recibir la imagen.",
             "Reza el Rosario en familia una vez que la imagen haya sido recibida en tu casa.",
-            "Puedes recibir también a los otros miembros del Oratorio. Normalmente quien entrega la Virgen se queda a rezar.",
+            "Puedes recibir también a los otros miembros del Oratorio. Normalmente quien entrega a la Virgen se queda a rezar.",
             "Si tu casa o apartamento es pequeño y no puedes recibirlos, dilo con respeto."
           ],
           "checklist": "positive"
@@ -301,6 +319,24 @@
     }
   },
   "en": {
+    "acerca-de": {
+      "title": "About",
+      "label": "✦ ✦ ✦",
+      "sections": [
+        {
+          "paragraphs": [
+            "This application is a collaboration between Sanchez Parra Labs and Fr. Juan Carlos Rivera Zelaya for the purpose of promoting the Apostolate of the Oratory of Our Lady of Fátima.",
+            "For questions or problems regarding the use of the application, please contact:"
+          ],
+          "links": [
+            {
+              "href": "mailto:sanchezparralabs@outlook.com",
+              "label": "sanchezparralabs@outlook.com"
+            }
+          ]
+        }
+      ]
+    },
     "presentacion": {
       "title": "Introduction",
       "label": "✦ ✦ ✦",
@@ -353,7 +389,7 @@
             },
             {
               "paragraphs": [
-                "Then place it in a position of honor and greet the Blessed Virgin by praying three Hail Marys",
+                "Then place it in a position of honor and greet the Blessed Virgin by praying three Hail Marys:",
                 "Hail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
               ],
               "markers": true,

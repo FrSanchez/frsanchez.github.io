@@ -1,6 +1,6 @@
 (function (root) {
-  const infoRoutes = ['presentacion', 'recomendaciones', 'consagracion', 'despedida', 'cancionero', 'hacer-y-no-hacer'];
-  const menuRoutes = ['presentacion', 'recomendaciones', 'rosario', 'consagracion', 'despedida', 'cancionero', 'hacer-y-no-hacer'];
+  const infoRoutes = ['presentacion', 'recomendaciones', 'consagracion', 'despedida', 'cancionero', 'hacer-y-no-hacer', 'acerca-de'];
+  const menuRoutes = ['presentacion', 'recomendaciones', 'rosario', 'consagracion', 'despedida', 'cancionero', 'hacer-y-no-hacer', 'acerca-de'];
   function routeForHash(hash, rosaryRoutes) {
     const [name, anchor = ''] = hash.replace(/^#/, '').split('/');
     if (infoRoutes.includes(name)) return { view: name, anchor, index: 0 };

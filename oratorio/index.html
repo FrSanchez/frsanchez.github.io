@@ -53,15 +53,15 @@
 
     <link rel="canonical" href="https://sanchezparralabs.com/oratorio">
     <link rel="stylesheet" href="vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css?v=1792632713221">
+    <link rel="stylesheet" href="css/styles.css?v=1792718961876">
     <link rel="icon" type="image/png" href="favicon.png">
-    <script src="js/content.js?v=1792632713221" defer></script>
-    <script src="js/content-en.js?v=1792632713221" defer></script>
-    <script src="js/locales.js?v=1792632713221" defer></script>
-    <script src="js/pages.js?v=1792632713221" defer></script>
-    <script src="js/rosary.js?v=1792632713221" defer></script>
-    <script src="js/navigation.js?v=1792632713221" defer></script>
-    <script src="js/app.js?v=1792632713221" defer></script>
+    <script src="js/content.js?v=1792718961876" defer></script>
+    <script src="js/content-en.js?v=1792718961876" defer></script>
+    <script src="js/locales.js?v=1792718961876" defer></script>
+    <script src="js/pages.js?v=1792718961876" defer></script>
+    <script src="js/rosary.js?v=1792718961876" defer></script>
+    <script src="js/navigation.js?v=1792718961876" defer></script>
+    <script src="js/app.js?v=1792718961876" defer></script>
 
     <script type="application/ld+json">
     {
@@ -115,7 +115,12 @@
 
       <article id="prayer-page" class="prayer-page">
         <p class="section-label" id="section-label"></p>
-        <h2 id="page-title" tabindex="-1"></h2>
+        <div class="page-heading">
+          <h2 id="page-title" tabindex="-1"></h2>
+          <button type="button" id="top-next-button" class="btn btn-primary top-next-button" aria-label="Siguiente" data-i18n-aria="next" hidden>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
         <p class="mystery-title" id="mystery-title" hidden></p>
         <p class="mystery-description" id="mystery-description" hidden></p>
         <div id="prayers"></div>

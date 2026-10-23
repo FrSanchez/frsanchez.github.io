@@ -19,11 +19,11 @@
   const elements = Object.fromEntries([
     'daily-group', 'progress', 'progress-fill', 
     'section-label', 'page-title', 'mystery-title', 'mystery-description',
-    'prayers', 'next-button', 'home-button', 'closing-symbol', 'progress-panel',
+    'prayers', 'next-button', 'top-next-button', 'home-button', 'closing-symbol', 'progress-panel',
   ].map(id => [id, document.getElementById(id)]));
   let groupKey = groupForDate();
   let current = routeForHash(window.location.hash, routes);
-  const menuLabelKeys = ['menuPresentation', 'menuRecommendations', 'menuRosary', 'menuConsecration', 'menuFarewell', 'menuSongbook', 'menuDosDonts'];
+  const menuLabelKeys = ['menuPresentation', 'menuRecommendations', 'menuRosary', 'menuConsecration', 'menuFarewell', 'menuSongbook', 'menuDosDonts', 'menuAbout'];
   const menuIcons = [
     'images/presentation.svg',
     'images/recommendations.svg',
@@ -32,6 +32,7 @@
     'images/farewell.svg',
     'images/songbook.svg',
     'images/dosdonts.svg',
+    'images/about.svg',
   ];
 
   function makeParagraph(text, section, ui) {
@@ -206,6 +207,7 @@
     }));
     elements['closing-symbol'].hidden = !isRosary || routes[current.index] !== 'cierre';
     elements['next-button'].hidden = !isRosary || current.index === pages.length - 1;
+    elements['top-next-button'].hidden = elements['next-button'].hidden;
     elements['home-button'].textContent = isRosary ? ui.home : ui.menuRosary;
     elements['home-button'].closest('footer').hidden = isRosary && current.index === 0;
     document.body.classList.toggle('at-start', isRosary && current.index === 0);
@@ -264,9 +266,11 @@
     render();
   });
 
-  elements['next-button'].addEventListener('click', () => {
-    if (current.view === 'rosario' && current.index < routes.length - 1) navigateTo(`#${routes[current.index + 1]}`);
-  });
+  for (const id of ['next-button', 'top-next-button']) {
+    elements[id].addEventListener('click', () => {
+      if (current.view === 'rosario' && current.index < routes.length - 1) navigateTo(`#${routes[current.index + 1]}`);
+    });
+  }
   elements['home-button'].addEventListener('click', () => navigateTo('#inicio'));
   document.querySelector('.skip-link').addEventListener('click', event => {
     event.preventDefault();

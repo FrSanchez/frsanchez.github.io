@@ -121,7 +121,7 @@
       "R: and kindle in them the fire of your love.",
       "V: Send forth your Spirit, O Creator",
       "R: and renew the face of the earth.",
-      "O God, who has enlightened the hearts of your children with the light of the Holy Spirit, make us attentive to his inspirations, that we may always delight in what is good and enjoy his consolation. Through Christ our Lord. Amen.",
+      "O God, who have enlightened the hearts of your children with the light of the Holy Spirit, make us attentive to his inspirations, that we may always delight in what is good and enjoy his consolation. Through Christ our Lord. Amen.",
       "We offer this Rosary for the intentions of the Holy Father, the archbishop, the parish priest, for peace in the world, and for…"
     ],
     "closingPrayers": [
