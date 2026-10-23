@@ -2,16 +2,12 @@
   const { groupForDate, pagesForGroup, routes } = window.Rosary;
   const { getLocale, format } = window.RosaryLocales;
   const { getPages } = window.OratorioPages;
-  const { routeForHash, menuRoutes } = window.OratorioNavigation;
-  const storageKey = 'oratorio-language';
-  let language = 'es';
-  try {
-    const saved = window.localStorage.getItem(storageKey);
-    if (saved === 'es' || saved === 'en') language = saved;
-  } catch { /* Language switching works when storage is unavailable. */ }
-  const settingsDialog = document.getElementById('settings-dialog');
-  const languageSelect = document.getElementById('language-select');
-  const settingsButton = document.getElementById('settings-button');
+  const { routeForHash, menuRoutes, languageForPath, pathForLanguage } = window.OratorioNavigation;
+  const language = languageForPath(window.location.pathname);
+  function languageHref(selected) {
+    return `${pathForLanguage(window.location.pathname, selected)}${window.location.search}${window.location.hash}`;
+  }
+  iconPrefix = language !== 'es' ? '../' : '';
   const menuDialog = document.getElementById('menu-dialog');
   const menuButton = document.getElementById('menu-button');
   const menuLinks = document.getElementById('menu-links');
@@ -25,14 +21,14 @@
   let current = routeForHash(window.location.hash, routes);
   const menuLabelKeys = ['menuPresentation', 'menuRecommendations', 'menuRosary', 'menuConsecration', 'menuFarewell', 'menuSongbook', 'menuDosDonts', 'menuAbout'];
   const menuIcons = [
-    'images/presentation.svg',
-    'images/recommendations.svg',
-    'images/rosary-svgrepo-com.svg',
-    'images/consecration.svg',
-    'images/farewell.svg',
-    'images/songbook.svg',
-    'images/dosdonts.svg',
-    'images/about.svg',
+    iconPrefix + 'images/presentation.svg',
+    iconPrefix + 'images/recommendations.svg',
+    iconPrefix + 'images/rosary-svgrepo-com.svg',
+    iconPrefix + 'images/consecration.svg',
+    iconPrefix + 'images/farewell.svg',
+    iconPrefix + 'images/songbook.svg',
+    iconPrefix + 'images/dosdonts.svg',
+    iconPrefix + 'images/about.svg',
   ];
 
   function makeParagraph(text, section, ui) {
@@ -153,7 +149,6 @@
     for (const element of document.querySelectorAll('[data-i18n]')) element.textContent = ui[element.dataset.i18n];
     for (const element of document.querySelectorAll('[data-i18n-aria]')) element.setAttribute('aria-label', ui[element.dataset.i18nAria]);
     for (const element of document.querySelectorAll('[data-i18n-alt]')) element.alt = ui[element.dataset.i18nAlt];
-    languageSelect.value = language;
     menuLinks.replaceChildren(...menuRoutes.map((route, index) => {
       const item = document.createElement('li');
       const link = document.createElement('a');
@@ -170,6 +165,21 @@
       item.append(link);
       return item;
     }));
+    const languageItem = document.createElement('li');
+    const languageLink = document.createElement('a');
+    const otherLanguage = language === 'es' ? 'en' : 'es';
+    languageLink.href = languageHref(otherLanguage);
+    languageLink.hreflang = otherLanguage;
+    languageLink.lang = otherLanguage;
+    const languageIcon = document.createElement('img');
+    languageIcon.src = iconPrefix + 'images/language.svg';
+    languageIcon.alt = '';
+    languageIcon.className = 'menu-icon';
+    const languageLabel = document.createElement('span');
+    languageLabel.textContent = language === 'es' ? ui.english : ui.spanish;
+    languageLink.append(languageIcon, languageLabel);
+    languageItem.append(languageLink);
+    menuLinks.insertBefore(languageItem, menuLinks.lastElementChild);
     const pages = pagesForGroup(groupKey, language);
     const page = isRosary ? pages[current.index] : getPages(language)[current.view];
     console.log(page);
@@ -249,23 +259,12 @@
   menuDialog.addEventListener('click', event => dismissOnBackdrop(menuDialog, event));
   menuLinks.addEventListener('click', event => {
     const link = event.target.closest('a');
-    if (!link || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (!link || !link.getAttribute('href').startsWith('#') || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
     menuNavigated = true;
     menuDialog.close();
     navigateTo(link.getAttribute('href'));
   });
-  settingsButton.addEventListener('click', () => settingsDialog.showModal());
-  settingsDialog.addEventListener('close', () => settingsButton.focus({ preventScroll: true }));
-  settingsDialog.addEventListener('click', event => dismissOnBackdrop(settingsDialog, event));
-  languageSelect.addEventListener('change', () => {
-    const selected = languageSelect.value;
-    if (selected !== 'es' && selected !== 'en') return;
-    language = selected;
-    try { window.localStorage.setItem(storageKey, language); } catch { /* Optional persistence. */ }
-    render();
-  });
-
   for (const id of ['next-button', 'top-next-button']) {
     elements[id].addEventListener('click', () => {
       if (current.view === 'rosario' && current.index < routes.length - 1) navigateTo(`#${routes[current.index + 1]}`);
